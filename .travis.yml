@@ -1,0 +1,9 @@
+lannguage: node_js
+node_js:
+  - 8
+cache:
+  directories:
+  - node_modules
+script:
+  - yarn test
+  - yarn run build
