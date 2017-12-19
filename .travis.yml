@@ -1,3 +1,4 @@
+dist: precise
 lannguage: node_js
 node_js:
   - 8
