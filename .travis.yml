@@ -1,4 +1,3 @@
-dist: precise
 lannguage: node_js
 node_js:
   - 8
@@ -9,5 +8,6 @@ cache:
   - packages/react-scripts/node_modules
 install: true
 script:
+  - yarn
   - yarn test
   - yarn run build
