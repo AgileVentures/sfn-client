@@ -6,6 +6,7 @@ cache:
   - node_modules
   - packages/create-react-app/node_modules
   - packages/react-scripts/node_modules
+install: true
 script:
   - yarn test
   - yarn run build
