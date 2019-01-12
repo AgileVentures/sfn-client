@@ -1,6 +1,6 @@
 lannguage: node_js
 node_js:
-  - 8
+  - 10.14.2
 cache:
   directories:
   - node_modules
