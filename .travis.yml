@@ -1,8 +1,7 @@
 dist: xenial
 language: node_js
 node_js:
-  - stable
-  - node
+  - 10.13.0
 cache:
   directories:
   - node_modules
