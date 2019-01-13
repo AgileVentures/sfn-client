@@ -19,6 +19,41 @@ We keep our code on [GitHub](http://github.com) and use [git](https://git-scm.co
 ### Forking the repository
 Each developer will usually work with a [fork](https://help.github.com/articles/fork-a-repo/) of the [main repository on Agile Ventures](https://github.com/AgileVentures/sfn-client). Before starting work on a new feature or bugfix, please ensure you have [synced your fork to upstream/develop](https://help.github.com/articles/syncing-a-fork/):
 
+### Node version management :hammer_and_wrench:
+Please ensure you have [nvm installed in your local machine](https://github.com/creationix/nvm). If you are using OSX you can run the command below
+
+```brew install nvm```
+
+Run the following command to install and switch to the current node version for the project:
+```
+nvm install v10.13.0
+```
+
+To ensure that the correct node version for the project is automatically selected when you cd into the sfn-client project's directory please install [avn](https://github.com/wbyoung/avn) in your local machine and run the commands below in your terminal:
+
+```
+npm install -g avn avn-nvm avn-n
+```
+OR
+```
+yarn global add avn avn-nvm avn-n
+```
+Then run:
+```
+avn setup
+```
+
+Unfortunately, if you are using vs code's integrated terminal, you have to `cd ..` and cd back in `cd sfn-client`
+
+In Mac's Terminal it works automatically.
+
+If you are using [fish shell](https://gist.github.com/idleberg/9c7aaa3abedc58694df5) please [use this](https://medium.com/@joshuacrass/nvm-on-mac-for-fish-users-e00af124c540) to install nvm and [install avn for fish](https://github.com/martinkacmar/fish-avn)
+
+### Install yarn.
+```
+npm install -g yarn
+```
+
 ### Choosing Stories/tickets.
 
 When deciding on an issue to work on, look for the  `Help Wanted` or `Good First Issue` tags.
@@ -28,7 +63,7 @@ When deciding on an issue to work on, look for the  `Help Wanted` or `Good First
 ```
 git checkout develop
 ```
-``` 
+```
 git pull upstream develop
 ```
 
@@ -47,7 +82,7 @@ upstream    https://github.com/AgileVentures/sfn-client.git (push)
 
 If not, you need to set the remote develop in order to get the latest copy once changes are merged.
 
-Inorder to achieve that, run:
+In order to achieve that, run:
 
 ```
 git remote add upstream https://github.com/AgileVentures/sfn-client
@@ -66,7 +101,7 @@ Once this is done, you can proceed with naming your branch following the below c
 
 ### Branch Naming Conventions
 
-``` 
+```
 git checkout -b 17-add-sfn-logo
 ```
 
@@ -98,3 +133,11 @@ fixes #799
 which will associate the pull request with the issue in the Waffle board.
 
 Your pull request needs to be reviewed by at least two people in the team for it to be merged in `develop` branch.
+
+### Design reference 🎨
+
+As moving towards with the project the individual screens and assets will be documented here
+
+#### Artists Page mockup
+
+![image](https://user-images.githubusercontent.com/9334646/51091497-976e6c00-178b-11e9-9883-322a722909fd.png)
