@@ -24,19 +24,23 @@ Please ensure you have [nvm installed in your local machine](https://github.com/
 
 ```brew install nvm```
 
+Run the following command to install and switch to the current node version for the project:
+```
+nvm install v10.13.0
+```
+
 To ensure that the correct node version for the project is automatically selected when you cd into the sfn-client project's directory please install [avn](https://github.com/wbyoung/avn) in your local machine and run the commands below in your terminal:
 
 ```
-{% tabs %}
-{% tab title="npm" %}
 npm install -g avn avn-nvm avn-n
-avn setup
-{% endtab %}
-{% tab title="yarn" %}
+```
+OR
+```
 yarn global add avn avn-nvm avn-n
+```
+Then run:
+```
 avn setup
-{% endtab %}
-{% endtabs %}
 ```
 
 Unfortunately, if you are using vs code's integrated terminal, you have to `cd ..` and cd back in `cd sfn-client`
@@ -44,11 +48,6 @@ Unfortunately, if you are using vs code's integrated terminal, you have to `cd .
 In Mac's Terminal it works automatically.
 
 If you are using [fish shell](https://gist.github.com/idleberg/9c7aaa3abedc58694df5) please [use this](https://medium.com/@joshuacrass/nvm-on-mac-for-fish-users-e00af124c540) to install nvm and [install avn for fish](https://github.com/martinkacmar/fish-avn)
-
-Run the following command to install and switch to the current node version for the project:
-```
-nvm install v10.13.0
-```
 
 ### Install yarn.
 ```
