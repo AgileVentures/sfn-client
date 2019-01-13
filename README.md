@@ -26,8 +26,10 @@ Please ensure you have nvm installed in your local machine. If you are using OSX
 
 To ensure that the correct node version for the project is automatically selected when you cd into the sfn-client project's directory please install [avn](https://github.com/wbyoung/avn) in your local machine and run the commands below in your terminal:
 
-```yarn global add  avn avn-nvm avn-n
-avn setup```
+```
+yarn global add  avn avn-nvm avn-n
+avn setup
+```
 
 Unfortunately, if you are using vs code's integrated terminal, you have to cd .. and cd back in.
 
