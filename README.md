@@ -63,7 +63,7 @@ When deciding on an issue to work on, look for the  `Help Wanted` or `Good First
 ```
 git checkout develop
 ```
-``` 
+```
 git pull upstream develop
 ```
 
@@ -101,7 +101,7 @@ Once this is done, you can proceed with naming your branch following the below c
 
 ### Branch Naming Conventions
 
-``` 
+```
 git checkout -b 17-add-sfn-logo
 ```
 
@@ -133,3 +133,11 @@ fixes #799
 which will associate the pull request with the issue in the Waffle board.
 
 Your pull request needs to be reviewed by at least two people in the team for it to be merged in `develop` branch.
+
+### Design reference 🎨
+
+As moving towards with the project the individual screens and assets will be documented here
+
+#### Artists Page mockup
+
+![image](https://user-images.githubusercontent.com/9334646/51091497-976e6c00-178b-11e9-9883-322a722909fd.png)
