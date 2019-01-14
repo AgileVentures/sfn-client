@@ -138,6 +138,8 @@ Your pull request needs to be reviewed by at least two people in the team for it
 
 As moving towards with the project the individual screens and assets will be documented here
 
+[Design inspiration](https://dribbble.com/shots/3144986-Online-Music-Streaming-Service-Artist-Page/attachments/666587)
+
 #### Artists Page mockup
 
 ![image](https://user-images.githubusercontent.com/9334646/51091497-976e6c00-178b-11e9-9883-322a722909fd.png)
