@@ -5,13 +5,25 @@ import {BrowserRouter, Route} from "react-router-dom";
 import "../main.scss";
 
 // Components
+import HomeContainer from "./Home/HomeContainer";
+import AboutContainer from "./About/AboutContainer";
+import CausesContainer from "./Causes/CausesContainer";
 import ArtistContainer from "./Artist/ArtistContainer";
+import PerformancesContainer from "./Performances/PerformancesContainer";
+import ContactContainer from "./Contact/ContactContainer";
 
 const App = () => {
   return (
     <div>
       <BrowserRouter>
-        <Route path="/artists/:id" component={ArtistContainer} />
+        <div>
+          <Route path="/" exact component={HomeContainer} />
+          <Route path="/about" component={AboutContainer} />
+          <Route path="/causes" component={CausesContainer} />
+          <Route path="/artists/:id" component={ArtistContainer} />
+          <Route path="/performances" component={PerformancesContainer} />
+          <Route path="/contact" component={ContactContainer} />
+        </div>
       </BrowserRouter>
     </div>
   );
