@@ -1,14 +1,14 @@
 // COLORS are based on the concept from Dribbble: https://dribbble.com/shots/3144986-Online-Music-Streaming-Service-Artist-Page/attachments/666587
 
 // WHITE
-$primary-color-white-darkest: darken($primary-color-white, 20%);
-$primary-color-white-darker: darken($primary-color-white, 10%);
 $primary-color-white: #fff;
+$primary-color-white-darker: darken($primary-color-white, 10%);
+$primary-color-white-darkest: darken($primary-color-white, 20%);
 
 // DARK-BLUE
+$primary-color-darkblue: #151828;
 $primary-color-darkblue-darkest: darken($primary-color-darkblue, 20%);
 $primary-color-darkblue-darker: darken($primary-color-darkblue, 10%);
-$primary-color-darkblue: #151828;
 $primary-color-darkblue-lighter: lighten($primary-color-darkblue, 10%);
 $primary-color-darkblue-lightest: lighten($primary-color-darkblue, 20%);
 
