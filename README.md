@@ -66,7 +66,11 @@ git checkout develop
 ```
 git pull upstream develop
 ```
+After you pulled the latest develop branch, make sure you have also the dependencies installed each time, by running in the console:
 
+```
+yarn
+```
 Ensure you have setup AgileVentures/sfn-client's upstream  `develop`.  Otherwise you will not have the latest `develop ` changes.
 
 To confirm this, run ```git remote -v```.
@@ -95,7 +99,6 @@ git pull upstream develop
 This depends on the name of your origin (Counter check before running the above command).
 
 You will now have the latest copy of develop in your local.
-
 
 Once this is done, you can proceed with naming your branch following the below convention.
 
@@ -137,6 +140,8 @@ Your pull request needs to be reviewed by at least two people in the team for it
 ### Design reference 🎨
 
 As moving towards with the project the individual screens and assets will be documented here
+
+[Design inspiration](https://dribbble.com/shots/3144986-Online-Music-Streaming-Service-Artist-Page/attachments/666587)
 
 #### Artists Page mockup
 
