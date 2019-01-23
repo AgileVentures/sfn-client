@@ -24,7 +24,7 @@ const App = () => {
           <Route path="/about" component={AboutContainer} />
           <Route path="/causes" component={CausesContainer} />
           <Route path="/causes/:id" component={CauseContainer} />
-          <Route path="/artists/:" component={ArtistsContainer} />
+          <Route path="/artists/" component={ArtistsContainer} />
           <Route path="/artists/:id" component={ArtistContainer} />
           <Route path="/performances" component={PerformancesContainer} />
           <Route path="/performances/:id" component={PerformanceContainer} />
