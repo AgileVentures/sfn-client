@@ -102,6 +102,11 @@ You will now have the latest copy of develop in your local.
 
 Once this is done, you can proceed with naming your branch following the below convention.
 
+### Starting the development server
+```
+yarn start
+```
+
 ### Branch Naming Conventions
 
 ```
