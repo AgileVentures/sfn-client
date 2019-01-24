@@ -54,6 +54,11 @@ If you are using [fish shell](https://gist.github.com/idleberg/9c7aaa3abedc58694
 npm install -g yarn
 ```
 
+### Starting the development server
+```
+yarn start
+```
+
 ### Choosing Stories/tickets.
 
 When deciding on an issue to work on, look for the  `Help Wanted` or `Good First Issue` tags.
