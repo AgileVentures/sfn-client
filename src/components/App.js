@@ -20,7 +20,7 @@ const App = () => {
   return (
     <div>
       <BrowserRouter>
-        <div>
+        <div className="main-container grid">
           <Header />
           <Route path="/" exact component={HomeContainer} />
           <Route path="/about" component={AboutContainer} />
