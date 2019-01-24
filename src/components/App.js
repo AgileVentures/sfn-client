@@ -14,12 +14,14 @@ import ArtistContainer from "./Artist/ArtistContainer";
 import PerformancesContainer from "./Performances/PerformancesContainer";
 import PerformanceContainer from "./Performance/PerformanceContainer";
 import ContactContainer from "./Contact/ContactContainer";
+import Header from "./Header";
 
 const App = () => {
   return (
     <div>
       <BrowserRouter>
         <div>
+          <Header />
           <Route path="/" exact component={HomeContainer} />
           <Route path="/about" component={AboutContainer} />
           <Route path="/causes" exact component={CausesContainer} />
