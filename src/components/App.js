@@ -14,14 +14,14 @@ import ArtistContainer from "./Artist/ArtistContainer";
 import PerformancesContainer from "./Performances/PerformancesContainer";
 import PerformanceContainer from "./Performance/PerformanceContainer";
 import ContactContainer from "./Contact/ContactContainer";
-import Header from "./Header";
+import Header from "./Header/Header";
 
 const App = () => {
   return (
-    <div>
-      <BrowserRouter>
-        <div className="main-container grid">
-          <Header />
+    <BrowserRouter>
+      <div>
+        <Header />
+        <main className="main-container grid">
           <Route path="/" exact component={HomeContainer} />
           <Route path="/about" component={AboutContainer} />
           <Route path="/causes" exact component={CausesContainer} />
@@ -31,9 +31,9 @@ const App = () => {
           <Route path="/performances" exact component={PerformancesContainer} />
           <Route path="/performances/:id" component={PerformanceContainer} />
           <Route path="/contact" component={ContactContainer} />
-        </div>
-      </BrowserRouter>
-    </div>
+        </main>
+      </div>
+    </BrowserRouter>
   );
 };
 
