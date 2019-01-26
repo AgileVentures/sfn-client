@@ -50,6 +50,15 @@ h6 {
 
 // TYPOGRAPHY UTILITIES
 
+.white {
+  color: $primary-color-white;
+}
+
+.stroke {
+  color: transparent;
+  -webkit-text-stroke: 1px $primary-color-white;
+}
+
 .label-normal {
   font-family: 'Archivo Black', sans-serif;
   font-size: 0.75rem;

@@ -142,7 +142,17 @@ which will associate the pull request with the issue in the Waffle board.
 
 Your pull request needs to be reviewed by at least two people in the team for it to be merged in `develop` branch.
 
-### Design reference 🎨
+### Design
+
+#### Designing components
+
+We try to make designing components easier with setting up some base grounds of colors, typography and layouts. Before start designing a component for the page, please consult these materials. You can find them in the src/components/styles directory.
+
+The layout of the pages is following Bootstrap's [12 column](https://getbootstrap.com/docs/4.0/layout/grid/) grid system, but with using [CSS Grid](https://css-tricks.com/snippets/css/complete-guide-grid/) and [Flexbox](https://css-tricks.com/snippets/css/a-guide-to-flexbox/) together. We recommend to have a look at the documentation, or just give a shot to [grid garden game](http://cssgridgarden.com/).
+
+The structure of the components and spacing is suggested to follow an 8px grid system, what does that mean? It means every spacing, padding and size (width, height) of a component is following a multiple of 8. To give you a head start related to this rule, we set up the margins and paddings already to use in the styles/utilities.scss file as SASS variables.
+
+#### Design reference 🎨
 
 As moving towards with the project the individual screens and assets will be documented here
 

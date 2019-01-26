@@ -4,7 +4,7 @@ import ArtistBio from "./ArtistBio";
 class ArtistContainer extends Component {
   render() {
     return (
-      <div>
+      <div className="artist-container">
         <ArtistBio />
       </div>
     );
