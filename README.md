@@ -59,6 +59,13 @@ npm install -g yarn
 yarn start
 ```
 
+### Running tests (jest)
+* start the test by running
+    ```
+    yarn test
+    ```
+* then press `a` to run all test 
+
 ### Choosing Stories/tickets.
 
 When deciding on an issue to work on, look for the  `Help Wanted` or `Good First Issue` tags.
