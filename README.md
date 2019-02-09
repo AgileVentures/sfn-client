@@ -1,3 +1,4 @@
+[![Waffle.io - Columns and their card count](https://badge.waffle.io/AgileVentures/sfn-client.svg?columns=all)](https://waffle.io/AgileVentures/sfn-client)
 
 ## About this project
 :construction: UNDER CONSTRUCTION :construction:
@@ -60,7 +61,7 @@ yarn start
     ```
     yarn test
     ```
-* then press `a` to run all test 
+* then press `a` to run all test
 
 ### Choosing Stories/tickets.
 
