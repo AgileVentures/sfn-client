@@ -8,10 +8,6 @@ This describes how to contribute to SFN-CLIENT:  the tools we use to track and
 coordinate the work that is happening and that needs to happen. This also describes the
 *workflow* -- the processes and sequences for getting contributions merged into the project in an organized and coherent way.
 
-First be sure that you've set up your development environment following all the steps
- in **[Setting Up for Development on WebSiteOne _(Project Set Up)_]() :construction:
-
-
 We use [Waffle](https://waffle.io/AgileVentures/sfn-client) to manage our work on features, chores and bugfixes.
 
 We keep our code on [GitHub](http://github.com) and use [git](https://git-scm.com) for version control.
