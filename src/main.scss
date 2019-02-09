@@ -1,0 +1,13 @@
+// This is the main SCSS files to import additional SCSS files from the styles directory
+// Please when you create a new SCSS file just add the end of the list, don't change the order
+
+@import 'styles/_reset.scss';
+@import 'styles/_colors.scss';
+@import 'styles/_typography.scss';
+@import 'styles/_utilities.scss';
+@import 'styles/_layout.scss';
+@import 'styles/_common_elements.scss';
+
+// COMPONENTS
+@import 'components/Header/header.scss';
+@import 'components/Artist/artist.scss';

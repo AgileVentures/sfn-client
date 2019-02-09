@@ -1,0 +1,42 @@
+// The layout defines the structure of the pages using the combination of CSS Grid and Flexbox
+// The structure following a 12-column grid structure using fractions
+
+body {
+  width: 100%;
+  height: 100%;
+}
+
+.main-container {
+  margin: 0 auto;
+  padding-left: $padding-s;
+  padding-right: $padding-s;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+}
+
+@media only screen and (min-width: 576px) {
+  .main-container {
+    max-width: 540px;
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  .main-container {
+    max-width: 720px;
+  }
+}
+
+@media only screen and (min-width: 992px) {
+  .main-container {
+    max-width: 960px;
+  }
+}
+
+@media only screen and (min-width: 1200px) {
+  .main-container {
+    max-width: 1140px;
+  }
+}
