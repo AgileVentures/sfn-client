@@ -50,7 +50,10 @@ If you are using [fish shell](https://gist.github.com/idleberg/9c7aaa3abedc58694
 ```
 npm install -g yarn
 ```
-
+### Run yarn to install dependencies
+```
+yarn
+```
 ### Starting the development server
 ```
 yarn start
