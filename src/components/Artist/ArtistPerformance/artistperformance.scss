@@ -1,0 +1,60 @@
+.artist-performance__item {
+  padding-top: $padding-s;
+  padding-bottom: $padding-xs;
+  display: flex;
+  flex-direction: column;
+  border-bottom: 1px solid $primary-color-white;
+
+  &:last-child {
+    border-bottom: none;
+  }
+}
+
+.artist-performance__item__venue__img {
+  width: 100%;
+  height: auto;
+  padding-bottom: $padding-s;
+  box-shadow: 0 12px 30px rgba($primary-color-darkblue, 0.4);
+}
+
+.artist-performance__item__venue__details {
+  display: flex;
+  flex-direction: column;
+  color: $primary-color-white;
+  justify-content: space-between;
+  padding-bottom: $padding-s;
+
+  .artist-performance__item__venue__headers {
+    margin-bottom: $margin-s;
+  }
+
+  .artist-performance__item__venue__name {
+    margin-bottom: $margin-xs;
+  }
+
+  .artist-performance__item__venue__date {
+    color: $primary-color-white-darkest;
+    margin-bottom: $margin-s;
+  }
+
+  .artist-performance__item__navigation {
+    display: flex;
+    align-items: center;
+
+    button {
+      margin-left: $margin-s;
+    }
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  .artist-performance__item {
+    flex-direction: row;
+  }
+
+  .artist-performance__item__venue__img {
+    width: 250px;
+    height: 250px;
+    padding-right: $padding-s;
+  }
+}

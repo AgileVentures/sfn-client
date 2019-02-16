@@ -16,15 +16,19 @@
   content: "";
   width: 100%;
   height: 100%;
-  background-image: radial-gradient(ellipse at 50%, rgba(21,24,40,0.31) 0%, $primary-color-darkblue 75%);
+  background-image: radial-gradient(
+    ellipse at 50%,
+    rgba(21, 24, 40, 0.31) 0%,
+    $primary-color-darkblue 75%
+  );
   position: absolute;
   z-index: 1;
   top: 0;
 }
 
 .artist-details__avatar {
-  position: relative;
-  box-shadow: 0 12px 30px rgba($primary-color-darkblue, .4);
+  width: 100%;
+  box-shadow: 0 12px 30px rgba($primary-color-darkblue, 0.4);
 }
 
 .artist-details__name {
@@ -32,8 +36,6 @@
 }
 
 .artist-details__text {
-  position: absolute;
-  bottom: -250px;
   left: 0;
   z-index: 1;
 
@@ -49,7 +51,12 @@
 @media only screen and (min-width: 768px) {
   .artist-container {
     min-height: 500px;
-    background-image: radial-gradient(ellipse at 50%, rgba(21,24,40,0.31) 0%, $primary-color-darkblue 70%) , url("/images/dua_lipa_bg.jpg");
+    background-image: radial-gradient(
+        ellipse at 50%,
+        rgba(21, 24, 40, 0.31) 0%,
+        $primary-color-darkblue 70%
+      ),
+      url("/images/dua_lipa_bg.jpg");
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
