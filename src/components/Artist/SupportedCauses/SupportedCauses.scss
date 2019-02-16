@@ -1,0 +1,11 @@
+.supportedcauses-container {
+    width: 100%;
+    margin-top: $margin-l;
+}
+
+@media only screen and (min-width: 768px) {
+    .supportedcauses-container {
+        width: 40%;
+        margin-top: $margin-r;
+    }
+}
