@@ -2,3 +2,9 @@
   width: 100%;
   margin-top: $margin-l;
 }
+
+@media only screen and (min-width: 768px) {
+  .artist-performance-container {
+    width: 60%;
+  }
+}
