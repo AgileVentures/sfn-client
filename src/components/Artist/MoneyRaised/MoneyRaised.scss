@@ -1,0 +1,11 @@
+.moneyraised-container {
+  width: 100%;
+  margin-top: $margin-l;
+}
+
+@media only screen and (min-width: 768px) {
+  .moneyraised-container {
+    width: 40%;
+    margin-right: $margin-r;
+  }
+}
