@@ -1,7 +1,7 @@
 import React from "react";
-import Artist from "./ArtistContainer";
+import About from "./AboutContainer";
 
 //Need at least 1 test to pass Travis CI
 it ("creates component without crashing", () => {
-  const artist = <Artist/>;
+  const about = <About/>;
 });
