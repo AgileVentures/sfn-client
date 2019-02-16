@@ -57,6 +57,8 @@ yarn start
 ```
 
 ### Running tests (jest)
+* This codebase uses Enzyme Javascript Testing Utility. To learn more about the Enzyme you can checkout their [documentation](https://airbnb.io/enzyme/).
+
 * start the test by running
     ```
     yarn test
