@@ -2,6 +2,7 @@ import React, {Component} from "react";
 import ArtistBio from "./ArtistBio";
 import ArtistPerformanceList from "./ArtistPerformanceList/ArtistPerformanceList";
 import MoneyRaised from "./MoneyRaised/MoneyRaised";
+import SupportedCauses from "./SupportedCauses/SupportedCauses"
 
 class ArtistContainer extends Component {
   render() {
@@ -10,6 +11,7 @@ class ArtistContainer extends Component {
         <ArtistBio />
         <div className="left-sidebar">
           <MoneyRaised />
+          <SupportedCauses/>
           <ArtistPerformanceList />
         </div>
       </div>
