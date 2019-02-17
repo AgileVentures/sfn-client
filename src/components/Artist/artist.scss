@@ -83,7 +83,13 @@
     align-self: start;
   }
 
+  .main-artistcontent-container {
+    display: flex;
+  }
+
   .left-sidebar {
     display: flex;
+    flex-direction: column;
+    margin-right: $margin-r;
   }
 }
