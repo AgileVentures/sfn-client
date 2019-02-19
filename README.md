@@ -170,3 +170,15 @@ As moving towards with the project the individual screens and assets will be doc
 #### Artists Page mockup
 
 ![image](https://user-images.githubusercontent.com/9334646/51091497-976e6c00-178b-11e9-9883-322a722909fd.png)
+
+#### Artists Index Page mockup
+
+![image](https://user-images.githubusercontent.com/9735009/52993526-88d63d00-343a-11e9-8918-d34454ff8e20.png)
+
+#### Causes Page mockup
+
+![image](https://user-images.githubusercontent.com/9735009/52993527-8b389700-343a-11e9-87c2-ac57a2c73072.png)
+
+#### Causes Index Page mockup
+
+![image](https://user-images.githubusercontent.com/9735009/52993521-84118900-343a-11e9-915d-2265e845fbef.png)
