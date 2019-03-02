@@ -1,10 +1,24 @@
 import React from "react";
 import ArtistPerformance from "./ArtistPerformance";
+import {shallow} from 'enzyme'
 
-//Need at least 1 test to pass Travis CI
-
+let wrapped
 describe("<ArtistPerformance />", () => {
-  it ("creates component without crashing", () => {
-    const artistPerformance = <ArtistPerformance />;
+  beforeEach(()=>{
+    wrapped = shallow( <ArtistPerformance/> )
+  })
+  it ("has donate button", () => {
+      expect(wrapped.find('button').text()).toEqual('Donate')
   });
+  it("has one button",()=>{
+    expect(wrapped.find('button').length).toEqual(1)
+  })
+
+  it("has an image element",()=>{
+    expect(wrapped.find('img').length).toEqual(1)
+  })
+  it("has text LIVE SHOW",()=>{
+    expect(wrapped.text()).toContain('LIVE SHOW')
+  })
+  
 });
