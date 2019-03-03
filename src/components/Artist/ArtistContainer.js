@@ -3,6 +3,7 @@ import ArtistBio from "./ArtistBio";
 import ArtistPerformanceList from "./ArtistPerformanceList/ArtistPerformanceList";
 import MoneyRaised from "./MoneyRaised/MoneyRaised";
 import SupportedCauses from "./SupportedCauses/SupportedCauses";
+import RelatedArtists from "./RelatedArtists/RelatedArtists";
 
 class ArtistContainer extends Component {
   render() {
@@ -13,6 +14,7 @@ class ArtistContainer extends Component {
           <div className="left-sidebar">
             <MoneyRaised />
             <SupportedCauses />
+            <RelatedArtists />
           </div>
           <ArtistPerformanceList />
         </div>
