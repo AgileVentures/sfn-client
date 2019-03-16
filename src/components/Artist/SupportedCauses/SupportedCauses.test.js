@@ -1,8 +1,13 @@
 import React from "react";
 import SupportedCauses from './SupportedCauses'
+import {shallow} from 'enzyme'
 
+let wrapped
 describe ("<SupportedCauses />", () => {
-  it ("creates a component without crashing", () => {
-      const supportedCause = <SupportedCauses/>;
-  });
+  beforeEach(()=>{
+    wrapped = shallow( <SupportedCauses/> )
+  })
+  it('contains text CauseContainer', ()=>{
+    expect(wrapped.find('h3').text()).toEqual('Supported Causes')
+  })
 });

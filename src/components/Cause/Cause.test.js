@@ -1,9 +1,14 @@
 import React from "react";
 import Cause from "./CauseContainer";
+import {shallow} from 'enzyme'
 
+let wrapped
 //Need at least 1 test to pass Travis CI
 describe ("<CauseContainer />", () => {
-  it ("creates component without crashing", () => {
-    const cause = <Cause/>;
-  });
+  beforeEach(()=>{
+    wrapped = shallow( <Cause/> )
+  })
+  it('contains text CauseContainer', ()=>{
+    expect(wrapped.text()).toEqual('CauseContainer')
+  })
 });
