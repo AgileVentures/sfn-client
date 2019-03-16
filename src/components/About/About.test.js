@@ -1,17 +1,19 @@
 import React from "react";
 import About from "./AboutContainer";
-import { shallow } from "enzyme";
+import {
+  shallow
+} from "enzyme";
 
-let wrapped;
+let wrapper;
 
 //Need at least 1 test to pass Travis CI
 describe("<AboutContainer />", () => {
 
   beforeEach(() => {
-    wrapped = shallow( < About / > )
+    wrapper = shallow( < About / > )
   })
 
   it("displays 'AboutContainer' text", () => {
-    expect(wrapped.find('div').text()).toEqual('AboutContainer')
+    expect(wrapper.find('div').text()).toEqual('AboutContainer')
   })
 });

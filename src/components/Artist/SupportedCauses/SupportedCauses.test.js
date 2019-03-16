@@ -1,13 +1,15 @@
 import React from "react";
 import SupportedCauses from './SupportedCauses'
-import {shallow} from 'enzyme'
+import {
+  shallow
+} from 'enzyme'
 
-let wrapped
-describe ("<SupportedCauses />", () => {
-  beforeEach(()=>{
-    wrapped = shallow( <SupportedCauses/> )
+let wrapper
+describe("<SupportedCauses />", () => {
+  beforeEach(() => {
+    wrapper = shallow( < SupportedCauses / > )
   })
-  it('contains text CauseContainer', ()=>{
-    expect(wrapped.find('h3').text()).toEqual('Supported Causes')
+  it('contains text CauseContainer', () => {
+    expect(wrapper.find('h3').text()).toEqual('Supported Causes')
   })
 });

@@ -1,14 +1,16 @@
 import React from "react";
 import Cause from "./CauseContainer";
-import {shallow} from 'enzyme'
+import {
+  shallow
+} from 'enzyme'
 
-let wrapped
+let wrapper
 //Need at least 1 test to pass Travis CI
-describe ("<CauseContainer />", () => {
-  beforeEach(()=>{
-    wrapped = shallow( <Cause/> )
+describe("<CauseContainer />", () => {
+  beforeEach(() => {
+    wrapper = shallow( < Cause / > )
   })
-  it('contains text CauseContainer', ()=>{
-    expect(wrapped.text()).toEqual('CauseContainer')
+  it('contains text CauseContainer', () => {
+    expect(wrapper.text()).toEqual('CauseContainer')
   })
 });

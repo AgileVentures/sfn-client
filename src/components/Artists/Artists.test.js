@@ -1,16 +1,18 @@
 import React from "react";
 import Artists from "./ArtistsContainer";
-import { shallow } from "enzyme"
+import {
+  shallow
+} from "enzyme"
 
-let wrapped;
+let wrapper;
 
 //Need at least 1 test to pass Travis CI
-describe ("<ArtistsContainer />", () => {
-  beforeEach(()=> { 
-    wrapped = shallow(< Artists />)
+describe("<ArtistsContainer />", () => {
+  beforeEach(() => {
+    wrapper = shallow( < Artists / > )
   })
 
-  it ("contains the text 'ArtistsContainer'", () => {
-    expect(wrapped.find('div').text()).toEqual('ArtistsContainer');
+  it("contains the text 'ArtistsContainer'", () => {
+    expect(wrapper.find('div').text()).toEqual('ArtistsContainer');
   });
 });

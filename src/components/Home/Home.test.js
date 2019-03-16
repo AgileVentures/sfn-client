@@ -1,16 +1,18 @@
 import React from "react";
 import Home from "./HomeContainer";
-import {shallow} from "enzyme"
+import {
+  shallow
+} from "enzyme"
 
-let wrapped;
+let wrapper;
 
 //Need at least 1 test to pass Travis CI
 describe("<HomeContainer />", () => {
-  beforeEach( ()=> {
-    wrapped = shallow(<Home/>)
+  beforeEach(() => {
+    wrapper = shallow( < Home / > )
   })
 
-  it("contains the text HomeContainer", ()=> {
-    expect(wrapped.text()).toEqual("HomeContainer")
+  it("contains the text HomeContainer", () => {
+    expect(wrapper.text()).toEqual("HomeContainer")
   })
 });

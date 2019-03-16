@@ -1,16 +1,18 @@
 import React from "react";
 import Contact from "./ContactContainer";
-import {shallow} from 'enzyme'
+import {
+  shallow
+} from 'enzyme'
 
-let wrapped; 
+let wrapper;
 
-describe("<ContactContainer/>", ()=>{
-  beforeEach(()=>{
-    wrapped = shallow(<Contact/>)
+describe("<ContactContainer/>", () => {
+  beforeEach(() => {
+    wrapper = shallow( < Contact / > )
   })
 
-  it('has text ContactContainer', ()=>{
-    expect(wrapped.text()).toEqual('ContactContainer')
+  it('has text ContactContainer', () => {
+    expect(wrapper.text()).toEqual('ContactContainer')
   })
 
 });
