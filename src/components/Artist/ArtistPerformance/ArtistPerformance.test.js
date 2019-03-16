@@ -20,5 +20,7 @@ describe("<ArtistPerformance />", () => {
   it("has text LIVE SHOW",()=>{
     expect(wrapped.text()).toContain('LIVE SHOW')
   })
-  
+  it("has a More Info link", () => {
+    expect(wrapped.find('Link').children().text()).toContain('More info')
+  });
 });
