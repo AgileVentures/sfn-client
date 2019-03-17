@@ -4,15 +4,17 @@ import {
   shallow
 } from "enzyme"
 
-let wrapper;
 
 //Need at least 1 test to pass Travis CI
 describe("<Header />", () => {
-  beforeEach(() => {
-    wrapper = shallow( < Header / > )
+
+  const headerWrapper = shallow( < Header / > )
+
+  it('creates component without crashing', () => {
+    const header = < Header / >
   })
 
   it("contains all the navigation links", () => {
-    expect(wrapper.find("NavLink").length).toEqual(6)
+    expect(headerWrapper.find("NavLink").length).toEqual(6)
   })
 });

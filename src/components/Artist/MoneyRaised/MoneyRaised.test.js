@@ -5,19 +5,19 @@ import {
   shallow
 } from "enzyme"
 
-let wrapper;
+let moneyRaisedWrapper;
 
 //Need at least 1 test to pass Travis CI
 describe("<MoneyRaised />", () => {
   beforeEach(() => {
-    wrapper = shallow( < MoneyRaised / > )
+    moneyRaisedWrapper = shallow( < MoneyRaised / > )
   })
 
   it("contains the text Money Raised", () => {
-    expect(wrapper.find("h3").text()).toContain("Money Raised")
+    expect(moneyRaisedWrapper.find("h3").text()).toContain("Money Raised")
   })
 
   it("contains the Chart component", () => {
-    expect(wrapper.find("Chart").length).toEqual(1)
+    expect(moneyRaisedWrapper.find("Chart").length).toEqual(1)
   })
 });

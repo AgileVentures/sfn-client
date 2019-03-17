@@ -6,20 +6,22 @@ import {
   shallow
 } from "enzyme"
 
-let wrapper;
+
 
 //Need at least 1 test to pass Travis CI
 describe("<ArtistContainer />", () => {
 
-  beforeEach(() => {
-    wrapper = shallow( < Artist / > )
+  const artistWrapper = shallow( < Artist / > )
+
+  it('creates component without crashing', () => {
+    const artist = < Artist / >
   })
 
   it("displays an artist bio", () => {
-    expect(wrapper.find(ArtistBio).length).toEqual(1)
+    expect(artistWrapper.find(ArtistBio).length).toEqual(1)
   })
 
   it("displays an money raised", () => {
-    expect(wrapper.find(MoneyRaised).length).toEqual(1)
+    expect(artistWrapper.find(MoneyRaised).length).toEqual(1)
   })
 });

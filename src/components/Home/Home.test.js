@@ -4,15 +4,18 @@ import {
   shallow
 } from "enzyme"
 
-let wrapper;
 
 //Need at least 1 test to pass Travis CI
 describe("<HomeContainer />", () => {
-  beforeEach(() => {
-    wrapper = shallow( < Home / > )
+
+  const homeWrapper = shallow( < Home / > )
+
+  it('creates component without crashing', () => {
+    const home = < Home / >
   })
 
+
   it("contains the text HomeContainer", () => {
-    expect(wrapper.text()).toEqual("HomeContainer")
+    expect(homeWrapper.text()).toEqual("HomeContainer")
   })
 });

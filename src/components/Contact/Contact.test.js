@@ -4,15 +4,17 @@ import {
   shallow
 } from 'enzyme'
 
-let wrapper;
 
 describe("<ContactContainer/>", () => {
-  beforeEach(() => {
-    wrapper = shallow( < Contact / > )
+
+  const contactContainerWrapper = shallow( < Contact / > )
+
+  it('creates component without crashing', () => {
+    const contact = < Contact / >
   })
 
   it('has text ContactContainer', () => {
-    expect(wrapper.text()).toEqual('ContactContainer')
+    expect(contactContainerWrapper.text()).toEqual('ContactContainer')
   })
 
 });

@@ -4,15 +4,15 @@ import {
   shallow
 } from "enzyme"
 
-let wrapper;
-
 //Need at least 1 test to pass Travis CI
 describe("<ArtistsContainer />", () => {
-  beforeEach(() => {
-    wrapper = shallow( < Artists / > )
-  })
 
+  const artistsContainerWrapper = shallow( < Artists / > )
+
+  it('creates component without crashing', () => {
+    const artistsContainer = < Artists / >
+  })
   it("contains the text 'ArtistsContainer'", () => {
-    expect(wrapper.find('div').text()).toEqual('ArtistsContainer');
+    expect(artistsContainerWrapper.find('div').text()).toEqual('ArtistsContainer');
   });
 });
