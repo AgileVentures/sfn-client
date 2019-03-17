@@ -5,16 +5,14 @@ import {
   shallow
 } from 'enzyme'
 
-
 describe('ArtistPerfomanceList', () => {
-
-  const artistPerformanceListWrapper = shallow( < ArtistPerformanceList / > )
 
   it('creates component without crashing', () => {
     const artistPerformanceList = < ArtistPerformanceList / >
   })
 
   it('has 3 ArtistPerfomence', () => {
+    const artistPerformanceListWrapper = shallow( < ArtistPerformanceList / > )
     expect(artistPerformanceListWrapper.find('ArtistPerformance').length).toEqual(3)
   })
 })

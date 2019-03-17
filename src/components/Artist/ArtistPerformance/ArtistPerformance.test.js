@@ -9,7 +9,6 @@ describe("<ArtistPerformance />", () => {
 
   const artistPerformanceWrapper = shallow( < ArtistPerformance / > )
 
-
   it('creates component without crashing', () => {
     const artistPerformance = < ArtistPerformance / >
   })

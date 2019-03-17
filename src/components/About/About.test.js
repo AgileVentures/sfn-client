@@ -7,13 +7,12 @@ import {
 //Need at least 1 test to pass Travis CI
 describe("<AboutContainer />", () => {
 
-  const aboutComponentWrapper = shallow( < About / > )
-
   it('creates component without crashing', () => {
     const about = < About / >
   })
 
   it("displays 'AboutContainer' text", () => {
+    const aboutComponentWrapper = shallow( < About / > )
     expect(aboutComponentWrapper.find('div').text()).toEqual('AboutContainer')
   })
 });

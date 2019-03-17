@@ -4,16 +4,14 @@ import {
   shallow
 } from "enzyme";
 
-
-
 describe("<RelatedArtists />", () => {
-  const relatedArtistsWrapper = shallow( < RelatedArtists / > )
 
   it('creates component without crashing', () => {
     const relatedArtists = < RelatedArtists / >
   })
 
   it("creates a component with the text RelatedArtists", () => {
+    const relatedArtistsWrapper = shallow( < RelatedArtists / > )
     expect(relatedArtistsWrapper.text()).toEqual("RelatedArtists")
   });
 

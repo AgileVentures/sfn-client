@@ -8,13 +8,13 @@ import {
 //Need at least 1 test to pass Travis CI
 describe("<Header />", () => {
 
-  const headerWrapper = shallow( < Header / > )
 
   it('creates component without crashing', () => {
     const header = < Header / >
   })
 
   it("contains all the navigation links", () => {
+    const headerWrapper = shallow( < Header / > )
     expect(headerWrapper.find("NavLink").length).toEqual(6)
   })
 });

@@ -7,13 +7,13 @@ import {
 
 describe("<ContactContainer/>", () => {
 
-  const contactContainerWrapper = shallow( < Contact / > )
 
   it('creates component without crashing', () => {
     const contact = < Contact / >
   })
 
   it('has text ContactContainer', () => {
+    const contactContainerWrapper = shallow( < Contact / > )
     expect(contactContainerWrapper.text()).toEqual('ContactContainer')
   })
 

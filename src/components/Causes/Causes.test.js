@@ -6,13 +6,12 @@ import {
 
 //Need at least 1 test to pass Travis CI
 describe("<CausesContainer />", () => {
-  const causesContainerWrapper = shallow( < Causes / > )
-
   it('creates component without crashing', () => {
     const causes = < Causes / >
   })
 
   it('contains text CausesContainer', () => {
+    const causesContainerWrapper = shallow( < Causes / > )
     expect(causesContainerWrapper.text()).toEqual('CausesContainer')
   })
 });

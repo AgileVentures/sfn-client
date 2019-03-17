@@ -4,16 +4,14 @@ import {
   shallow
 } from 'enzyme'
 
-let supportedCausesWrapper
 describe("<SupportedCauses />", () => {
-
-
-  const supportedCausesWrapper = shallow( < SupportedCauses / > )
 
   it('creates component without crashing', () => {
     const supportedCauses = < SupportedCauses / >
   })
+
   it('contains text CauseContainer', () => {
+    const supportedCausesWrapper = shallow( < SupportedCauses / > )
     expect(supportedCausesWrapper.find('h3').text()).toEqual('Supported Causes')
   })
 });
