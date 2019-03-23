@@ -8,11 +8,16 @@ import {
 
 //Need at least 1 test to pass Travis CI
 describe("<MoneyRaised />", () => {
-  const moneyRaisedWrapper = shallow( < MoneyRaised / > )
-
+  
   it('creates component without crashing', () => {
     const moneyRaised = < MoneyRaised / >
   })
+  
+  let moneyRaisedWrapper;
+  beforeEach( ()=> {
+    moneyRaisedWrapper = shallow( < MoneyRaised / > )
+  })
+    
   it("contains the text Money Raised", () => {
     expect(moneyRaisedWrapper.find("h3").text()).toContain("Money Raised")
   })
