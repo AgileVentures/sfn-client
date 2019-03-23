@@ -12,7 +12,7 @@ describe("<AboutContainer />", () => {
   })
 
   it("displays 'AboutContainer' text", () => {
-    const aboutComponentWrapper = shallow( < About / > )
-    expect(aboutComponentWrapper.find('div').text()).toEqual('AboutContainer')
+    const aboutWrapper = shallow( < About / > )
+    expect(aboutWrapper.find('div').text()).toEqual('AboutContainer')
   })
 });
