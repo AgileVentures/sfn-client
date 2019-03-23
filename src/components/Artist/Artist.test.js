@@ -11,12 +11,15 @@ import {
 //Need at least 1 test to pass Travis CI
 describe("<ArtistContainer />", () => {
 
-  const artistWrapper = shallow( < Artist / > )
-
   it('creates component without crashing', () => {
     const artist = < Artist / >
   })
 
+  let artistWrapper;
+  beforeEach(() => {
+    artistWrapper = shallow( < Artist / > )
+  })
+    
   it("displays an artist bio", () => {
     expect(artistWrapper.find(ArtistBio).length).toEqual(1)
   })
