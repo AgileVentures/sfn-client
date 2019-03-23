@@ -2,7 +2,7 @@ import React, { Component } from "react";
 
 class PerformancesContainer extends Component {
   render() {
-    return <div> PerformancesContainer </div>;
+    return <div>PerformancesContainer</div>;
   }
 }
 

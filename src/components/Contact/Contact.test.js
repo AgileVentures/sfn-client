@@ -1,9 +1,20 @@
 import React from "react";
 import Contact from "./ContactContainer";
+import {
+  shallow
+} from 'enzyme'
 
-//Need at least 1 test to pass Travis CI
-describe("<ContactContainer/>", ()=>{
-  it ("creates component without crashing", () => {
-    const contact = <Contact/>;
-  });
+
+describe("<ContactContainer/>", () => {
+
+
+  it('creates component without crashing', () => {
+    const contact = < Contact / >
+  })
+
+  it('has text ContactContainer', () => {
+    const contactContainerWrapper = shallow( < Contact / > )
+    expect(contactContainerWrapper.text()).toEqual('ContactContainer')
+  })
+
 });
