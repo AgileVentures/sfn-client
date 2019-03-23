@@ -7,10 +7,13 @@ import {
 
 describe("<ArtistPerformance />", () => {
 
-  const artistPerformanceWrapper = shallow( < ArtistPerformance / > )
-
   it('creates component without crashing', () => {
     const artistPerformance = < ArtistPerformance / >
+  })
+  
+  let artistPerformanceWrapper;
+  beforeEach(()=>{
+    artistPerformanceWrapper = shallow( < ArtistPerformance / > )
   })
 
   it("has donate button", () => {
