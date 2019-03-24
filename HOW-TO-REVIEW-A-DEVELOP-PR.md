@@ -20,7 +20,7 @@ Then skip to the [Reviewing from GitHub](#reviewing-from-github) section
 
   * We're going to assume the PR is for `45-add-waffle-badges`.
 
-  * **First,** go to your terminal and fetch any new branches with `git fetch origin`.
+  * **First,** go to your terminal and fetch any new branches with `git fetch upstream`.
 
   * **Then,** navigate to the branch which you want to provide a PR review with `git checkout 45-add-waffle-badges`.
 
@@ -108,15 +108,17 @@ Then skip to the [Reviewing from GitHub](#reviewing-from-github) section
 ## For forked repos
 ### tl;dr commands (actually, if you read the [step-by-step instructions for a non-forked repo](#championer-one-procedures-for-merging-pull-requests-dictates-one-review-by-a-fellow-collaborator), then these are very similar.
 
-![example forked repo](https://camo.githubusercontent.com/5c6f58d6502efecfa1d35119cd362f311227d2eb/68747470733a2f2f646c2e64726f70626f782e636f6d2f732f717570786161783171776c6a3038642f53637265656e73686f74253230323031382d31302d313225323030302e31352e31332e706e67)
+![example forked repo](https://user-images.githubusercontent.com/11988089/54495511-522a0000-48dc-11e9-9c31-90f56af1105e.png)
 
 With this example, you can run the following commands:
 ```
-git remote add pedro https://github.com/PedroPovedaQ/championer_one
-git fetch pedro
-git checkout 97-deprecation-fix
+git remote add mike https://github.com/aonomike/sfn-client
+git fetch mike
+git checkout 98_refactor-tests-to-use-enzyme
 git pull
 yarn && yarn test
+// Press a to run all tests
+// Press q to quit watch mode.
 yarn start
 // Navigate to http://localhost:8081, then review and inspect the app and its elements for expected and unexpected behavior
 ```
