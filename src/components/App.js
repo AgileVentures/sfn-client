@@ -9,11 +9,11 @@ import HomeContainer from "./Home/HomeContainer";
 import AboutContainer from "./About/AboutContainer";
 import Causes from "../containers/Causes/Causes";
 import CauseContainer from "./Cause/CauseContainer";
-import ArtistsContainer from "./Artists/ArtistsContainer";
+import Artists from "../containers/Artists/Artists";
 import ArtistContainer from "./Artist/ArtistContainer";
 import Performances from "../containers/Performances/Performances";
 import PerformanceContainer from "./Performance/PerformanceContainer";
-import ContactContainer from "./Contact/ContactContainer";
+import Contacts from "../containers/Contacts/Contacts";
 import Header from "./Header/Header";
 
 const App = () => {
