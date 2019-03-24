@@ -1,20 +1,18 @@
-import React from "react";
-import {BrowserRouter, Route} from "react-router-dom";
+import React from 'react'
+import { BrowserRouter, Route } from 'react-router-dom'
 
-// CSS
-import "../main.scss";
+import HomeContainer from './Home/HomeContainer'
+import AboutContainer from './About/AboutContainer'
+import Causes from '../containers/Causes/Causes'
+import CauseContainer from './Cause/CauseContainer'
+import ArtistsContainer from './Artists/ArtistsContainer'
+import ArtistContainer from './Artist/ArtistContainer'
+import Performances from '../containers/Performances/Performances'
+import PerformanceContainer from './Performance/PerformanceContainer'
+import ContactContainer from './Contact/ContactContainer'
+import Header from './Header/Header'
 
-// Components
-import HomeContainer from "./Home/HomeContainer";
-import AboutContainer from "./About/AboutContainer";
-import Causes from "../containers/Causes/Causes";
-import CauseContainer from "./Cause/CauseContainer";
-import ArtistsContainer from "./Artists/ArtistsContainer";
-import ArtistContainer from "./Artist/ArtistContainer";
-import Performances from "../containers/Performances/Performances";
-import PerformanceContainer from "./Performance/PerformanceContainer";
-import ContactContainer from "./Contact/ContactContainer";
-import Header from "./Header/Header";
+import '../main.scss'
 
 const App = () => {
   return (
@@ -34,7 +32,7 @@ const App = () => {
         </main>
       </div>
     </BrowserRouter>
-  );
-};
+  )
+}
 
-export default App;
+export default App

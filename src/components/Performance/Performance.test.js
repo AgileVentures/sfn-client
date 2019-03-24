@@ -1,20 +1,10 @@
-import React from "react";
-import Performance from "./PerformanceContainer";
-import {
-  shallow
-} from "enzyme"
+import React from 'react'
+import Performance from './PerformanceContainer'
+import { shallow } from 'enzyme'
 
-
-//Need at least 1 test to pass Travis CI
-describe("<PerformanceContainer />", () => {
-
-
-  it('creates component without crashing', () => {
-    const performance = < Performance / >
+describe('<PerformanceContainer />', () => {
+  it('contains the text PerformanceContainer', () => {
+    const performanceWrapper = shallow(<Performance />)
+    expect(performanceWrapper.text()).toEqual('PerformanceContainer')
   })
-
-  it("contains the text PerformanceContainer", () => {
-    const performanceWrapper = shallow( < Performance / > )
-    expect(performanceWrapper.text()).toEqual("PerformanceContainer")
-  })
-});
+})

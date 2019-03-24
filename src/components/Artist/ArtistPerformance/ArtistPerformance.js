@@ -1,5 +1,5 @@
-import React, {Component} from "react";
-import {Link} from "react-router-dom";
+import React, { Component } from 'react'
+import { Link } from 'react-router-dom'
 
 class ArtistPerformance extends Component {
   render() {
@@ -32,8 +32,8 @@ class ArtistPerformance extends Component {
           </div>
         </div>
       </div>
-    );
+    )
   }
 }
 
-export default ArtistPerformance;
+export default ArtistPerformance

@@ -1,20 +1,10 @@
-import React from "react";
-import Contact from "./ContactContainer";
-import {
-  shallow
-} from 'enzyme'
+import React from 'react'
+import Contact from './ContactContainer'
+import { shallow } from 'enzyme'
 
-
-describe("<ContactContainer/>", () => {
-
-
-  it('creates component without crashing', () => {
-    const contact = < Contact / >
-  })
-
+describe('<ContactContainer/>', () => {
   it('has text ContactContainer', () => {
-    const contactContainerWrapper = shallow( < Contact / > )
+    const contactContainerWrapper = shallow(<Contact />)
     expect(contactContainerWrapper.text()).toEqual('ContactContainer')
   })
-
-});
+})
