@@ -1,11 +1,9 @@
 import React from "react";
-import Artists from "./ArtistsContainer";
-import {
-  shallow
-} from "enzyme"
+import Artists from "./Artists";
+import { shallow } from "enzyme"
 
 //Need at least 1 test to pass Travis CI
-describe("<ArtistsContainer />", () => {
+describe("<Artists />", () => {
 
 
   it('creates component without crashing', () => {

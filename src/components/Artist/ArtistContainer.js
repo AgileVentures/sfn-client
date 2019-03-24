@@ -1,9 +1,9 @@
 import React, {Component} from "react";
 import ArtistBio from "./ArtistBio";
-import ArtistPerformanceList from "./ArtistPerformanceList/ArtistPerformanceList";
+import ArtistPerformances from "../../containers/Artists/ArtistPerformances/ArtistPerformances";
 import MoneyRaised from "./MoneyRaised/MoneyRaised";
-import SupportedCauses from "./SupportedCauses/SupportedCauses";
-import RelatedArtists from "./RelatedArtists/RelatedArtists";
+import SupportedCauses from "../../containers/Artists/SupportedCauses/SupportedCauses";
+import RelatedArtists from "../../containers/Artists/RelatedArtists/RelatedArtists";
 
 class ArtistContainer extends Component {
   render() {
@@ -16,7 +16,7 @@ class ArtistContainer extends Component {
             <SupportedCauses />
             <RelatedArtists />
           </div>
-          <ArtistPerformanceList />
+          <ArtistPerformances />
         </div>
       </div>
     );
