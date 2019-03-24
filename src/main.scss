@@ -11,9 +11,9 @@
 // COMPONENTS
 @import "components/Header/header.scss";
 @import "components/Artist/artist.scss";
-@import "components/Artist/ArtistPerformanceList/artistperformancelist.scss";
+@import "containers/Artists/ArtistPerformances/artistperformances.scss";
 @import "components/Artist/ArtistPerformance/artistperformance.scss";
 @import "components/Artist/MoneyRaised/MoneyRaised.scss";
 @import "components/Artist/MoneyRaised/Charts.scss";
-@import "components/Artist/SupportedCauses/SupportedCauses.scss";
-@import "components/Artist/RelatedArtists/RelatedArtists.scss";
+@import "containers/Artists/SupportedCauses/SupportedCauses.scss";
+@import "containers/Artists/RelatedArtists/RelatedArtists.scss";
