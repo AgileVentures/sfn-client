@@ -3,6 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "@nivo/bar": "^0.54.0",
     "node-sass": "^4.11.0",
     "react": "^16.1.1",
     "react-dom": "^16.1.1",
@@ -13,7 +14,8 @@
     "start": "PORT=8081 react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test --env=jsdom",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "test:debug": "react-scripts --inspect-brk test --runInBand --no-cache"
   },
   "engines": {
     "node": "10.13.0"
@@ -27,5 +29,8 @@
   "devDependencies": {
     "enzyme": "^3.8.0",
     "enzyme-adapter-react-16": "^1.9.1"
+  },
+  "standard": {
+    "parser": "babel-eslint"
   }
 }

@@ -151,6 +151,8 @@ which will associate the pull request with the issue in the Waffle board.
 
 Your pull request needs to be reviewed by at least two people in the team for it to be merged in `develop` branch.
 
+Instructions on how to review a pull request can be found [here](https://github.com/AgileVentures/sfn-client/blob/develop/HOW-TO-REVIEW-A-DEVELOP-PR.md).
+
 ### Design
 
 #### Designing components

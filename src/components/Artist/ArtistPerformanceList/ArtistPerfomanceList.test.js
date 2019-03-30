@@ -1,16 +1,18 @@
 import React from 'react'
 import ArtistPerformanceList from './ArtistPerformanceList'
 import ArtistPerformance from '../ArtistPerformance/ArtistPerformance'
-import {shallow} from 'enzyme'
+import {
+  shallow
+} from 'enzyme'
 
-let wrapped
+describe('ArtistPerfomanceList', () => {
 
-describe('ArtistPerfomanceList', ()=>{
-    beforeEach(()=>{
-        wrapped = shallow( <ArtistPerformanceList/> )
-      })
+  it('creates component without crashing', () => {
+    const artistPerformanceList = < ArtistPerformanceList / >
+  })
 
-    it('has 3 ArtistPerfomence',() => {
-         expect(wrapped.find('ArtistPerformance').length).toEqual(3)
-    })
+  it('has 3 ArtistPerfomence', () => {
+    const artistPerformanceListWrapper = shallow( < ArtistPerformanceList / > )
+    expect(artistPerformanceListWrapper.find('ArtistPerformance').length).toEqual(3)
+  })
 })
