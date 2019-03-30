@@ -31,12 +31,6 @@
     "enzyme-adapter-react-16": "^1.9.1"
   },
   "standard": {
-    "parser": "babel-eslint",
-    "ignore": [
-      "src/assets/*"
-    ],
-    "env": [
-      "jest"
-    ]
+    "parser": "babel-eslint"
   }
 }
