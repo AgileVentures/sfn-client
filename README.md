@@ -68,6 +68,9 @@ yarn start
     ```
 * then press `a` to run all test
 
+### Using the debugger
+* If tests are failing, or you found a bug running the development server, you can debug using the [inline debug tool](https://github.com/AgileVentures/sfn-client/blob/develop/HOW-TO-USE-DEBUG-SCRIPT.md).
+
 ### Choosing Stories/tickets.
 
 When deciding on an issue to work on, look for the  `Help Wanted` or `Good First Issue` tags.
