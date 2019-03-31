@@ -15,6 +15,7 @@ import Performances from "../containers/Performances/Performances";
 import PerformanceContainer from "./Performance/PerformanceContainer";
 import ContactContainer from "./Contact/ContactContainer";
 import Header from "./Header/Header";
+import Footer from "./Footer/Footer";
 
 const App = () => {
   return (
@@ -32,6 +33,7 @@ const App = () => {
           <Route path="/performances/:id" component={PerformanceContainer} />
           <Route path="/contact" component={ContactContainer} />
         </main>
+        <Footer />
       </div>
     </BrowserRouter>
   );
