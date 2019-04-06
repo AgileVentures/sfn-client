@@ -5,15 +5,15 @@ import {BrowserRouter, Route} from "react-router-dom";
 import "../main.scss";
 
 // Components
-import HomeContainer from "./Home/HomeContainer";
-import AboutContainer from "./About/AboutContainer";
+import Home from "../containers/Home/Home";
+import About from "../containers/About/About";
 import Causes from "../containers/Causes/Causes";
-import CauseContainer from "./Cause/CauseContainer";
-import ArtistsContainer from "./Artists/ArtistsContainer";
-import ArtistContainer from "./Artist/ArtistContainer";
+import Cause from "../containers/Cause/Cause";
+import Artists from "../containers/Artists/Artists";
+import Artist from "../containers/Artist/Artist"
 import Performances from "../containers/Performances/Performances";
-import PerformanceContainer from "./Performance/PerformanceContainer";
-import ContactContainer from "./Contact/ContactContainer";
+import Performance from "../containers/Performance/Performance";
+import Contact from "../containers/Contact/Contact";
 import Header from "./Header/Header";
 import Footer from "./Footer/Footer";
 
@@ -23,15 +23,15 @@ const App = () => {
       <div>
         <Header />
         <main className="main-container grid">
-          <Route path="/" exact component={HomeContainer} />
-          <Route path="/about" component={AboutContainer} />
+          <Route path="/" exact component={Home} />
+          <Route path="/about" component={About} />
           <Route path="/causes" exact component={Causes} />
-          <Route path="/causes/:id" component={CauseContainer} />
-          <Route path="/artists" exact component={ArtistsContainer} />
-          <Route path="/artists/:id" component={ArtistContainer} />
+          <Route path="/causes/:id" component={Cause} />
+          <Route path="/artists" exact component={Artists} />
+          <Route path="/artists/:id" component={Artist} />
           <Route path="/performances" exact component={Performances} />
-          <Route path="/performances/:id" component={PerformanceContainer} />
-          <Route path="/contact" component={ContactContainer} />
+          <Route path="/performances/:id" component={Performance} />
+          <Route path="/contact" component={Contact} />
         </main>
         <Footer />
       </div>

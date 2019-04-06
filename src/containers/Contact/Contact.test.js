@@ -1,5 +1,5 @@
 import React from "react";
-import Contact from "./ContactContainer";
+import Contact from "./Contact";
 import {
   shallow
 } from 'enzyme'

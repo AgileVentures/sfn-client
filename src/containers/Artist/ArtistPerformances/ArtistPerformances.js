@@ -1,7 +1,7 @@
 import React, {Component} from "react";
-import ArtistPerformance from "../ArtistPerformance/ArtistPerformance";
+import ArtistPerformance from "../../../components/Artist/ArtistPerformance/ArtistPerformance";
 
-class ArtistPerformanceList extends Component {
+class ArtistPerformances extends Component {
   render() {
     return (
       <div className="artist-performance-container">
@@ -14,4 +14,4 @@ class ArtistPerformanceList extends Component {
   }
 }
 
-export default ArtistPerformanceList;
+export default ArtistPerformances;
