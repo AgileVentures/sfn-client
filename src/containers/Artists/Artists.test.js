@@ -11,6 +11,6 @@ describe("<Artists />", () => {
   })
   it("contains the text 'ArtistsContainer'", () => {
     const artistsContainerWrapper = shallow( < Artists / > )
-    expect(artistsContainerWrapper.find('div').text()).toEqual('ArtistsContainer');
+    expect(artistsContainerWrapper.find('TrendingArtists').length).toEqual(1);
   });
 });
