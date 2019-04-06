@@ -1,8 +1,9 @@
 import React, {Component} from "react";
+import TrendingArtists from "../TrendingArtists/TrendingArtists"
 
 class Artists extends Component {
   render() {
-    return <div>ArtistsContainer</div>;
+    return <TrendingArtists />;
   }
 }
 
