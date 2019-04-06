@@ -1,9 +1,9 @@
 import React, {Component} from "react";
 import ArtistBio from "../../components/Artist/ArtistBio/ArtistBio";
-import ArtistPerformances from "../Artists/ArtistPerformances/ArtistPerformances";
+import ArtistPerformances from "../Artist/ArtistPerformances/ArtistPerformances";
 import MoneyRaised from "../../components/Artist/MoneyRaised/MoneyRaised";
-import SupportedCauses from "../Artists/SupportedCauses/SupportedCauses";
-import RelatedArtists from "../Artists/RelatedArtists/RelatedArtists";
+import SupportedCauses from "../Artist/SupportedCauses/SupportedCauses";
+import RelatedArtists from "../Artist/RelatedArtists/RelatedArtists";
 
 class ArtistContainer extends Component {
   render() {
