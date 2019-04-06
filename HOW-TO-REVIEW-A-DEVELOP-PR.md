@@ -106,7 +106,7 @@ Then skip to the [Reviewing from GitHub](#reviewing-from-github) section
  
 
 ## For forked repos
-### tl;dr commands (actually, if you read the [step-by-step instructions for a non-forked repo](#championer-one-procedures-for-merging-pull-requests-dictates-one-review-by-a-fellow-collaborator), then these are very similar.
+### tl;dr commands (actually, if you read the [step-by-step instructions for a non-forked repo](#sing-for-needs-procedures-for-merging-pull-requests-dictates-one-review-by-a-fellow-collaborator), then these are very similar.
 
 ![example forked repo](https://user-images.githubusercontent.com/11988089/54495511-522a0000-48dc-11e9-9c31-90f56af1105e.png)
 

@@ -1,6 +1,6 @@
 import React from "react";
 import Artist from "./ArtistContainer";
-import ArtistBio from "./ArtistBio"
+import ArtistBio from "./ArtistBio/ArtistBio"
 import MoneyRaised from "./MoneyRaised/MoneyRaised"
 import {
   shallow

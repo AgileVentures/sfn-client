@@ -1,0 +1,32 @@
+.footer-container {
+  width: 100%;
+  background-color: $primary-color-darkblue;
+}
+
+.footer__nav-container {
+  display: flex;
+  align-items: center;
+  padding-top: $padding-s;
+  padding-bottom: $padding-s;
+
+  a {
+    color: rgba($primary-color-white, 0.6);
+    font-weight: 700;
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin-right: $margin-r;
+
+    &:active {
+      color: $primary-color-white;
+    }
+
+    &:hover {
+      color: rgba($primary-color-white, 1);
+    }
+  }
+}
+
+.footer__nav-container .footer__nav__item--selected {
+  color: $primary-color-white;
+}
