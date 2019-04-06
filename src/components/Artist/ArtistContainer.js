@@ -1,5 +1,5 @@
 import React, {Component} from "react";
-import ArtistBio from "./ArtistBio";
+import ArtistBio from "./ArtistBio/ArtistBio";
 import ArtistPerformances from "../../containers/Artists/ArtistPerformances/ArtistPerformances";
 import MoneyRaised from "./MoneyRaised/MoneyRaised";
 import SupportedCauses from "../../containers/Artists/SupportedCauses/SupportedCauses";
