@@ -9,7 +9,7 @@ import {
 
 
 //Need at least 1 test to pass Travis CI
-describe("<ArtistContainer />", () => {
+describe("<Artist />", () => {
 
   it('creates component without crashing', () => {
     const artist = < Artist / >

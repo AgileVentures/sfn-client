@@ -5,7 +5,7 @@ import MoneyRaised from "../../components/Artist/MoneyRaised/MoneyRaised";
 import SupportedCauses from "../Artist/SupportedCauses/SupportedCauses";
 import RelatedArtists from "../Artist/RelatedArtists/RelatedArtists";
 
-class ArtistContainer extends Component {
+class Artist extends Component {
   render() {
     return (
       <div className="artist-container">
@@ -23,4 +23,4 @@ class ArtistContainer extends Component {
   }
 }
 
-export default ArtistContainer;
+export default Artist;
