@@ -10,7 +10,7 @@ import About from "../containers/About/About";
 import Causes from "../containers/Causes/Causes";
 import CauseContainer from "./Cause/CauseContainer";
 import Artists from "../containers/Artists/Artists";
-import ArtistContainer from "./Artist/ArtistContainer"
+import Artist from "../containers/Artist/Artist"
 import Performances from "../containers/Performances/Performances";
 import PerformanceContainer from "./Performance/PerformanceContainer";
 import Contact from "../containers/Contact/Contact";
@@ -28,7 +28,7 @@ const App = () => {
           <Route path="/causes" exact component={Causes} />
           <Route path="/causes/:id" component={CauseContainer} />
           <Route path="/artists" exact component={Artists} />
-          <Route path="/artists/:id" component={ArtistContainer} />
+          <Route path="/artists/:id" component={Artist} />
           <Route path="/performances" exact component={Performances} />
           <Route path="/performances/:id" component={PerformanceContainer} />
           <Route path="/contact" component={Contact} />

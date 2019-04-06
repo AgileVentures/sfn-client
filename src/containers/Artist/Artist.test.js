@@ -1,7 +1,7 @@
 import React from "react";
-import Artist from "./ArtistContainer";
-import ArtistBio from "./ArtistBio/ArtistBio"
-import MoneyRaised from "./MoneyRaised/MoneyRaised"
+import Artist from "./Artist";
+import ArtistBio from "../../components/Artist/ArtistBio/ArtistBio"
+import MoneyRaised from "../../components/Artist/MoneyRaised/MoneyRaised"
 import {
   shallow
 } from "enzyme"
