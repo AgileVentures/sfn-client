@@ -1,12 +1,12 @@
 import React from "react";
-import Home from "./HomeContainer";
+import Home from "./Home";
 import {
   shallow
 } from "enzyme"
 
 
 //Need at least 1 test to pass Travis CI
-describe("<HomeContainer />", () => {
+describe("<Home />", () => {
 
 
   it('creates component without crashing', () => {
@@ -14,8 +14,8 @@ describe("<HomeContainer />", () => {
   })
 
 
-  it("contains the text HomeContainer", () => {
+  it("contains the text Home", () => {
     const homeWrapper = shallow( < Home / > )
-    expect(homeWrapper.text()).toEqual("HomeContainer")
+    expect(homeWrapper.text()).toEqual("Home")
   })
 });
