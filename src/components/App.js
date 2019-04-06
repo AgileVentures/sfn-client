@@ -6,7 +6,7 @@ import "../main.scss";
 
 // Components
 import HomeContainer from "./Home/HomeContainer";
-import AboutContainer from "./About/AboutContainer";
+import About from "../containers/About/About";
 import Causes from "../containers/Causes/Causes";
 import CauseContainer from "./Cause/CauseContainer";
 import Artists from "../containers/Artists/Artists";
@@ -24,7 +24,7 @@ const App = () => {
         <Header />
         <main className="main-container grid">
           <Route path="/" exact component={HomeContainer} />
-          <Route path="/about" component={AboutContainer} />
+          <Route path="/about" component={About} />
           <Route path="/causes" exact component={Causes} />
           <Route path="/causes/:id" component={CauseContainer} />
           <Route path="/artists" exact component={Artists} />
