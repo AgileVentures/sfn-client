@@ -13,7 +13,7 @@ import Artists from "../containers/Artists/Artists";
 import ArtistContainer from "./Artist/ArtistContainer"
 import Performances from "../containers/Performances/Performances";
 import PerformanceContainer from "./Performance/PerformanceContainer";
-import Contacts from "../containers/Contacts/Contacts";
+import Contact from "../containers/Contact/Contact";
 import Header from "./Header/Header";
 import Footer from "./Footer/Footer";
 
@@ -31,7 +31,7 @@ const App = () => {
           <Route path="/artists/:id" component={ArtistContainer} />
           <Route path="/performances" exact component={Performances} />
           <Route path="/performances/:id" component={PerformanceContainer} />
-          <Route path="/contact" component={Contacts} />
+          <Route path="/contact" component={Contact} />
         </main>
         <Footer />
       </div>
