@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import TrendingArtist from '../../components/TrendingArtist/TrendingArtist'
+import TrendingArtist from '../../../components/Artists/TrendingArtist/TrendingArtist'
 
 class TrendingArtists extends Component {
   render() {

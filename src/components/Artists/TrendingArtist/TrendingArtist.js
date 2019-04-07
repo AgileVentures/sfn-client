@@ -1,9 +1,6 @@
 import React, {Component} from "react";
 
-class TrendingArtist extends Component {
-  render() {
+const TrendingArtist =() => {
     return <div className="trending-artist white">TrendingArtist</div>;
-  }
 }
-
 export default TrendingArtist;
