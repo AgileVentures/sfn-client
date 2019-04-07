@@ -9,6 +9,6 @@ describe('TrendingArtist', () => {
 
   it('has text TrendingArtist', () => {
     const trendingArtistWrapper = shallow( < TrendingArtist/> )
-    expect(trendingArtistWrapper.find('div').text()).toEqual('TrendingArtist')
+    expect(trendingArtistWrapper.find('ArtistImage').length).toEqual(1)
   })
 })
