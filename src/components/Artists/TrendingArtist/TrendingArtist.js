@@ -1,4 +1,4 @@
-import React, {Component} from "react";
+import React from "react";
 
 const TrendingArtist =() => {
     return <div className="trending-artist white">TrendingArtist</div>;
