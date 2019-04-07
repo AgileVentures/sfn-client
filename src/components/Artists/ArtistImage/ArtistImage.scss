@@ -1,13 +1,17 @@
-.artist-details {
-    position: absolute;
-}
-
-.artist-name {
-    position: relative;
-}
-
 .artist-image {
-    width: 100%
+    vertical-align: top;
+    display: inline-block;
+    text-align: center;
+    width: 120px;
+}
+
+.artist-image__avatar {
+    width: 100px;
+    height: 100px;
+}
+
+.artist-image__name {
+    display: block;
 }
 
 
