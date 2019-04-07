@@ -1,7 +1,7 @@
 import React from "react";
-import Artist from "./ArtistContainer";
-import ArtistBio from "./ArtistBio"
-import MoneyRaised from "./MoneyRaised/MoneyRaised"
+import Artist from "./Artist";
+import ArtistBio from "../../components/Artist/ArtistBio/ArtistBio"
+import MoneyRaised from "../../components/Artist/MoneyRaised/MoneyRaised"
 import {
   shallow
 } from "enzyme"
@@ -9,7 +9,7 @@ import {
 
 
 //Need at least 1 test to pass Travis CI
-describe("<ArtistContainer />", () => {
+describe("<Artist />", () => {
 
   it('creates component without crashing', () => {
     const artist = < Artist / >
