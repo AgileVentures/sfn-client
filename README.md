@@ -68,6 +68,14 @@ yarn start
     ```
 * then press `a` to run all test
 
+### Running eslint/standard autofix command
+
+* You can't commit or run the tests if you have lint errors, so run:
+
+    ```
+    yarn lint:fix
+    ```
+
 ### Using the debugger
 * If tests are failing, or you found a bug running the development server, you can debug using the [inline debug tool](https://github.com/AgileVentures/sfn-client/blob/develop/HOW-TO-USE-DEBUG-SCRIPT.md).
 
