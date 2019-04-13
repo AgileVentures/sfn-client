@@ -1,4 +1,4 @@
-import React from "react";
+import React from 'react'
 import { ResponsiveBar } from "@nivo/bar";
 
 let data = [
@@ -126,7 +126,7 @@ const Chart = () => {
         ]}
     />
     </div>
-  );
-};
+  )
+}
 
-export default Chart;
+export default Chart

@@ -1,8 +1,8 @@
-import React from "react";
-import {BrowserRouter, Route} from "react-router-dom";
+import React from 'react'
+import { BrowserRouter, Route } from 'react-router-dom'
 
 // CSS
-import "../main.scss";
+import '../main.scss'
 
 // Components
 import Home from "../containers/Home/Home";
@@ -36,7 +36,7 @@ const App = () => {
         <Footer />
       </div>
     </BrowserRouter>
-  );
-};
+  )
+}
 
-export default App;
+export default App

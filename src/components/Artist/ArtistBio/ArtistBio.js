@@ -1,4 +1,4 @@
-import React from "react";
+import React from 'react'
 
 const ArtistBio = () => {
   return (
@@ -29,7 +29,7 @@ const ArtistBio = () => {
         </p>
       </div>
     </div>
-  );
-};
+  )
+}
 
-export default ArtistBio;
+export default ArtistBio
