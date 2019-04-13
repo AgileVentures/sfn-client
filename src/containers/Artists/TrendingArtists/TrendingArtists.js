@@ -4,11 +4,14 @@ import TrendingArtist from '../../../components/Artists/TrendingArtist/TrendingA
 class TrendingArtists extends Component {
   render() {
     return (
-      <div>
-        < TrendingArtist />
-        < TrendingArtist />
-        < TrendingArtist />
-        < TrendingArtist />
+      <div className="trending-artists-container">
+        <h1 className="trending-artists-title">Trending Artists</h1>
+        <div className='trending-artists'>
+          < TrendingArtist />
+          < TrendingArtist />
+          < TrendingArtist />
+          < TrendingArtist />
+        </div>
       </div>
       );
   }

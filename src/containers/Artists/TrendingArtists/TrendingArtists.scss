@@ -1,3 +1,12 @@
 .trending-artists {
-    color: $primary-color-white
+    color: $primary-color-white;
+    display: flex; 
+    justify-content: space-between
+}
+
+.trending-artists-title {
+    font-size: 25px;
+    display: block;
+    color: $primary-color-white;
+    text-align: center;
 }
