@@ -6,9 +6,8 @@ import {
 } from 'enzyme'
 
 describe('TrendingArtist', () => {
-
   it('has text TrendingArtist', () => {
-    const trendingArtistWrapper = shallow( < TrendingArtist/> )
+    const trendingArtistWrapper = shallow(<TrendingArtist />)
     expect(trendingArtistWrapper.find('ArtistImage').length).toEqual(1)
   })
 })

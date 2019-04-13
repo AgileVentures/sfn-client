@@ -6,10 +6,9 @@ import {
 } from 'enzyme'
 
 describe('ArtistImage', () => {
-
   let artistImageWrapper
   beforeEach(() => {
-    artistImageWrapper = shallow( < ArtistImage/> )
+    artistImageWrapper = shallow(<ArtistImage />)
   })
 
   it('has an image of the artist', () => {
@@ -17,6 +16,6 @@ describe('ArtistImage', () => {
   })
 
   it('has the artist name', () => {
-      expect(artistImageWrapper.find('h5').text()).toEqual('Dua Lipa')
+    expect(artistImageWrapper.find('h5').text()).toEqual('Dua Lipa')
   })
 })

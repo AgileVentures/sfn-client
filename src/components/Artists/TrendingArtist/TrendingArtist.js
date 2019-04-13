@@ -1,7 +1,7 @@
-import React from "react";
-import ArtistImage from "../ArtistImage/ArtistImage";
+import React from 'react'
+import ArtistImage from '../ArtistImage/ArtistImage'
 
-const TrendingArtist =() => {
-    return <div className="trending-artist"><ArtistImage /></div>;
+const TrendingArtist = () => {
+  return <div className="trending-artist"><ArtistImage /></div>
 }
-export default TrendingArtist;
+export default TrendingArtist
