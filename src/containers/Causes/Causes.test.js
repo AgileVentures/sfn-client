@@ -3,8 +3,8 @@ import Causes from "./Causes";
 import {shallow} from "enzyme";
 
 describe("<Causes />", () => {
-  it("contains text CausesContainer", () => {
+  it("contains text Causes", () => {
     const causesWrapper = shallow(<Causes />);
-    expect(causesWrapper.text()).toEqual("CausesContainer");
+    expect(causesWrapper.text()).toEqual("Causes");
   });
 });
