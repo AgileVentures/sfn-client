@@ -4,21 +4,37 @@ import { faUserCircle } from '@fortawesome/free-solid-svg-icons';
 
 const RelatedArtists = () => {
   return (
-    <div className="relatedartists-container">
+    <div className="related-artists-container">
       <h3 className="white">Related Artists</h3>
       <div>
-        <ul className="related-artist-item-list white">
+        <ul className="related-artists-item-list white">
           <li>
-            <FontAwesomeIcon icon={faUserCircle} /> Awesome Artist A
+            <FontAwesomeIcon
+              className="related-artists-item-list__icon"
+              icon={faUserCircle}
+            />
+            <span>Awesome Artist A</span>
           </li>
           <li>
-            <FontAwesomeIcon icon={faUserCircle} /> Awesome Artist B
+            <FontAwesomeIcon
+              className="related-artists-item-list__icon"
+              icon={faUserCircle}
+            />
+            <span>Awesome Artist B</span>
           </li>
           <li>
-            <FontAwesomeIcon icon={faUserCircle} /> Awesome Artist C
+            <FontAwesomeIcon
+              className="related-artists-item-list__icon"
+              icon={faUserCircle}
+            />
+            <span>Awesome Artist C</span>
           </li>
           <li>
-            <FontAwesomeIcon icon={faUserCircle} /> Awesome Artist D
+            <FontAwesomeIcon
+              className="related-artists-item-list__icon"
+              icon={faUserCircle}
+            />
+            <span>Awesome Artist D</span>
           </li>
         </ul>
       </div>

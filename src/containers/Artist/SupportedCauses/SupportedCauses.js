@@ -9,16 +9,32 @@ const SupportedCauses = () => {
       <div>
         <ul className="supported-causes-item-list white">
           <li>
-            <FontAwesomeIcon icon={faGift} /> Deserving Cause A
+            <FontAwesomeIcon
+              className="supported-causes-item-list__icon"
+              icon={faGift}
+            />
+            <span>Deserving Cause A</span>
           </li>
           <li>
-            <FontAwesomeIcon icon={faGift} /> Deserving Cause B
+            <FontAwesomeIcon
+              className="supported-causes-item-list__icon"
+              icon={faGift}
+            />
+            <span>Deserving Cause B</span>
           </li>
           <li>
-            <FontAwesomeIcon icon={faGift} /> Deserving Cause C
+            <FontAwesomeIcon
+              className="supported-causes-item-list__icon"
+              icon={faGift}
+            />
+            <span>Deserving Cause C</span>
           </li>
           <li>
-            <FontAwesomeIcon icon={faGift} /> Deserving Cause D
+            <FontAwesomeIcon
+              className="supported-causes-item-list__icon"
+              icon={faGift}
+            />
+            <span>Deserving Cause D</span>
           </li>
         </ul>
       </div>
