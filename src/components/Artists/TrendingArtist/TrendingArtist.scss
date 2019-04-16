@@ -1,3 +1,32 @@
 .trending-artist {
-    width: 100%
+  grid-column-end: span 3;
+  border: 1px solid rgba($primary-color-white, 0.6);
+  margin: $padding-s;
+  padding: $padding-s;
+  color: $primary-color-white;
+  font-size: 1.1rem;
+  text-align: center;
+}
+
+.trending-artist hr {
+  border-color: rgba($primary-color-white, 0.6);
+}
+
+.trending-artist-name {
+  font-size: 1.6rem;
+  margin-top: 1rem;
+}
+
+.trending-artist-detail {
+  text-align: left;
+}
+
+.trending-artist-funds {
+  font-size: 1.4rem;
+  text-align: center;
+  margin-top: 1rem;
+}
+
+.trending-artist button {
+  margin: 0.9rem 0 0.1rem;
 }
