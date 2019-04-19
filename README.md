@@ -85,6 +85,13 @@ So as to create ready issues,
 ### Choosing Stories/tickets.
 
 When deciding on an issue to work on, look for the  `Help Wanted` or `Good First Issue` tags.
+Request to be added as a collaborator in our [AgileVentures.org Slack chat channel](https://agileventures.slack.com/messages/phoenix_one).
+After you’re a collaborator, you can move the ticket to the `In Progress` column [here](https://waffle.io/AgileVentures/sfn-client), to indicate you’ve started work on it.
+And within the Pull Requests section, add:
+After feature branch work is complete, push up to the upstream repo, for example:
+```
+git push --set-upstream upstream 17-add-sfn-logo
+```
 
 ### How to create a feature branch
 
