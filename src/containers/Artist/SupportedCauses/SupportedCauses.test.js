@@ -8,14 +8,14 @@ describe("<SupportedCauses />", () => {
   beforeEach(()=>{
     supportedCausesWrapper = shallow(<SupportedCauses />);
   })
-  it("contains text Cause", () => {
+  it("contains text Supported Causes", () => {
     expect(supportedCausesWrapper.find("h3").text()).toEqual(
       "Supported Causes"
     );
 
   });
 
-  it('has a list of 4 Related Artists', ()=>{
+  it('has a list of 4 Supported Causes', ()=>{
     expect(supportedCausesWrapper.find('li').length).toEqual(4)
   });
 
