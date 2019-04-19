@@ -90,13 +90,6 @@ Request to be added as a collaborator in our [AgileVentures.org Slack chat chann
 
 After you’re a collaborator, you can move the ticket to the `In Progress` column [here](https://waffle.io/AgileVentures/sfn-client), to indicate you’ve started work on it.
 
-And within the Pull Requests section, add:
-
-After feature branch work is complete, push up to the upstream repo, for example:
-```
-git push --set-upstream upstream 17-add-sfn-logo
-```
-
 ### How to create a feature branch
 
 ```
@@ -173,6 +166,11 @@ fixes #799
 ```
 
 which will associate the pull request with the issue in the Waffle board.
+
+After feature branch work is complete, push up to the upstream repo, for example:
+```
+git push --set-upstream upstream 17-add-sfn-logo
+```
 
 Your pull request needs to be reviewed by at least two people in the team for it to be merged in `develop` branch.
 
