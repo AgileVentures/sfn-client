@@ -1,11 +1,19 @@
 .supportedcauses-container {
-    width: 100%;
-    margin-top: $margin-l;
+  width: 100%;
+  margin-top: $margin-l;
+}
+
+.supported-causes-item-list li {
+  margin: $margin-xs 0;
+}
+
+.supported-causes-item-list__icon {
+  margin-right: $margin-xs;
 }
 
 @media only screen and (min-width: 768px) {
-    .supportedcauses-container {
-        width: 40%;
-        margin-top: $margin-r;
-    }
+  .supportedcauses-container {
+    width: 100%;
+    margin-top: $margin-r;
+  }
 }
