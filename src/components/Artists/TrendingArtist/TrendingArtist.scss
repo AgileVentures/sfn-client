@@ -30,3 +30,18 @@
 .trending-artist button {
   margin: 0.9rem 0 0.1rem;
 }
+
+@media only screen and (max-width: 768px) {
+  .trending-artist {
+    grid-column-end: span 6;
+  }
+}
+
+@media only screen and (max-width: 576px) {
+  .trending-artist {
+    grid-column-end: span 12;
+  }
+}
+
+
+
