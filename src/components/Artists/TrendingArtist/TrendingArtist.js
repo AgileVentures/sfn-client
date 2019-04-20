@@ -1,5 +1,5 @@
-import React from 'react';
-import ArtistImage from '../ArtistImage/ArtistImage';
+import React from 'react'
+import ArtistImage from '../ArtistImage/ArtistImage'
 
 const TrendingArtist = () => {
   return (
@@ -16,6 +16,6 @@ const TrendingArtist = () => {
       <p className="trending-artist-funds">$3000</p>
       <button>Learn More</button>
     </div>
-  );
-};
-export default TrendingArtist;
+  )
+}
+export default TrendingArtist

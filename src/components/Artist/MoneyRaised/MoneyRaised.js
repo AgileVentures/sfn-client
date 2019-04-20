@@ -1,5 +1,5 @@
-import React from "react";
-import Chart from "./Chart";
+import React from 'react'
+import Chart from './Chart'
 
 const MoneyRaised = () => {
   return (
@@ -7,7 +7,7 @@ const MoneyRaised = () => {
       <h3 className="white">Money Raised</h3>
       <Chart />
     </div>
-  );
-};
+  )
+}
 
-export default MoneyRaised;
+export default MoneyRaised

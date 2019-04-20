@@ -1,5 +1,5 @@
-import React, {Component} from "react";
-import ArtistPerformance from "../../../components/Artist/ArtistPerformance/ArtistPerformance";
+import React, { Component } from 'react'
+import ArtistPerformance from '../../../components/Artist/ArtistPerformance/ArtistPerformance'
 
 class ArtistPerformances extends Component {
   render() {
@@ -10,8 +10,8 @@ class ArtistPerformances extends Component {
         <ArtistPerformance />
         <ArtistPerformance />
       </div>
-    );
+    )
   }
 }
 
-export default ArtistPerformances;
+export default ArtistPerformances

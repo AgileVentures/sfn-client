@@ -1,9 +1,9 @@
-import React, {Component} from "react";
+import React, { Component } from 'react'
 
 class Causes extends Component {
   render() {
-    return <div>Causes</div>;
+    return <div>Causes</div>
   }
 }
 
-export default Causes;
+export default Causes
