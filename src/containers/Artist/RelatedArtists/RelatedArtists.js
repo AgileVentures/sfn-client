@@ -1,6 +1,6 @@
-import React from 'react';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faUserCircle } from '@fortawesome/free-solid-svg-icons';
+import React from 'react'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faUserCircle } from '@fortawesome/free-solid-svg-icons'
 
 const RelatedArtists = () => {
   return (
@@ -39,7 +39,7 @@ const RelatedArtists = () => {
         </ul>
       </div>
     </div>
-  );
-};
+  )
+}
 
-export default RelatedArtists;
+export default RelatedArtists

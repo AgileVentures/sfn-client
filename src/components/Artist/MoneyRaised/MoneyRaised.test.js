@@ -1,20 +1,18 @@
-import React from "react";
-import MoneyRaised from "./MoneyRaised";
-import Chart from "./Chart";
-import {shallow} from "enzyme";
+import React from 'react'
+import MoneyRaised from './MoneyRaised'
+import { shallow } from 'enzyme'
 
-//Need at least 1 test to pass Travis CI
-describe("<MoneyRaised />", () => {
-  let moneyRaisedWrapper;
+describe('<MoneyRaised />', () => {
+  let moneyRaisedWrapper
   beforeEach(() => {
-    moneyRaisedWrapper = shallow(<MoneyRaised />);
-  });
+    moneyRaisedWrapper = shallow(<MoneyRaised />)
+  })
 
-  it("contains the text Money Raised", () => {
-    expect(moneyRaisedWrapper.find("h3").text()).toContain("Money Raised");
-  });
+  it('contains the text Money Raised', () => {
+    expect(moneyRaisedWrapper.find('h3').text()).toContain('Money Raised')
+  })
 
-  it("contains the Chart component", () => {
-    expect(moneyRaisedWrapper.find("Chart").length).toEqual(1);
-  });
-});
+  it('contains the Chart component', () => {
+    expect(moneyRaisedWrapper.find('Chart').length).toEqual(1)
+  })
+})

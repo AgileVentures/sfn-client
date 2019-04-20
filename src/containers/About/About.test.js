@@ -1,12 +1,11 @@
-import React from "react";
-import About from "./About";
-import {shallow} from "enzyme";
+import React from 'react'
+import About from './About'
+import { shallow } from 'enzyme'
 
-//Need at least 1 test to pass Travis CI
-describe("<About />", () => {
-
+// Need at least 1 test to pass Travis CI
+describe('<About />', () => {
   it("displays 'About' text", () => {
-    const aboutWrapper = shallow( < About / > )
+    const aboutWrapper = shallow(<About />)
     expect(aboutWrapper.find('div').text()).toEqual('About')
   })
-});
+})

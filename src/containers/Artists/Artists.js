@@ -1,10 +1,10 @@
-import React, {Component} from "react";
-import TrendingArtists from "./TrendingArtists/TrendingArtists"
+import React, { Component } from 'react'
+import TrendingArtists from './TrendingArtists/TrendingArtists'
 
 class Artists extends Component {
   render() {
-    return <TrendingArtists />;
+    return <TrendingArtists />
   }
 }
 
-export default Artists;
+export default Artists
