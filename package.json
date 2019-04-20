@@ -18,8 +18,16 @@
     "build": "react-scripts build",
     "test": "react-scripts test --env=jsdom",
     "eject": "react-scripts eject",
+    "lint": "eslint .",
+    "lint:fix": "eslint . --fix",
+    "pretest": "yarn run lint",
     "test:debug": "react-scripts --inspect-brk test --runInBand --no-cache",
     "cypress:open": "cypress open"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "yarn run lint"
+    }
   },
   "engines": {
     "node": "10.13.0"
@@ -33,7 +41,17 @@
   "devDependencies": {
     "cypress": "^3.2.0",
     "enzyme": "^3.8.0",
-    "enzyme-adapter-react-16": "^1.9.1"
+    "enzyme-adapter-react-16": "^1.9.1",
+    "eslint": "5.6.0",
+    "eslint-config-standard": "^12.0.0",
+    "eslint-config-standard-react": "^7.0.2",
+    "eslint-plugin-import": "^2.16.0",
+    "eslint-plugin-jest": "^22.4.1",
+    "eslint-plugin-node": "^8.0.1",
+    "eslint-plugin-promise": "^4.0.1",
+    "eslint-plugin-react": "^7.12.4",
+    "eslint-plugin-standard": "^4.0.0",
+    "husky": "^1.3.1"
   },
   "standard": {
     "parser": "babel-eslint"

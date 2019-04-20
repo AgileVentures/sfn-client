@@ -1,21 +1,21 @@
-import React from "react";
-import {BrowserRouter, Route} from "react-router-dom";
+import React from 'react'
+import { BrowserRouter, Route } from 'react-router-dom'
 
 // CSS
-import "../main.scss";
+import '../main.scss'
 
 // Components
-import Home from "../containers/Home/Home";
-import About from "../containers/About/About";
-import Causes from "../containers/Causes/Causes";
-import Cause from "../containers/Cause/Cause";
-import Artists from "../containers/Artists/Artists";
-import Artist from "../containers/Artist/Artist"
-import Performances from "../containers/Performances/Performances";
-import Performance from "../containers/Performance/Performance";
-import Contact from "../containers/Contact/Contact";
-import Header from "./Header/Header";
-import Footer from "./Footer/Footer";
+import Home from '../containers/Home/Home'
+import About from '../containers/About/About'
+import Causes from '../containers/Causes/Causes'
+import Cause from '../containers/Cause/Cause'
+import Artists from '../containers/Artists/Artists'
+import Artist from '../containers/Artist/Artist'
+import Performances from '../containers/Performances/Performances'
+import Performance from '../containers/Performance/Performance'
+import Contact from '../containers/Contact/Contact'
+import Header from './Header/Header'
+import Footer from './Footer/Footer'
 
 const App = () => {
   return (
@@ -36,7 +36,7 @@ const App = () => {
         <Footer />
       </div>
     </BrowserRouter>
-  );
-};
+  )
+}
 
-export default App;
+export default App

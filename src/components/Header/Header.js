@@ -1,5 +1,5 @@
-import React from "react";
-import {NavLink} from "react-router-dom";
+import React from 'react'
+import { NavLink } from 'react-router-dom'
 
 const Header = () => {
   return (
@@ -25,7 +25,7 @@ const Header = () => {
         </NavLink>
       </nav>
     </div>
-  );
-};
+  )
+}
 
-export default Header;
+export default Header
