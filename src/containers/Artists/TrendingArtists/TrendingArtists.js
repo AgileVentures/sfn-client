@@ -11,7 +11,7 @@ class TrendingArtists extends Component {
         <TrendingArtist />
         <TrendingArtist />
       </React.Fragment>
-    );
+    )
   }
 }
 
