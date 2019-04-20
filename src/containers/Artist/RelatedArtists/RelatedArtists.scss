@@ -1,0 +1,19 @@
+.related-artists-container {
+  width: 100%;
+  margin-top: $margin-l;
+}
+
+.related-artists-item-list li {
+  margin: $margin-xs 0;
+}
+
+.related-artists-item-list__icon {
+  margin-right: $margin-xs;
+}
+
+@media only screen and (min-width: 768px) {
+  .related-artists-container {
+    width: 100%;
+    margin-top: $margin-r;
+  }
+}

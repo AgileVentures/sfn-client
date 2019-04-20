@@ -68,9 +68,35 @@ yarn start
     ```
 * then press `a` to run all test
 
+### Running eslint/standard autofix command
+
+* You can't commit or run the tests if you have lint errors, so run:
+
+    ```
+    yarn lint:fix
+    ```
+
+### Using the debugger
+* If tests are failing, or you found a bug running the development server, you can debug using the [inline debug tool](https://github.com/AgileVentures/sfn-client/blob/develop/HOW-TO-USE-DEBUG-SCRIPT.md).
+
+### Creating an Issue
+
+So as to create ready issues, 
+- Navigate to this [dummy ticket](https://github.com/AgileVentures/sfn-client/issues/122) issue
+- Click on the three dots as shown in the image below <img width="706" alt="Screen Shot 2019-03-30 at 9 38 40 PM" src="https://user-images.githubusercontent.com/1543546/55280303-dc3e8380-5334-11e9-8228-558789fa8307.png">
+- Click on edit from the drop down.
+- Kindly ensure that you don't override the dummy ticket issue.
+- Copy the content of the issue and paste in the new issue you are creating so as to use it as a template.
+- Fill in all the relevant sections as you create your issue.
+- Submit your issue
+
 ### Choosing Stories/tickets.
 
 When deciding on an issue to work on, look for the  `Help Wanted` or `Good First Issue` tags.
+
+Request to be added as a collaborator in our [AgileVentures.org Slack chat channel](https://agileventures.slack.com/messages/phoenix_one).
+
+After you’re a collaborator, you can move the ticket to the `In Progress` column [here](https://waffle.io/AgileVentures/sfn-client), to indicate you’ve started work on it.
 
 ### How to create a feature branch
 
@@ -135,6 +161,11 @@ git commit -m "Implement user login"
 ```
 
 ### Pull Requests
+
+After feature branch work is complete, push up to the upstream repo, for example:
+```
+git push --set-upstream upstream 17-add-sfn-logo
+```
 
 For your Pull Requests, ensure you have a proper title describing your task.
 Make sure to add a link to the ticket you've worked on and add any screenshots if necessary.
