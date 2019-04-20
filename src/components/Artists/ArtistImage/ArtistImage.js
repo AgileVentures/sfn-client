@@ -1,4 +1,4 @@
-import React from 'react';
+import React from 'react'
 
 const ArtistImage = () => {
   return (
@@ -9,6 +9,6 @@ const ArtistImage = () => {
         alt="Dua Lipa profile"
       />
     </div>
-  );
-};
-export default ArtistImage;
+  )
+}
+export default ArtistImage
