@@ -154,6 +154,11 @@ git commit -m "Implement user login"
 
 ### Pull Requests
 
+After feature branch work is complete, push up to the upstream repo, for example:
+```
+git push --set-upstream upstream 17-add-sfn-logo
+```
+
 For your Pull Requests, ensure you have a proper title describing your task.
 Make sure to add a link to the ticket you've worked on and add any screenshots if necessary.
 
@@ -166,11 +171,6 @@ fixes #799
 ```
 
 which will associate the pull request with the issue in the Waffle board.
-
-After feature branch work is complete, push up to the upstream repo, for example:
-```
-git push --set-upstream upstream 17-add-sfn-logo
-```
 
 Your pull request needs to be reviewed by at least two people in the team for it to be merged in `develop` branch.
 
