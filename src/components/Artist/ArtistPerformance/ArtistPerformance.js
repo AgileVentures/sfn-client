@@ -1,8 +1,7 @@
-import React, { Component } from 'react'
-import { Link } from 'react-router-dom'
+import React from "react";
+import {Link} from "react-router-dom";
 
-class ArtistPerformance extends Component {
-  render() {
+const ArtistPerformance = () => {
     return (
       <div className="artist-performance__item">
         <img
@@ -32,8 +31,8 @@ class ArtistPerformance extends Component {
           </div>
         </div>
       </div>
-    )
-  }
+
+    );
 }
 
 export default ArtistPerformance

@@ -1,3 +1,6 @@
-.trending-artists {
-    color: $primary-color-white
+.trending-artists-title {
+  text-align: center;
+  grid-column-end: span 12;
+  padding: $padding-s;
+  color: $primary-color-white;
 }

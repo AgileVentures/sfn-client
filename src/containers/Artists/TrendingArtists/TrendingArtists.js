@@ -4,13 +4,14 @@ import TrendingArtist from '../../../components/Artists/TrendingArtist/TrendingA
 class TrendingArtists extends Component {
   render() {
     return (
-      <div>
+      <React.Fragment>
+        <h1 className="trending-artists-title">Trending Artists</h1>
         <TrendingArtist />
         <TrendingArtist />
         <TrendingArtist />
         <TrendingArtist />
-      </div>
-    )
+      </React.Fragment>
+    );
   }
 }
 
