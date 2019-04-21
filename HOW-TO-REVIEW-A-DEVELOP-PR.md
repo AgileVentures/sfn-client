@@ -8,7 +8,7 @@ yarn test
 // Press a to run all tests
 // Press q to quit watch mode.
 yarn start
-// Navigate to http://localhost:8081, then review and inspect the app and its elements for expected and unexpected behavior
+// Navigate to http://localhost:3000, then review and inspect the app and its elements for expected and unexpected behavior
 ```
 
 Then skip to the [Reviewing from GitHub](#reviewing-from-github) section
@@ -120,6 +120,6 @@ yarn && yarn test
 // Press a to run all tests
 // Press q to quit watch mode.
 yarn start
-// Navigate to http://localhost:8081, then review and inspect the app and its elements for expected and unexpected behavior
+// Navigate to http://localhost:3000, then review and inspect the app and its elements for expected and unexpected behavior
 ```
 Then jump back to the [Reviewing from GitHub](#reviewing-from-github) section
