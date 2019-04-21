@@ -8,9 +8,11 @@ describe('<TrendingArtists />', () => {
     TrendingArtistsWrapper = shallow(<TrendingArtists />)
   })
   it('Has 4 Trending Artists', () => {
-    expect(TrendingArtistsWrapper.find('TrendingArtist').length).toEqual(4)
+    expect(TrendingArtistsWrapper.find('ArtistCard').length).toEqual(4)
   })
   it("has 'Trending Artists' title", () => {
-    expect(TrendingArtistsWrapper.find('h1').text()).toEqual('Trending Artists')
+    expect(TrendingArtistsWrapper.find('h1').text()).toEqual(
+      'Trending Artists'
+    )
   })
 })
