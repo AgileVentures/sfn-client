@@ -1,5 +1,5 @@
-import React from "react";
-import {NavLink} from "react-router-dom";
+import React from 'react'
+import { NavLink } from 'react-router-dom'
 
 const Footer = () => {
   return (
@@ -28,7 +28,7 @@ const Footer = () => {
         </NavLink>
       </nav>
     </div>
-  );
-};
+  )
+}
 
-export default Footer;
+export default Footer

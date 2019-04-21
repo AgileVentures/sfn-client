@@ -1,6 +1,6 @@
-import React from 'react';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faGift } from '@fortawesome/free-solid-svg-icons';
+import React from 'react'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faGift } from '@fortawesome/free-solid-svg-icons'
 
 const SupportedCauses = () => {
   return (
@@ -39,7 +39,7 @@ const SupportedCauses = () => {
         </ul>
       </div>
     </div>
-  );
-};
+  )
+}
 
-export default SupportedCauses;
+export default SupportedCauses

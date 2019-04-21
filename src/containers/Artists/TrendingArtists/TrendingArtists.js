@@ -1,5 +1,5 @@
-import React, { Component } from 'react';
-import TrendingArtist from '../../../components/Artists/TrendingArtist/TrendingArtist';
+import React, { Component } from 'react'
+import TrendingArtist from '../../../components/Artists/TrendingArtist/TrendingArtist'
 
 class TrendingArtists extends Component {
   render() {
@@ -11,8 +11,8 @@ class TrendingArtists extends Component {
         <TrendingArtist />
         <TrendingArtist />
       </React.Fragment>
-    );
+    )
   }
 }
 
-export default TrendingArtists;
+export default TrendingArtists
