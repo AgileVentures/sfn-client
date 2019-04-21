@@ -25,7 +25,7 @@ const ArtistCard = props => {
 
 ArtistCard.propTypes = {
   artistName: PropTypes.string,
-  artistDetails: PropTypes.boolean
+  artistDetails: PropTypes.bool
 }
 
 export default ArtistCard
