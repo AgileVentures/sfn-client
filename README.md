@@ -80,15 +80,11 @@ yarn start
 * If tests are failing, or you found a bug running the development server, you can debug using the [inline debug tool](https://github.com/AgileVentures/sfn-client/blob/develop/HOW-TO-USE-DEBUG-SCRIPT.md).
 
 ### Creating an Issue
-
-So as to create ready issues, 
-- Navigate to this [dummy ticket](https://github.com/AgileVentures/sfn-client/issues/122) issue
-- Click on the three dots as shown in the image below <img width="706" alt="Screen Shot 2019-03-30 at 9 38 40 PM" src="https://user-images.githubusercontent.com/1543546/55280303-dc3e8380-5334-11e9-8228-558789fa8307.png">
-- Click on edit from the drop down.
-- Kindly ensure that you don't override the dummy ticket issue.
-- Copy the content of the issue and paste in the new issue you are creating so as to use it as a template.
+ 
+- You can create an issue by clicking on this [link](https://github.com/AgileVentures/sfn-client/issues/new/choose) or by clicking on the new issue button on for [github issues](https://github.com/AgileVentures/sfn-client/issues) for the sfn-client project
+- Click on the [Get Started](https://github.com/AgileVentures/sfn-client/issues/new?assignees=&labels=&template=issue-template.md&title=) button to open the issue creation template. 
 - Fill in all the relevant sections as you create your issue.
-- Submit your issue
+- Submit your issue by clicking on "Submit issue" button.
 
 ### Choosing Stories/tickets.
 
