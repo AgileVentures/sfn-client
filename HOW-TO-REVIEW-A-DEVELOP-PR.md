@@ -28,7 +28,7 @@ Then skip to the [Reviewing from GitHub](#reviewing-from-github) section
 
   * **Now,** you are ready to run the tests to verify everything is passing. For this, you'll need to run `yarn && yarn test`.
 
-  * **Having verified all the tests pass,** you can start the server with `yarn start` and navigate to `http://localhost:3000` in your browser to check that everything compiles correctly.
+  * **Having verified all the tests pass,** you can start the server with `yarn start` and navigate to `http://0.0.0.0:3000` in your browser to check that everything compiles correctly.
 
 ## Reviewing from GitHub
   * **The next step** is to navigate to  [SFN-Client's repo](https://github.com/AgileVentures/sfn-client).
