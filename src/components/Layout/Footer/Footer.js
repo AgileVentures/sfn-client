@@ -1,10 +1,10 @@
 import React from 'react'
-import { NavLink } from 'react-router-dom'
+// import { NavLink } from 'react-router-dom'
 
 const Footer = () => {
   return (
     <div className="footer__container">
-      <nav className="main-container footer__nav-container">
+      {/* <nav className="footer__nav-container">
         <NavLink exact activeClassName="footer__nav__item--selected" to="/">
           Home
         </NavLink>
@@ -26,7 +26,7 @@ const Footer = () => {
         <NavLink activeClassName="footer__nav__item--selected" to="/contact">
           Contact
         </NavLink>
-      </nav>
+      </nav> */}
     </div>
   )
 }

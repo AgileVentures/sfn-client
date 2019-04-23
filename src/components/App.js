@@ -1,5 +1,6 @@
 import React from 'react'
 import { BrowserRouter, Route } from 'react-router-dom'
+import Layout from '../containers/Layout/Layout'
 
 // CSS
 import '../main.scss'
@@ -14,15 +15,12 @@ import Artist from '../containers/Artist/Artist'
 import Performances from '../containers/Performances/Performances'
 import Performance from '../containers/Performance/Performance'
 import Contact from '../containers/Contact/Contact'
-import Header from './Header/Header'
-import Footer from './Footer/Footer'
 
 const App = () => {
   return (
     <BrowserRouter>
-      <div>
-        <Header />
-        <main className="main-container grid">
+      <Layout>
+        <main className="grid">
           <Route path="/" exact component={Home} />
           <Route path="/about" component={About} />
           <Route path="/causes" exact component={Causes} />
@@ -33,9 +31,8 @@ const App = () => {
           <Route path="/performances/:id" component={Performance} />
           <Route path="/contact" component={Contact} />
         </main>
-        <Footer />
-      </div>
-    </BrowserRouter>
+      </Layout>
+    </BrowserRouter >
   )
 }
 
