@@ -1,0 +1,60 @@
+.artist-card {
+  grid-column-end: span 3;
+  border: 1px solid rgba($primary-color-white, 0.6);
+  margin: $padding-s;
+  padding: $padding-s;
+  color: $primary-color-white;
+  text-align: center;
+
+  &:hover {
+    background-image: radial-gradient(
+      rgba($primary-color-white, 0.6),
+      rgba(255, 255, 255, 0)
+    );
+  }
+}
+
+.artist-card-name {
+  font-size: 1.6rem;
+  margin-top: 1rem;
+}
+
+.artist-card-detail {
+  display: flex;
+  flex-direction: column;
+
+  hr {
+    border-color: rgba($primary-color-white, 0.6);
+    width: 100%;
+  }
+
+  p {
+    text-align: left;
+  }
+
+  p:last-of-type {
+    margin-top: $margin-s;
+  }
+
+  .artist-card-funds {
+    font-size: 1.4rem;
+    text-align: center;
+    margin-top: $margin-s;
+  }
+}
+
+.artist-card button {
+  margin: 0.9rem 0 0.1rem;
+}
+
+@media only screen and (max-width: 768px) {
+  .artist-card-artist {
+    grid-column-end: span 6;
+  }
+}
+
+@media only screen and (max-width: 576px) {
+  .artist-card {
+    grid-column-end: span 12;
+  }
+}
