@@ -12,3 +12,4 @@ script:
   - yarn
   - yarn test
   - yarn run build
+  - yarn cypress:install && yarn e2e:ci
