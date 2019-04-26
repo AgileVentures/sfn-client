@@ -3628,7 +3628,7 @@ cypress-cucumber-preprocessor@^1.11.0:
     glob "^7.1.2"
     through "^2.3.8"
 
-cypress@^3.2.0:
+cypress@^3.1.5:
   version "3.2.0"
   resolved "https://registry.yarnpkg.com/cypress/-/cypress-3.2.0.tgz#c2d5befd5077dab6fb52ad70721e0868ac057001"
   integrity sha512-PN0wz6x634QyNL56/voTzJoeScDfwtecvSfFTHfv5MkHuECVSR4VQcEZTvYtKWln3CMBMUkWbBKPIwwu2+a/kw==
