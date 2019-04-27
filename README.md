@@ -1,5 +1,3 @@
-[![Waffle.io - Columns and their card count](https://badge.waffle.io/AgileVentures/sfn-client.svg?columns=all)](https://waffle.io/AgileVentures/sfn-client)
-
 ## About this project
 :construction: UNDER CONSTRUCTION :construction:
 
@@ -9,7 +7,7 @@ This describes how to contribute to SFN-CLIENT:  the tools we use to track and
 coordinate the work that is happening and that needs to happen. This also describes the
 *workflow* -- the processes and sequences for getting contributions merged into the project in an organized and coherent way.
 
-We use [Waffle](https://waffle.io/AgileVentures/sfn-client) to manage our work on features, chores and bugfixes.
+We use [Zenhub](https://app.zenhub.com/workspaces/sfn-client-5cbedb54074dff0857634473/board?repos=110595899) to manage our work on features, chores and bugfixes.
 
 We keep our code on [GitHub](http://github.com) and use [git](https://git-scm.com) for version control.
 
@@ -83,7 +81,7 @@ yarn start
  
 - You can create an issue by clicking on this [link](https://github.com/AgileVentures/sfn-client/issues/new/choose) or by clicking on the new issue button on for [github issues](https://github.com/AgileVentures/sfn-client/issues) for the sfn-client project
 - Click on the [Get Started](https://github.com/AgileVentures/sfn-client/issues/new?assignees=&labels=&template=issue-template.md&title=) button to open the issue creation template. 
-- Fill in all the relevant sections as you create your issue.
+- Fill in all the relevant sections provided in the template as you create your issue.
 - Submit your issue by clicking on "Submit issue" button.
 
 ### Choosing Stories/tickets.
@@ -174,7 +172,7 @@ This PR adds a CONTRIBUTING.md file and a docs directory
 fixes #799
 ```
 
-which will associate the pull request with the issue in the Waffle board.
+which will associate the pull request with the issue in the Zenhub board.
 
 Your pull request needs to be reviewed by at least two people in the team for it to be merged in `develop` branch.
 
