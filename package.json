@@ -24,7 +24,8 @@
     "lint": "eslint .",
     "lint:fix": "eslint . --fix",
     "pretest": "yarn run lint",
-    "test:debug": "react-scripts --inspect-brk test --runInBand --no-cache"
+    "test:debug": "react-scripts --inspect-brk test --runInBand --no-cache",
+    "cypress:open": "cypress open"
   },
   "husky": {
     "hooks": {
@@ -41,6 +42,7 @@
     "not op_mini all"
   ],
   "devDependencies": {
+    "cypress": "^3.2.0",
     "enzyme": "^3.8.0",
     "enzyme-adapter-react-16": "^1.9.1",
     "eslint": "5.6.0",
