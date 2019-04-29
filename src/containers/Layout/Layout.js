@@ -4,7 +4,6 @@ import Header from '../../components/Layout/Header/Header'
 import PropTypes from 'prop-types'
 
 export default class Layout extends Component {
-
   state = {
     mobileMenu: false
   }
