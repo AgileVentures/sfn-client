@@ -1,8 +1,6 @@
 import React from 'react'
 import Artists from './Artists'
-import {
-  shallow
-} from 'enzyme'
+import { shallow } from 'enzyme'
 
 describe('<Artists />', () => {
   let artistsWrapper
@@ -15,5 +13,9 @@ describe('<Artists />', () => {
 
   it('contains 1 Explore Artists container', () => {
     expect(artistsWrapper.find('ExploreArtists').length).toEqual(1)
+  })
+
+  it('contains 1 Sign Up Banner', () => {
+    expect(artistsWrapper.find('Banner').length).toEqual(1)
   })
 })
