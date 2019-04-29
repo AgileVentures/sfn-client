@@ -2,11 +2,9 @@ import React from 'react'
 import Footer from './Footer'
 import { shallow } from 'enzyme'
 
-// Need at least 1 test to pass Travis CI
 describe('<Footer />', () => {
-  it('contains all the navigation links', () => {
+  it('contains a copyright', () => {
     const footerWrapper = shallow(<Footer />)
-    expect(footerWrapper.exists()).toBe(true)
-    // expect(footerWrapper.find('NavLink').length).toEqual(6)
+    expect(footerWrapper.find('.footer-container__copyright').length).toEqual(1)
   })
 })

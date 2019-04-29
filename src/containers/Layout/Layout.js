@@ -4,15 +4,12 @@ import Header from '../../components/Layout/Header/Header'
 import PropTypes from 'prop-types'
 
 export default class Layout extends Component {
-  constructor(props) {
-    super(props)
-    this.state = {
-      mobileMenu: false
-    }
-    this.handleClick = this.handleClick.bind(this)
+
+  state = {
+    mobileMenu: false
   }
 
-  handleClick() {
+  handleClick = () => {
     this.setState({
       mobileMenu: !this.state.mobileMenu
     })
@@ -20,7 +17,7 @@ export default class Layout extends Component {
 
   render() {
     return (
-      <div className="main-container">
+      <div>
         <Header mobileMenu={this.state.mobileMenu} handleClick={this.handleClick} />
         {this.props.children}
         <Footer />

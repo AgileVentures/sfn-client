@@ -5,7 +5,7 @@ import { faBars } from '@fortawesome/free-solid-svg-icons'
 import { NavLink } from 'react-router-dom'
 
 const NavBar = props => {
-  let navBarClass = 'nav-container'
+  let navBarClass = 'nav-container main-container'
   if (props.mobileMenu === true) {
     navBarClass += ' toggled'
   }

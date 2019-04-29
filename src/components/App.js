@@ -1,11 +1,11 @@
 import React from 'react'
 import { BrowserRouter, Route } from 'react-router-dom'
-import Layout from '../containers/Layout/Layout'
 
 // CSS
 import '../main.scss'
 
 // Components
+import Layout from '../containers/Layout/Layout'
 import Home from '../containers/Home/Home'
 import About from '../containers/About/About'
 import Causes from '../containers/Causes/Causes'
@@ -20,7 +20,7 @@ const App = () => {
   return (
     <BrowserRouter>
       <Layout>
-        <main className="grid">
+        <main className="main-container grid">
           <Route path="/" exact component={Home} />
           <Route path="/about" component={About} />
           <Route path="/causes" exact component={Causes} />

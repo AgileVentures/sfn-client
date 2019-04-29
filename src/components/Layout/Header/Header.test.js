@@ -3,9 +3,8 @@ import Header from './Header'
 import { shallow } from 'enzyme'
 
 describe('<Header />', () => {
-  it('contains all the navigation links', () => {
-    const headerWrapper = shallow(<Header handleClick={() => { }} mobileMenu={false} />)
-    expect(headerWrapper.exists()).toBe(true)
-    // expect(headerWrapper.find('NavLink').length).toEqual(6)
+  it('contains a NavBar component', () => {
+    const headerWrapper = shallow(<Header handleClick={jest.fn()} mobileMenu={false} />)
+    expect(headerWrapper.find('NavBar').length).toEqual(1)
   })
 })
