@@ -1,5 +1,3 @@
-[![Waffle.io - Columns and their card count](https://badge.waffle.io/AgileVentures/sfn-client.svg?columns=all)](https://waffle.io/AgileVentures/sfn-client)
-
 ## About this project
 :construction: UNDER CONSTRUCTION :construction:
 
@@ -9,7 +7,7 @@ This describes how to contribute to SFN-CLIENT:  the tools we use to track and
 coordinate the work that is happening and that needs to happen. This also describes the
 *workflow* -- the processes and sequences for getting contributions merged into the project in an organized and coherent way.
 
-We use [Waffle](https://waffle.io/AgileVentures/sfn-client) to manage our work on features, chores and bugfixes.
+We use [Zenhub](https://app.zenhub.com/workspaces/sfn-client-5cbedb54074dff0857634473/board?repos=110595899) to manage our work on features, chores and bugfixes.
 
 We keep our code on [GitHub](http://github.com) and use [git](https://git-scm.com) for version control.
 
@@ -81,14 +79,10 @@ yarn start
 
 ### Creating an Issue
 
-So as to create ready issues, 
-- Navigate to this [dummy ticket](https://github.com/AgileVentures/sfn-client/issues/122) issue
-- Click on the three dots as shown in the image below <img width="706" alt="Screen Shot 2019-03-30 at 9 38 40 PM" src="https://user-images.githubusercontent.com/1543546/55280303-dc3e8380-5334-11e9-8228-558789fa8307.png">
-- Click on edit from the drop down.
-- Kindly ensure that you don't override the dummy ticket issue.
-- Copy the content of the issue and paste in the new issue you are creating so as to use it as a template.
-- Fill in all the relevant sections as you create your issue.
-- Submit your issue
+- You can create an issue by clicking on this [link](https://github.com/AgileVentures/sfn-client/issues/new/choose) or by clicking on the new issue button on for [github issues](https://github.com/AgileVentures/sfn-client/issues) for the sfn-client project
+- Click on the [Get Started](https://github.com/AgileVentures/sfn-client/issues/new?assignees=&labels=&template=issue-template.md&title=) button to open the issue creation template.
+- Fill in all the relevant sections provided in the template as you create your issue.
+- Submit your issue by clicking on "Submit issue" button.
 
 ### Choosing Stories/tickets.
 
@@ -178,7 +172,7 @@ This PR adds a CONTRIBUTING.md file and a docs directory
 fixes #799
 ```
 
-which will associate the pull request with the issue in the Waffle board.
+which will associate the pull request with the issue in the Zenhub board.
 
 Your pull request needs to be reviewed by at least two people in the team for it to be merged in `develop` branch.
 
@@ -203,6 +197,10 @@ As moving towards with the project the individual screens and assets will be doc
 #### Artists Page mockup
 
 ![image](https://user-images.githubusercontent.com/9334646/51091497-976e6c00-178b-11e9-9883-322a722909fd.png)
+
+#### Editing Artist Page mockup & flow
+
+![Artist Profile (edit)](https://user-images.githubusercontent.com/9334646/56868353-9fc47d00-69f1-11e9-90b1-40418ca7097f.png)
 
 #### Artists Index Page mockup
 
