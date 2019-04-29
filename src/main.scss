@@ -9,8 +9,9 @@
 @import "styles/_common_elements.scss";
 
 // COMPONENTS
-@import "components/Header/header.scss";
-@import "components/Footer/footer.scss";
+@import "components/Layout/Header/header.scss";
+@import "components/Layout/Footer/footer.scss";
+@import "components/Layout/Navbar/navbar.scss";
 @import "containers/Artist/artist.scss";
 @import "containers/Artist/ArtistPerformances/artistperformances.scss";
 @import "components/Artist/ArtistPerformance/artistperformance.scss";
