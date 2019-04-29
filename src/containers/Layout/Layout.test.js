@@ -5,7 +5,6 @@ import Layout from './Layout'
 
 // Need at least 1 test to pass Travis CI
 describe('<Layout />', () => {
-
   let layoutWrapper
   beforeEach(() => {
     layoutWrapper = shallow(<Layout children={[]} />)

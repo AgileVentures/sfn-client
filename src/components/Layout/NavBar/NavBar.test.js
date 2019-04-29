@@ -21,7 +21,7 @@ describe('<NavBar />', () => {
     expect(navBarWrapper.find('.toggled').length).toEqual(0)
   })
   it('contains a toggled class if the mobileMenu prop is true', () => {
-    const navBarWrapper = shallow(<NavBar handleClick={jest.fn()} mobileMenu={true} />)
+    const navBarWrapper = shallow(<NavBar handleClick={jest.fn()} mobileMenu />)
     expect(navBarWrapper.find('.toggled').length).toEqual(1)
   })
 })
