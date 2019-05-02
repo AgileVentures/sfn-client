@@ -10,5 +10,7 @@ cache:
 install: true
 script:
   - yarn
-  - yarn test
+  - yarn test -- --coverage
   - yarn run build
+after-script:
+  - COVERALLS_REPO_TOKEN=$coveralls_repo_token npm run coveralls

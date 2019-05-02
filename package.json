@@ -25,7 +25,9 @@
     "lint": "eslint .",
     "lint:fix": "eslint . --fix",
     "pretest": "yarn run lint",
-    "test:debug": "react-scripts --inspect-brk test --runInBand --no-cache"
+    "test:debug": "react-scripts --inspect-brk test --runInBand --no-cache",
+    "coverage": "react-scripts test --env=jsdom --coverage",
+    "coveralls": "cat ./coverage/lcov.info | node node_modules/.bin/coveralls"
   },
   "husky": {
     "hooks": {
@@ -42,6 +44,7 @@
     "not op_mini all"
   ],
   "devDependencies": {
+    "coveralls": "^3.0.3",
     "enzyme": "^3.8.0",
     "enzyme-adapter-react-16": "^1.9.1",
     "eslint": "5.6.0",
