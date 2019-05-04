@@ -73,6 +73,21 @@ yarn start
     ```
     yarn lint:fix
     ```
+## SetUp Project with Docker
+### Prerequisite
+* Ensure you have docker installed. [Install docker](https://docs.docker.com/install/)
+
+### Instructions
+* Change to the project root directory. (.//sfn-client)
+
+* Create an image with the following command
+> docker build -f docker/Dockerfile -t sfn_client:production .
+
+* Run the created image with
+> docker run -p 80:80 sfn_client:production
+
+* Access the application on localhost port 80
+> http://127.0.0.1:80
 
 ### Using the debugger
 * If tests are failing, or you found a bug running the development server, you can debug using the [inline debug tool](https://github.com/AgileVentures/sfn-client/blob/develop/HOW-TO-USE-DEBUG-SCRIPT.md).
