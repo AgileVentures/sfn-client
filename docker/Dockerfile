@@ -14,7 +14,6 @@ FROM nginx:1.13.9-alpine
 LABEL app="sfn-client"
 
 COPY --from=production-build ./build /usr/share/nginx/html
-# COPY build /usr/share/nginx/html
 COPY docker-config/vhost.conf /etc/nginx/conf.d/default.conf
 EXPOSE 80
 WORKDIR /usr/share/nginx/html
