@@ -3,10 +3,6 @@ import ReactPaginate from 'react-paginate'
 import ArtistPerformance from '../../../components/Artist/ArtistPerformance/ArtistPerformance'
 
 class ArtistPerformances extends Component {
-  handlePageClick() {
-    console.log('The page has changed!')
-  }
-
   render() {
     return (
       <div className="artist-performance-container">
@@ -22,7 +18,6 @@ class ArtistPerformances extends Component {
           pageCount={2}
           marginPagesDisplayed={1}
           pageRangeDisplayed={3}
-          onPageChange={this.handlePageClick}
           containerClassName={'pagination'}
           subContainerClassName={'pages pagination'}
           activeClassName={'active'}

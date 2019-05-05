@@ -15,7 +15,7 @@ describe('ArtistPerformances', () => {
     )
   })
 
-  it('displays a pagination component under perfomances', () => {
+  it('displays a pagination component under performances', () => {
     expect(artistPerformancesWrapper.find(ReactPaginate).length).toEqual(1)
   })
 })
