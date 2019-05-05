@@ -8,7 +8,7 @@ const CauseBio = () => {
   return (
     <div>
       <CauseBioDetail heading={aboutTheCause} content={content} />
-      <CauseBioDetail heading={aboutTheCharity} content={content} />     
+      <CauseBioDetail heading={aboutTheCharity} content={content} />
     </div>
   )
 }
