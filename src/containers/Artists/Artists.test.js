@@ -14,8 +14,4 @@ describe('<Artists />', () => {
   it('contains 1 Explore Artists container', () => {
     expect(artistsWrapper.find('ExploreArtists').length).toEqual(1)
   })
-
-  it('contains 1 Sign Up Banner', () => {
-    expect(artistsWrapper.find('Banner').length).toEqual(1)
-  })
 })
