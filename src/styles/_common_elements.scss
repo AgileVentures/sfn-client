@@ -11,6 +11,11 @@ a {
   }
 }
 
+.disabled {
+  color: $disabled-color-white;
+  pointer-events: none;
+}
+
 button {
   appearance: none;
   background-color: $primary-color-accent;
