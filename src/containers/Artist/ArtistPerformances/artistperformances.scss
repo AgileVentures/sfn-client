@@ -4,6 +4,41 @@
   margin-bottom: $margin-r;
 }
 
+.pagination {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: $margin-r;
+
+  & > * {
+    margin-right: $margin-r;
+  }
+
+  .active {
+    background-color: $primary-color-accent;
+    padding: $padding-s;
+    border-radius: 50%;
+    width: 24px;
+    height: 24px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    pointer-events: none;
+  }
+
+  li:hover {
+    cursor: pointer;
+  }
+
+  li:last-child {
+    margin-right: 0;
+  }
+
+  li.disabled a {
+    color: $disabled-color-white;
+  }
+}
+
 @media only screen and (min-width: 768px) {
   .artist-performance-container {
     width: 60%;
