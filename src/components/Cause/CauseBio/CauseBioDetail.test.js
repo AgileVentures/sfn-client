@@ -12,11 +12,11 @@ describe('<CauseBioDetail/>', () => {
     causeBioDetailWrapper = shallow(<CauseBioDetail {...props} />)
   })
 
-  it('has <h5> element', () => {
+  it('has <h5> element with text Heading', () => {
     expect(causeBioDetailWrapper.find('h5').text()).toEqual('Heading')
   })
 
-  it('has <p> element', () => {
+  it('has <p> element with text Content', () => {
     expect(causeBioDetailWrapper.find('p').text()).toEqual('Content')
   })
 })
