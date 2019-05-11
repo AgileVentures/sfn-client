@@ -3,13 +3,13 @@ import CampaignsEndingSoon from './CampaignsEndingSoon'
 import { shallow } from 'enzyme'
 
 describe('<CampaignsEndingSoon />', () => {
-  let CampaignsEndingSoonWrapper
+  let campaignsEndingSoonWrapper
   beforeEach(() => {
-    CampaignsEndingSoonWrapper = shallow(<CampaignsEndingSoon />)
+    campaignsEndingSoonWrapper = shallow(<CampaignsEndingSoon />)
   })
 
   it("has 'Campaign Ending Soon' title", () => {
-    expect(CampaignsEndingSoonWrapper.find('h2').text()).toEqual(
+    expect(campaignsEndingSoonWrapper.find('h2').text()).toEqual(
       'Campaigns Ending Soon'
     )
   })
