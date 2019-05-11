@@ -1,10 +1,10 @@
 .artist-card {
   grid-column-end: span 3;
-  border: 1px solid rgba($primary-color-white, 0.6);
   margin: $padding-s;
   padding: $padding-s;
   color: $primary-color-white;
   text-align: center;
+  background-color: $primary-color-darkblue-lighter;
 
   &:hover {
     background-image: radial-gradient(
