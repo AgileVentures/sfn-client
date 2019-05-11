@@ -3,12 +3,12 @@ import TrendingCauses from './TrendingCauses'
 import { shallow } from 'enzyme'
 
 describe('<TrendingArtists />', () => {
-  let TrendingCausesWrapper
+  let trendingCausesWrapper
   beforeEach(() => {
-    TrendingCausesWrapper = shallow(<TrendingCauses />)
+    trendingCausesWrapper = shallow(<TrendingCauses />)
   })
 
   it("has 'Trending Causes' title", () => {
-    expect(TrendingCausesWrapper.find('h1').text()).toEqual('Trending Causes')
+    expect(trendingCausesWrapper.find('h2').text()).toEqual('Trending Causes')
   })
 })

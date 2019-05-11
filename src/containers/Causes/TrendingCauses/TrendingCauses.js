@@ -4,7 +4,7 @@ class TrendingCauses extends Component {
   render() {
     return (
       <div className="trending-causes-container">
-        <h1 className="trending-causes-title white">Trending Causes</h1>
+        <h2 className="trending-causes-title white">Trending Causes</h2>
       </div>
     )
   }
