@@ -1,11 +1,11 @@
 // The typography conventions are following the 1.333 Perfect Fourth typescale, please don't introduce new sizes until really-really necessary
 
-@import url('https://fonts.googleapis.com/css?family=Archivo+Black|Roboto:400,400i,700');
+@import url("https://fonts.googleapis.com/css?family=Archivo+Black|Roboto:400,400i,700");
 
 // BODY -- ROBOTO
 
 body {
-  font-family: 'Roboto', sans-serif;
+  font-family: "Roboto", sans-serif;
   font-size: 16px;
   line-height: 1.35;
 }
@@ -13,37 +13,37 @@ body {
 // HEADINGS -- ARCHIVO BLACK
 
 h1 {
-  font-family: 'Archivo Black', sans-serif;
+  font-family: "Archivo Black", sans-serif;
   font-size: 4.209rem;
   line-height: 1;
 }
 
 h2 {
-  font-family: 'Archivo Black', sans-serif;
+  font-family: "Archivo Black", sans-serif;
   font-size: 3.157rem;
   line-height: 1;
 }
 
 h3 {
-  font-family: 'Archivo Black', sans-serif;
+  font-family: "Archivo Black", sans-serif;
   font-size: 2.369rem;
   line-height: 1.1;
 }
 
 h4 {
-  font-family: 'Archivo Black', sans-serif;
+  font-family: "Archivo Black", sans-serif;
   font-size: 1.777rem;
   line-height: 1.1;
 }
 
 h5 {
-  font-family: 'Archivo Black', sans-serif;
+  font-family: "Archivo Black", sans-serif;
   font-size: 1.333rem;
   line-height: 1.2;
 }
 
 h6 {
-  font-family: 'Archivo Black', sans-serif;
+  font-family: "Archivo Black", sans-serif;
   font-size: 1rem;
   line-height: 1.2;
 }
@@ -59,14 +59,18 @@ h6 {
   -webkit-text-stroke: 1px $primary-color-white;
 }
 
+.italic {
+  font-style: italic;
+}
+
 .label-normal {
-  font-family: 'Archivo Black', sans-serif;
+  font-family: "Archivo Black", sans-serif;
   font-size: 0.75rem;
   line-height: 1.2;
 }
 
 .label-small {
-  font-family: 'Archivo Black', sans-serif;
+  font-family: "Archivo Black", sans-serif;
   font-size: 0.563rem;
   line-height: 1.2;
 }
