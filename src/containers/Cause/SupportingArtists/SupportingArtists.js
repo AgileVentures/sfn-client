@@ -1,9 +1,15 @@
 import React, { Component } from 'react'
+import SupportingArtist from '../../../components/Cause/SupportingArtist/SupportingArtist'
 
 class SupportingArtists extends Component {
   render() {
     return (
-      <div>SupportingArtists</div>
+      <React.Fragment>
+        <SupportingArtist />
+        <SupportingArtist />
+        <SupportingArtist />
+        <SupportingArtist />
+      </React.Fragment>
     )
   }
 }
