@@ -5,4 +5,9 @@
   margin-top: $margin-s;
   color: $primary-color-white;
   border-right: 1px solid $primary-color-white;
+
+  .cause-cards {
+    display: flex;
+    margin-top: $margin-r;
+  }
 }
