@@ -9,6 +9,6 @@ describe('<TrendingArtists />', () => {
   })
 
   it("has 'Trending Causes' title", () => {
-    expect(TrendingCausesWrapper.find('h1').text()).toEqual('Trending Causes')
+    expect(TrendingCausesWrapper.find('h2').text()).toEqual('Trending Causes')
   })
 })
