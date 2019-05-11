@@ -1,6 +1,12 @@
-.cause-bio-detail__heading {
-    margin-bottom: $margin-s;
-}
-.cause-bio-detail__content {
+.cause-bio-detail-container {
+  grid-column: 1/6;
+  margin-bottom: $margin-l;
+
+  .cause-bio-detail__content {
     margin-bottom: 0;
+  }
+
+  .cause-bio-detail__heading {
+    margin-bottom: $margin-s;
+  }
 }
