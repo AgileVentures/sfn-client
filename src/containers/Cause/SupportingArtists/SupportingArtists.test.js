@@ -10,7 +10,7 @@ describe('SupportingArtists', () => {
     supportingArtistsWrapper = shallow(<SupportingArtists />)
   })
 
-  it('has text SupportingArtists', () => {
-    expect(supportingArtistsWrapper.find('div').text()).toEqual('SupportingArtists')
+  it('has 4 SupportingArtist components', () => {
+    expect(supportingArtistsWrapper.find('SupportingArtist').length).toEqual(4)
   })
 })
