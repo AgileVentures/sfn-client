@@ -35,7 +35,7 @@ const ExploreCauses = () => {
 
   return (
     <div className="explore-causes-container">
-      <h2 className="explore-causes-title white">Explore these causes</h2>
+      <h3 className="explore-causes-title white">Explore these causes</h3>
       <div className="explore-causes-categories">{renderedList}</div>
     </div>
   )

@@ -1,12 +1,36 @@
 .trending-causes-container {
   text-align: center;
   grid-column: 1/7;
-  padding: $padding-s;
-  margin-top: $margin-s;
+  padding-left: 0;
+  margin-top: $margin-xl;
+  margin-bottom: $margin-l;
+  margin-right: $margin-s;
   color: $primary-color-white;
+
+  a {
+    color: rgba($primary-color-white, 0.6);
+    font-weight: 700;
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    text-decoration: none;
+
+    &:active {
+      color: $primary-color-white;
+    }
+
+    &:hover {
+      color: rgba($primary-color-white, 1);
+    }
+  }
 
   .cause-cards {
     display: flex;
     margin-top: $margin-r;
+    margin-bottom: $margin-s;
+
+    .cause-card:first-of-type {
+      margin-right: $margin-r;
+    }
   }
 }
