@@ -13,4 +13,10 @@ describe('<Causes />', () => {
       'Explore these causes'
     )
   })
+
+  it('has an 8 different cause categories', () => {
+    expect(exploreCausesWrapper.find('ExploreCausesCategory').length).toEqual(
+      8
+    )
+  })
 })

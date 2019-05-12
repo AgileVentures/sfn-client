@@ -1,4 +1,40 @@
 .explore-causes-container {
   grid-column: 1/-1;
   margin: $margin-r auto;
+
+  h2 {
+    text-align: center;
+  }
+
+  .explore-causes-categories {
+    display: flex;
+    flex-wrap: wrap;
+    margin-bottom: $margin-r;
+
+    .explore-causes-category {
+      padding: $padding-xl;
+      background-color: $primary-color-darkblue-lighter;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      margin-top: $margin-r;
+      margin-right: $margin-r;
+      min-width: 170px;
+      min-height: 170px;
+
+      &:hover {
+        cursor: pointer;
+        background-image: radial-gradient(
+          rgba($primary-color-white, 0.6),
+          rgba(255, 255, 255, 0)
+        );
+      }
+
+      .cause-category-icon {
+        font-size: 2.369rem;
+        margin-bottom: $margin-s;
+      }
+    }
+  }
 }
