@@ -1,0 +1,112 @@
+.nav-container {
+  padding-top: $padding-s;
+  padding-bottom: $padding-s;
+
+  a {
+    color: rgba($primary-color-white, .6);
+    font-weight: 700;
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    text-decoration: none;
+
+    &:active {
+      color: $primary-color-white;
+    }
+
+    &:hover {
+      color: rgba($primary-color-white, 1);
+    }
+  }
+}
+
+.nav-container .nav__item--selected {
+  color: $primary-color-white;
+  padding-bottom: $padding-xs;
+  border-bottom: 3px solid $primary-color-accent;
+}
+
+.nav-container__icon {
+  position: absolute;
+  color: $primary-color-white;
+  top: 1.2rem;
+  right: 1.2rem;
+  font-size: 1rem;
+  display: none;
+}
+
+.nav-container__left > * {
+  margin-left: $margin-l;
+  padding: 11.4px;
+  float: left;
+  text-align: center;
+  min-width: 50px;
+}
+
+.nav-container__logo {
+  color: $primary-color-white;
+  font-size: 18px;
+  float: left;
+  font-size: 20px;
+  padding: 5px 35px 0 0;
+}
+
+.clear-fix {
+  clear: both;
+}
+
+@media only screen and (max-width: 992px) {
+  .nav-container__left > *  {
+    margin-left: 7px;
+  }
+  .nav-container__logo {
+    padding: 5px 10px 5px 0;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .nav-container__left > * {
+    padding: 11.4px 5px;
+    margin-left: 0;
+  }
+  .nav-container__logo {
+    padding: 5px 5px 5px 0;
+  }
+}
+
+@media screen and (max-width: 576px) {
+  .nav-container {
+    padding: 40px 20px 20px 20px;
+    max-height: 0;
+    overflow: hidden;
+  }
+  .nav-container__left {
+    display: none;
+  }
+  .nav-container__icon {
+    display: block;
+  }
+  .nav-container.toggled {
+    padding: 60px 0 0 0;
+    max-height: 1500px;
+    transition: max-height 1s;
+  }
+  .nav-container.toggled *:not(.nav-container__logo):not(.nav-container__icon) {
+      float: none;
+      display: block !important;
+      text-align: left;
+      margin: 0;
+  }
+  .nav-container__logo {
+      position: absolute;
+      top: 10px;
+      left: 10px;
+      float: none;
+  }
+  .nav-container .nav__item--selected {
+    color: $primary-color-white;
+    padding-bottom: $padding-xs;
+    border-bottom: none;
+    text-decoration: underline $primary-color-accent;
+  }
+}

@@ -5,6 +5,7 @@ import { BrowserRouter, Route } from 'react-router-dom'
 import '../main.scss'
 
 // Components
+import Layout from '../containers/Layout/Layout'
 import Home from '../containers/Home/Home'
 import About from '../containers/About/About'
 import Causes from '../containers/Causes/Causes'
@@ -14,14 +15,11 @@ import Artist from '../containers/Artist/Artist'
 import Performances from '../containers/Performances/Performances'
 import Performance from '../containers/Performance/Performance'
 import Contact from '../containers/Contact/Contact'
-import Header from './Header/Header'
-import Footer from './Footer/Footer'
 
 const App = () => {
   return (
     <BrowserRouter>
-      <div>
-        <Header />
+      <Layout>
         <main className="main-container grid">
           <Route path="/" exact component={Home} />
           <Route path="/about" component={About} />
@@ -33,9 +31,8 @@ const App = () => {
           <Route path="/performances/:id" component={Performance} />
           <Route path="/contact" component={Contact} />
         </main>
-        <Footer />
-      </div>
-    </BrowserRouter>
+      </Layout>
+    </BrowserRouter >
   )
 }
 
