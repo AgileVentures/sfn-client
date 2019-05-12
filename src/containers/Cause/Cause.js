@@ -10,7 +10,7 @@ import RecentDonors from './RecentDonors/RecentDonors'
 class Cause extends Component {
   render() {
     return (
-      <div>
+      <React.Fragment>
         <CauseBio />
         <Donate />
         <Campaign />
@@ -18,7 +18,7 @@ class Cause extends Component {
         <SupportingArtists />
         <RelatedCauses />
         <RecentDonors />
-      </div>
+      </React.Fragment>
     )
   }
 }
