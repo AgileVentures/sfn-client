@@ -1,0 +1,99 @@
+.campaign-container {
+  grid-row: 1;
+  grid-column: 7/-1;
+  display: flex;
+  margin-bottom: $margin-l;
+  margin-top: $margin-l;
+  padding: $padding-r;
+  flex-direction: column;
+  background-color: $primary-color-darkblue-lighter;
+
+  .campaign-detail {
+    display: flex;
+    flex-direction: column;
+    margin-top: $margin-xs;
+
+    hr {
+      border-color: rgba($primary-color-white, 0.6);
+      width: 100%;
+    }
+
+    p {
+      text-align: left;
+    }
+
+    .campaign-funds {
+      text-align: left;
+      margin-top: $margin-s;
+    }
+
+    .campaign-number-of-donors {
+      color: $primary-color-white-darkest;
+    }
+
+    .campaign-numbers {
+      display: flex;
+      justify-content: space-between;
+      margin-top: $margin-xs;
+
+      .campaign-days-to-go {
+        color: $primary-color-white-darkest;
+      }
+    }
+
+    .campaign-progress-bar {
+      margin-top: $margin-s;
+      height: 16px;
+      width: 100%;
+      background-color: $primary-color-darkblue-lightest;
+
+      .campaign-progress-bar-active {
+        width: 33%;
+        height: 100%;
+        background-color: $primary-color-accent;
+        position: relative;
+
+        &:before {
+          content: "";
+          position: absolute;
+          top: 0;
+          left: 0;
+          background-image: radial-gradient(
+            to top,
+            rgba($primary-color-white, 0.4),
+            rgba($primary-color-white, 0)
+          );
+          width: 33%;
+          height: 100%;
+          animation: runningLight 4000ms;
+          animation-iteration-count: infinite;
+          animation-direction: alternate;
+        }
+      }
+    }
+  }
+
+  .donation-buttons {
+    display: flex;
+    align-items: center;
+    margin-top: $margin-r;
+
+    button {
+      margin-bottom: 0;
+      max-width: 50%;
+    }
+
+    .donation-button-icon {
+      margin-right: $margin-xs;
+    }
+  }
+}
+
+@keyframes runningLight {
+  from {
+    left: 0;
+  }
+  to {
+    left: 66%;
+  }
+}
