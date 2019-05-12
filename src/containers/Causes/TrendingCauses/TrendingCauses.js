@@ -1,11 +1,12 @@
 import React, { Component } from 'react'
+import { NavLink } from 'react-router-dom'
 import CauseCard from '../../../components/Causes/CauseCard/CauseCard'
 
 class TrendingCauses extends Component {
   render() {
     return (
       <div className="trending-causes-container">
-        <h2 className="trending-causes-title white">Trending Causes</h2>
+        <h3 className="trending-causes-title white">Trending causes</h3>
         <div className="cause-cards">
           <CauseCard
             causeName="Go Blue on World Children's Day"
@@ -22,6 +23,9 @@ class TrendingCauses extends Component {
             organization="UNICEF"
           />
         </div>
+        <NavLink activeClassName="nav__item--selected" to="/causes?q=trending">
+          See all trending causes
+        </NavLink>
       </div>
     )
   }

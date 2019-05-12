@@ -9,7 +9,7 @@ describe('<Causes />', () => {
   })
 
   it("has an 'Explore these causes' title", () => {
-    expect(exploreCausesWrapper.find('h2').text()).toEqual(
+    expect(exploreCausesWrapper.find('h3').text()).toEqual(
       'Explore these causes'
     )
   })
