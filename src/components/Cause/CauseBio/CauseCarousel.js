@@ -22,31 +22,35 @@ class CauseCarousel extends React.Component {
   };
 
   slideCarouselRight = () => {
-    this.setState({
-      currentSlide: this.state.currentSlide + 1
-    })
+    const nextSlide = this.state.currentSlide + 1
 
-    if (this.state.currentSlide >= this.state.totalSlides) {
+    if (nextSlide > this.state.totalSlides - 1) {
       this.setState({
         currentSlide: 0
       })
+      this.moveSlide(0)
+    } else {
+      this.setState({
+        currentSlide: nextSlide
+      })
+      this.moveSlide(nextSlide)
     }
-
-    this.moveSlide(this.state.currentSlide)
   };
 
   slideCarouselLeft = () => {
-    this.setState({
-      currentSlide: this.state.currentSlide - 1
-    })
+    const nextSlide = this.state.currentSlide - 1
 
-    if (this.state.currentSlide < 0) {
+    if (nextSlide < 0) {
       this.setState({
         currentSlide: this.state.totalSlides - 1
       })
+      this.moveSlide(this.state.totalSlides - 1)
+    } else {
+      this.setState({
+        currentSlide: nextSlide
+      })
+      this.moveSlide(nextSlide)
     }
-
-    this.moveSlide(this.state.currentSlide)
   };
 
   render() {
