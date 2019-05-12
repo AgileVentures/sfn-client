@@ -1,7 +1,12 @@
 .explore-artists-title {
-    text-align: center;
-    grid-column-end: span 12;
-    padding: $padding-s;
-    color: $primary-color-white;
-    margin-top: $margin-l;
+  text-align: center;
+  grid-column-end: span 12;
+  padding: $padding-s;
+  color: $primary-color-white;
+  margin-top: $margin-l;
+}
+
+.pagination {
+  grid-column: -1 / 1;
+  display: flex;
 }
