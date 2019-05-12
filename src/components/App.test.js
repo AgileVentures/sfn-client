@@ -3,8 +3,8 @@ import App from './App'
 import { shallow } from 'enzyme'
 
 describe('<App />', () => {
-  it('contains a Header component', () => {
+  it('contains a Layout component', () => {
     const appWrapper = shallow(<App />)
-    expect(appWrapper.find('Header').length).toEqual(1)
+    expect(appWrapper.find('Layout').length).toEqual(1)
   })
 })
