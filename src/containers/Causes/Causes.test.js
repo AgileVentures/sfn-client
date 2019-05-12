@@ -19,4 +19,8 @@ describe('<Causes />', () => {
   it('contains 1 Explore these causes container', () => {
     expect(causesWrapper.find('ExploreCauses').length).toEqual(1)
   })
+
+  it('contains a sign up banner at the bottom', () => {
+    expect(causesWrapper.find('Banner').length).toEqual(1)
+  })
 })
