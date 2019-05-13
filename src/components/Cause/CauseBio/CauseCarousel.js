@@ -16,7 +16,7 @@ class CauseCarousel extends React.Component {
 
   moveSlide = slide => {
     const slideShowHolder = document.querySelector('.causeslideshow-holder')
-    const leftPosition = -slide * 500 + 'px'
+    const leftPosition = -slide * 550 + 'px'
 
     slideShowHolder.style.left = `${leftPosition}`
   };
