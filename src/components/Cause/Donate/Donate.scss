@@ -1,0 +1,64 @@
+.donation-wrapper {
+  grid-column: 1/7;
+  margin-top: $margin-s;
+  margin-bottom: $margin-l;
+
+  .donation-blocks {
+    margin-top: $margin-s;
+
+    .donation-block {
+      display: flex;
+      margin-bottom: $margin-xs;
+
+      .donation-block-amount {
+        padding: $padding-r;
+        background-color: $primary-color-darkblue-lighter;
+        display: flex;
+        align-items: center;
+        flex-grow: 1;
+      }
+
+      .donation-block-option {
+        display: flex;
+        align-items: center;
+        padding: $padding-r;
+        background-color: $primary-color-darkblue-lighter;
+        border-left: 1px solid $primary-color-darkblue;
+      }
+
+      .donation-block-buttons {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        padding: $padding-s;
+        min-width: 180px;
+        background-color: $primary-color-darkblue-lighter;
+        border-left: 1px solid $primary-color-darkblue;
+
+        .donation-button {
+          margin-bottom: $margin-xs;
+        }
+      }
+
+      input {
+        border: none;
+        border-bottom: 2px solid $primary-color-white;
+        background-color: transparent;
+        width: 43px;
+        position: relative;
+        font-family: "Archivo Black", sans-serif;
+        font-size: 1.333rem;
+        line-height: 1.2;
+        color: $primary-color-white;
+      }
+
+      input::placeholder {
+        font-family: "Archivo Black", sans-serif;
+        font-size: 1.333rem;
+        line-height: 1.2;
+        opacity: 0.4;
+      }
+    }
+  }
+}
