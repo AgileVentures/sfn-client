@@ -20,10 +20,10 @@ class Cause extends Component {
           daysToGo={12}
           organization="UNICEF"
         />
-        <ContactUs />
         <SupportingArtists />
         <RelatedCauses />
         <RecentDonors />
+        <ContactUs />
       </React.Fragment>
     )
   }

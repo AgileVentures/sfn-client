@@ -4,12 +4,13 @@ import SupportingArtist from '../../../components/Cause/SupportingArtist/Support
 class SupportingArtists extends Component {
   render() {
     return (
-      <React.Fragment>
+      <div className="supporting-artists-wrapper">
+        <h5 className="white">Supporting artists</h5>
         <SupportingArtist />
         <SupportingArtist />
         <SupportingArtist />
         <SupportingArtist />
-      </React.Fragment>
+      </div>
     )
   }
 }

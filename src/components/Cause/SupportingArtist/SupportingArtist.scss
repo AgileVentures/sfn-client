@@ -1,0 +1,9 @@
+.supporting-artist {
+  display: flex;
+  align-items: center;
+  margin-bottom: $margin-xs;
+
+  .supporting-artist__icon {
+    margin-right: $margin-xs;
+  }
+}
