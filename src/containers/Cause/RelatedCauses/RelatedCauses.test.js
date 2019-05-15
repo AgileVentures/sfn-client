@@ -13,4 +13,8 @@ describe('RelatedCauses', () => {
   it('has 4 related cause components', () => {
     expect(relatedCausesWrapper.find('RelatedCause').length).toEqual(4)
   })
+
+  it('has Related causes title', () => {
+    expect(relatedCausesWrapper.find('h5').text()).toEqual('Related causes')
+  })
 })

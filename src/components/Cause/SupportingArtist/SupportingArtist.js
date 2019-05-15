@@ -4,15 +4,13 @@ import { faUserCircle } from '@fortawesome/free-solid-svg-icons'
 
 const SupportingArtist = () => {
   return (
-    <React.Fragment>
+    <div className="supporting-artist">
       <FontAwesomeIcon
         className="supporting-artist__icon white"
         icon={faUserCircle}
       />
-      <div className="white">
-        Awesome artist A
-      </div>
-    </React.Fragment>
+      <div className="white">Awesome artist A</div>
+    </div>
   )
 }
 

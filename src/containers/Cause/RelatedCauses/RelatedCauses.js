@@ -4,12 +4,13 @@ import RelatedCause from '../../../components/Cause/RelatedCause/RelatedCause'
 class RelatedCauses extends Component {
   render() {
     return (
-      <React.Fragment>
+      <div className="related-causes-wrapper">
+        <h5 className="white">Related causes</h5>
         <RelatedCause />
         <RelatedCause />
         <RelatedCause />
         <RelatedCause />
-      </React.Fragment>
+      </div>
     )
   }
 }

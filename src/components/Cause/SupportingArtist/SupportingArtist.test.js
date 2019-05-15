@@ -10,7 +10,9 @@ describe('SupportingArtist', () => {
   })
 
   it('has a div with text Awesome artist A', () => {
-    expect(supportingArtistWrapper.find('div').text()).toEqual('Awesome artist A')
+    expect(supportingArtistWrapper.find('div.white').text()).toEqual(
+      'Awesome artist A'
+    )
   })
 
   it('has an FontAwesomeIcon of the artist', () => {
