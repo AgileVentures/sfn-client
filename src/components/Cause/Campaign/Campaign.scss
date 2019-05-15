@@ -1,7 +1,8 @@
 .campaign-container {
   grid-row: 1;
-  grid-column: 8/-1;
+  grid-column: 7/-1;
   display: flex;
+  margin-left: $margin-l;
   margin-bottom: $margin-l;
   margin-top: $margin-l;
   padding: $padding-r;

@@ -10,7 +10,9 @@ describe('RelatedCause', () => {
   })
 
   it('has a div with text Deserving cause A', () => {
-    expect(relatedCauseWrapper.find('div').text()).toEqual('Deserving cause A')
+    expect(relatedCauseWrapper.find('div.white').text()).toEqual(
+      'Deserving cause A'
+    )
   })
 
   it('has an FontAwesomeIcon of the cause', () => {
