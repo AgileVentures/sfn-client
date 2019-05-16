@@ -1,5 +1,9 @@
 ## About this project
-:construction: UNDER CONSTRUCTION :construction:
+Sing for Needs is a donation platform, meant to be a positive means for giving, inspired by music performances from artists, unknown and famous. The Artists get to see and choose the various causes to support with their performances, while getting a view of all the funds generated.
+
+The Sing for Needs project is currently under active developement by a team of volunteers at [Agileventures](https://www.agileventures.org), an official UK Charity (#1170963) dedicated to crowdsourced learning and project development. Under the umbrella of Championer projects, the [Sing for Needs backend](https://github.com/agileVentures/sing_for_needs) uses the [Elixir/Phoenix](https://phoenixframework.org/) framework, while the frontend uses [React](https://reactjs.org/), mainly to facilitate mentorship for the volunteers to learn these modern technologies.
+
+This is a guide, to help easily get set up and started with the frontend, for any voluteer who would like to contribute through code, PR reviews, mentorship, or in any other way.
 
 ## Getting Started
 
