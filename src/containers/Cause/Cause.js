@@ -10,15 +10,21 @@ import RecentDonors from './RecentDonors/RecentDonors'
 class Cause extends Component {
   render() {
     return (
-      <div>
+      <React.Fragment>
         <CauseBio />
         <Donate />
-        <Campaign />
-        <ContactUs />
+        <Campaign
+          causeName="Go Blue on World Children's Day"
+          donatedAmount={3000}
+          numberOfDonors={23}
+          daysToGo={12}
+          organization="UNICEF"
+        />
         <SupportingArtists />
         <RelatedCauses />
         <RecentDonors />
-      </div>
+        <ContactUs />
+      </React.Fragment>
     )
   }
 }

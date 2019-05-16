@@ -11,6 +11,11 @@ a {
   }
 }
 
+.disabled {
+  color: $disabled-color-white;
+  pointer-events: none;
+}
+
 button {
   appearance: none;
   background-color: $primary-color-accent;
@@ -23,5 +28,35 @@ button {
 
   &:hover {
     cursor: pointer;
+  }
+}
+
+button.secondary {
+  appearance: none;
+  background-color: transparent;
+  font-size: 16px;
+  font-weight: bold;
+  border: 2px solid $primary-color-white;
+  border-radius: 32px;
+  padding: $padding-xs $padding-s;
+  color: $primary-color-white;
+
+  &:hover {
+    cursor: pointer;
+  }
+}
+
+button.text-link {
+  appearance: none;
+  background-color: transparent;
+  font-size: 16px;
+  font-weight: bold;
+  border-radius: 32px;
+  padding: $padding-xs $padding-s;
+  color: $primary-color-white;
+
+  &:hover {
+    cursor: pointer;
+    text-decoration: underline;
   }
 }

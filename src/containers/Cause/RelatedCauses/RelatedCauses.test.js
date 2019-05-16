@@ -10,7 +10,11 @@ describe('RelatedCauses', () => {
     relatedCausesWrapper = shallow(<RelatedCauses />)
   })
 
-  it('has text RelatedCauses', () => {
-    expect(relatedCausesWrapper.find('div').text()).toEqual('RelatedCauses')
+  it('has 4 related cause components', () => {
+    expect(relatedCausesWrapper.find('RelatedCause').length).toEqual(4)
+  })
+
+  it('has Related causes title', () => {
+    expect(relatedCausesWrapper.find('h5').text()).toEqual('Related causes')
   })
 })

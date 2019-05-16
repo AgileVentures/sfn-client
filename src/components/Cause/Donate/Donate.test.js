@@ -10,7 +10,13 @@ describe('Donate', () => {
     donateWrapper = shallow(<Donate />)
   })
 
-  it('has text Donate', () => {
-    expect(donateWrapper.find('div').text()).toEqual('Donate')
+  it('has a title how your donation makes a difference', () => {
+    expect(donateWrapper.find('h5').text()).toEqual(
+      'How your donation makes a difference'
+    )
+  })
+
+  it('has 4 donation blocks', () => {
+    expect(donateWrapper.find('DonateBlock').length).toEqual(4)
   })
 })
