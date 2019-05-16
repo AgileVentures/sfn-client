@@ -1,3 +1,10 @@
+.recent-donors-wrapper {
+  grid-column: 7/-1;
+  grid-row: 3;
+  margin-left: $margin-l;
+}
+
 .recent-donors__avatars {
-    display: flex;
+  display: flex;
+  margin-top: $margin-s;
 }

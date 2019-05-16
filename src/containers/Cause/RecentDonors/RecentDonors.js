@@ -3,7 +3,7 @@ import Avatar from '../../../components/Shared/Avatar/Avatar'
 class RecentDonors extends Component {
   render() {
     return (
-      <React.Fragment>
+      <div className="recent-donors-wrapper">
         <h5 className="white">RecentDonors</h5>
         <div className="recent-donors__avatars">
           <Avatar />
@@ -12,7 +12,7 @@ class RecentDonors extends Component {
           <Avatar />
           <Avatar />
         </div>
-      </React.Fragment>
+      </div>
     )
   }
 }
