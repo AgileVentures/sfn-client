@@ -26,7 +26,7 @@ describe('Avatar', () => {
       request
         .respondWith({
           status: 200,
-          response: { data: {
+          response: {
             'results': [
               {
                 'picture': {
@@ -34,7 +34,6 @@ describe('Avatar', () => {
                 }
               }
             ]
-          }
           }
         }).then(() => {
           expect(avatarWrapper.state().avatarImage).toEqual('https://randomuser.me/api/portraits/med/men/65.jpg')

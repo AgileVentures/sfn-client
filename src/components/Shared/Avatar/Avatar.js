@@ -7,8 +7,9 @@ class Avatar extends React.Component {
   }
 
   getImage = () => {
-    axios.get('https://randomuser.me/api/').then(image => {
-      this.setState({ avatarImage: image.data.data.results[0].picture.medium })
+    axios.get('https://randomuser.me/api/').then(response => {
+      const { data: image } = response
+      this.setState({ avatarImage: image.results[0].picture.medium })
     })
   }
 
