@@ -7,8 +7,8 @@ describe('Avatar', () => {
   let avatarWrapper
 
   beforeEach(() => {
-    avatarWrapper = shallow(<Avatar />)
     moxios.install()
+    avatarWrapper = shallow(<Avatar />)
   })
 
   afterEach(() => {
@@ -19,19 +19,27 @@ describe('Avatar', () => {
     expect(avatarWrapper.find('img').length).toEqual(1)
   })
 
-  it('calls getImage once', () => {
+  it('setsState with avatarImage after successfully fetching an avatar', done => {
+    expect.assertions(1)
     moxios.wait(() => {
-      const request = moxios.requests.mostRecent()
-      request.resolve({ data: {
-        'results': [
-          {
-            'picture': {
-              'medium': 'https://randomuser.me/api/portraits/med/men/65.jpg'
-            }
+      let request = moxios.requests.mostRecent()
+      request
+        .respondWith({
+          status: 200,
+          response: { data: {
+            'results': [
+              {
+                'picture': {
+                  'medium': 'https://randomuser.me/api/portraits/med/men/65.jpg'
+                }
+              }
+            ]
           }
-        ]
-      } })
+          }
+        }).then(() => {
+          expect(avatarWrapper.state().avatarImage).toEqual('https://randomuser.me/api/portraits/med/men/65.jpg')
+          done()
+        })
     })
-    expect(avatarWrapper.find('img').prop('src')).toEqual('https://randomuser.me/api/portraits/med/men/65.jpg')
   })
 })

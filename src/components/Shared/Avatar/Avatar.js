@@ -6,14 +6,14 @@ class Avatar extends React.Component {
     avatarImage: ''
   }
 
-  getImage = async () => {
-    const { data: image } = await axios.get('https://randomuser.me/api/')
-    this.setState({ avatarImage: image.results[0].picture.medium })
+  getImage = () => {
+    axios.get('https://randomuser.me/api/').then(image => {
+      this.setState({ avatarImage: image.data.data.results[0].picture.medium })
+    })
   }
 
   componentDidMount() {
     this.getImage()
-    console.log(this.state.avatarImage)
   }
 
   render() {
