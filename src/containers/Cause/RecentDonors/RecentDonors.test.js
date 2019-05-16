@@ -10,7 +10,7 @@ describe('RecentDonors', () => {
     recentDonorsWrapper = shallow(<RecentDonors />)
   })
 
-  it('has text RecentDonors', () => {
-    expect(recentDonorsWrapper.find('div').text()).toEqual('RecentDonors')
+  it('has 5 avatars', () => {
+    expect(recentDonorsWrapper.find('Avatar').length).toEqual(5)
   })
 })
