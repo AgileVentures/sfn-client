@@ -1,0 +1,9 @@
+.related-cause {
+  display: flex;
+  align-items: center;
+  margin-bottom: $margin-xs;
+
+  .related-cause__icon {
+    margin-right: $margin-xs;
+  }
+}

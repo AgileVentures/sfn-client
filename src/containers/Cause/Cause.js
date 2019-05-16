@@ -13,11 +13,17 @@ class Cause extends Component {
       <React.Fragment>
         <CauseBio />
         <Donate />
-        <Campaign />
-        <ContactUs />
+        <Campaign
+          causeName="Go Blue on World Children's Day"
+          donatedAmount={3000}
+          numberOfDonors={23}
+          daysToGo={12}
+          organization="UNICEF"
+        />
         <SupportingArtists />
         <RelatedCauses />
         <RecentDonors />
+        <ContactUs />
       </React.Fragment>
     )
   }
