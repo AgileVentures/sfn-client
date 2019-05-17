@@ -2,6 +2,11 @@ dist: xenial
 language: node_js
 node_js:
   - 10.13.0
+addons:
+  apt:
+    packages:
+      # Ubuntu 16+ does not install this dependency by default, so we need to install it ourselves
+      - libgconf-2-4
 cache:
   directories:
   - node_modules
@@ -12,3 +17,4 @@ script:
   - yarn
   - yarn test -- --coverage
   - yarn run build
+  - yarn cypress:install && yarn e2e:ci
