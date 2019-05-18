@@ -3,7 +3,7 @@ import DonateBlock from './DonateBlock'
 
 import { shallow } from 'enzyme'
 
-describe('DonateBlock', () => {
+describe('<DonateBlock />', () => {
   let donateBlockWrapper
   let props = {
     donationAmount: 50,

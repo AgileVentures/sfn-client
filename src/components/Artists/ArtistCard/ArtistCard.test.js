@@ -3,7 +3,7 @@ import ArtistCard from './ArtistCard'
 
 import { shallow } from 'enzyme'
 
-describe('ArtistCard', () => {
+describe('<ArtistCard />', () => {
   let artistCardWrapper
 
   beforeEach(() => {
