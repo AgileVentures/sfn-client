@@ -15,7 +15,7 @@ describe('RelatedCause', () => {
     )
   })
 
-  it('has an FontAwesomeIcon of the cause', () => {
-    expect(relatedCauseWrapper.find('FontAwesomeIcon').length).toEqual(1)
+  it('has an Avatar component', () => {
+    expect(relatedCauseWrapper.find('Avatar').length).toEqual(1)
   })
 })
