@@ -7,6 +7,8 @@
     "@fortawesome/free-solid-svg-icons": "^5.8.1",
     "@fortawesome/react-fontawesome": "^0.1.4",
     "@nivo/bar": "^0.54.0",
+    "axios": "^0.18.0",
+    "moxios": "^0.4.0",
     "node-sass": "^4.11.0",
     "react": "^16.1.1",
     "react-dom": "^16.1.1",
