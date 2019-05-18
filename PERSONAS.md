@@ -8,7 +8,7 @@ Personas are fictional characters, which you create based upon your research in 
 
 We identified 3 main groups for this mission: the artists, the causes (fundraisers) and the donors
 
-## This doesn't like like a typical persona, why is that?
+## This doesn't sound like a typical persona, why is that?
 
 These personas are combining the mindset of the fictional characters mentioned above with the value proposition canvas as stating their main daily tasks, the pains and the gains. The value proposition canvas is a tool designed by a company called Strategyzer. More details of how to create one or how to understand it on a deeper level, [here](https://www.strategyzer.com/canvas/value-proposition-canvas).
 
