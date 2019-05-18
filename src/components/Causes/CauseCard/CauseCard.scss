@@ -1,0 +1,79 @@
+.cause-card {
+  width: 50%;
+  padding: $padding-s;
+  color: $primary-color-white;
+  text-align: center;
+  background-color: $primary-color-darkblue-lighter;
+
+  &:hover {
+    background-image: radial-gradient(
+      rgba($primary-color-white, 0.6),
+      rgba(255, 255, 255, 0)
+    );
+  }
+}
+
+.cause-card-name {
+  margin-top: $margin-s;
+  margin-bottom: $margin-xs;
+}
+
+.cause-card-owner {
+  margin-bottom: $margin-s;
+}
+
+.cause-card-detail {
+  display: flex;
+  flex-direction: column;
+  margin-top: $margin-xs;
+
+  hr {
+    border-color: rgba($primary-color-white, 0.6);
+    width: 100%;
+  }
+
+  p {
+    text-align: left;
+  }
+
+  p:last-of-type {
+    margin-top: $margin-xs;
+  }
+
+  .cause-card-funds {
+    text-align: center;
+    margin-top: $margin-s;
+  }
+
+  .cause-card-number-of-donors {
+    color: $primary-color-white-darkest;
+  }
+
+  .cause-card-days-to-go {
+    color: $primary-color-white-darkest;
+  }
+
+  .cause-card-progress-bar {
+    margin-top: $margin-s;
+    height: 16px;
+    width: 100%;
+    background-color: $primary-color-darkblue-lightest;
+
+    .cause-card-progress-bar-active {
+      width: 33%;
+      height: 100%;
+      background-color: $primary-color-accent;
+    }
+  }
+}
+
+.cause-card button {
+  margin-top: $margin-r;
+  margin-bottom: 0;
+}
+
+@media only screen and (max-width: 576px) {
+  .cause-card {
+    grid-column-end: span 12;
+  }
+}

@@ -10,7 +10,11 @@ describe('CauseBio', () => {
     causeBioWrapper = shallow(<CauseBio />)
   })
 
-  it('has text CauseBio', () => {
-    expect(causeBioWrapper.find('div').text()).toEqual('CauseBio')
+  it('has 2 <CauseBioDetail /> elements', () => {
+    expect(causeBioWrapper.find('CauseBioDetail')).toHaveLength(2)
+  })
+
+  it('has a <CauseCarousel /> element', () => {
+    expect(causeBioWrapper.find('CauseCarousel')).toHaveLength(1)
   })
 })

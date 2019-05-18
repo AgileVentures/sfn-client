@@ -4,6 +4,7 @@
 $primary-color-white: #fff;
 $primary-color-white-darker: darken($primary-color-white, 10%);
 $primary-color-white-darkest: darken($primary-color-white, 20%);
+$disabled-color-white: rgba($primary-color-white, 0.6);
 
 // DARK-BLUE
 $primary-color-darkblue: #151828;

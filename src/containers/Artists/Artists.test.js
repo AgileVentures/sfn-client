@@ -15,7 +15,7 @@ describe('<Artists />', () => {
     expect(artistsWrapper.find('ExploreArtists').length).toEqual(1)
   })
 
-  it('contains 1 Sign Up Banner', () => {
+  it('contains a sign up banner at the bottom', () => {
     expect(artistsWrapper.find('Banner').length).toEqual(1)
   })
 })
