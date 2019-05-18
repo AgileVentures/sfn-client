@@ -3,7 +3,7 @@ import RelatedCauses from './RelatedCauses'
 
 import { shallow } from 'enzyme'
 
-describe('RelatedCauses', () => {
+describe('<RelatedCauses />', () => {
   let relatedCausesWrapper
 
   beforeEach(() => {
