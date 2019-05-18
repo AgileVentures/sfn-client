@@ -1,6 +1,5 @@
 import React from 'react'
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faGift } from '@fortawesome/free-solid-svg-icons'
+import Avatar from '../../../components/Shared/Avatar/Avatar'
 
 const SupportedCauses = () => {
   return (
@@ -9,31 +8,19 @@ const SupportedCauses = () => {
       <div>
         <ul className="supported-causes-item-list white">
           <li>
-            <FontAwesomeIcon
-              className="supported-causes-item-list__icon"
-              icon={faGift}
-            />
+            <Avatar />
             <span>Deserving Cause A</span>
           </li>
           <li>
-            <FontAwesomeIcon
-              className="supported-causes-item-list__icon"
-              icon={faGift}
-            />
+            <Avatar />
             <span>Deserving Cause B</span>
           </li>
           <li>
-            <FontAwesomeIcon
-              className="supported-causes-item-list__icon"
-              icon={faGift}
-            />
+            <Avatar />
             <span>Deserving Cause C</span>
           </li>
           <li>
-            <FontAwesomeIcon
-              className="supported-causes-item-list__icon"
-              icon={faGift}
-            />
+            <Avatar />
             <span>Deserving Cause D</span>
           </li>
         </ul>
