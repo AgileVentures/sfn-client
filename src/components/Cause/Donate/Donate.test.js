@@ -3,7 +3,7 @@ import Donate from './Donate'
 
 import { shallow } from 'enzyme'
 
-describe('Donate', () => {
+describe('<Donate />', () => {
   let donateWrapper
 
   beforeEach(() => {

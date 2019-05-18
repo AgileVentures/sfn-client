@@ -2,7 +2,7 @@ import React from 'react'
 import { shallow } from 'enzyme'
 import SupportingArtist from './SupportingArtist'
 
-describe('SupportingArtist', () => {
+describe('<SupportingArtist />', () => {
   let supportingArtistWrapper
 
   beforeEach(() => {

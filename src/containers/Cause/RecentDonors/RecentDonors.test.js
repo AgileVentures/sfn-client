@@ -3,7 +3,7 @@ import RecentDonors from './RecentDonors'
 
 import { shallow } from 'enzyme'
 
-describe('RecentDonors', () => {
+describe('<RecentDonors />', () => {
   let recentDonorsWrapper
 
   beforeEach(() => {

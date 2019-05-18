@@ -3,7 +3,7 @@ import Campaign from './Campaign'
 
 import { shallow } from 'enzyme'
 
-describe('Campaign', () => {
+describe('<Campaign />', () => {
   let campaignWrapper
 
   let props = {

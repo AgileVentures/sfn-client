@@ -2,7 +2,7 @@ import React from 'react'
 import { shallow } from 'enzyme'
 import RelatedCause from './RelatedCause'
 
-describe('RelatedCause', () => {
+describe('<RelatedCause />', () => {
   let relatedCauseWrapper
 
   beforeEach(() => {
