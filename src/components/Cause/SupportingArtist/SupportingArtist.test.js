@@ -2,7 +2,7 @@ import React from 'react'
 import { shallow } from 'enzyme'
 import SupportingArtist from './SupportingArtist'
 
-describe('SupportingArtist', () => {
+describe('<SupportingArtist />', () => {
   let supportingArtistWrapper
 
   beforeEach(() => {
@@ -15,7 +15,7 @@ describe('SupportingArtist', () => {
     )
   })
 
-  it('has an FontAwesomeIcon of the artist', () => {
-    expect(supportingArtistWrapper.find('FontAwesomeIcon').length).toEqual(1)
+  it('has an Avatar component', () => {
+    expect(supportingArtistWrapper.find('Avatar').length).toEqual(1)
   })
 })

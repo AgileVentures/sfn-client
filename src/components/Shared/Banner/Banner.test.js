@@ -3,7 +3,7 @@ import Banner from './Banner'
 
 import { shallow } from 'enzyme'
 
-describe('Banner', () => {
+describe('<Banner />', () => {
   let bannerWrapper
 
   beforeEach(() => {

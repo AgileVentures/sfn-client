@@ -15,6 +15,10 @@ describe('<SupportedCauses />', () => {
   })
 
   it('has a list of 4 Supported Causes', () => {
+    expect(supportedCausesWrapper.find('Avatar').length).toEqual(4)
+  })
+
+  it('has a list of 4 Supported Causes', () => {
     expect(supportedCausesWrapper.find('li').length).toEqual(4)
   })
 })

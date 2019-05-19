@@ -3,7 +3,7 @@ import CauseCarousel from './CauseCarousel'
 
 import { shallow } from 'enzyme'
 
-describe('CauseCarousel', () => {
+describe('<CauseCarousel />', () => {
   let causeCarouselWrapper
 
   beforeEach(() => {

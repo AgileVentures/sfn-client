@@ -3,7 +3,7 @@ import ReactPaginate from 'react-paginate'
 import ArtistPerformances from './ArtistPerformances'
 import { shallow } from 'enzyme'
 
-describe('ArtistPerformances', () => {
+describe('<ArtistPerformances />', () => {
   let artistPerformancesWrapper
   beforeEach(() => {
     artistPerformancesWrapper = shallow(<ArtistPerformances />)

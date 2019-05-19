@@ -3,7 +3,7 @@ import ContactUs from './ContactUs'
 
 import { shallow } from 'enzyme'
 
-describe('ContactUs', () => {
+describe('<ContactUs />', () => {
   let contactUsWrapper
 
   beforeEach(() => {
