@@ -3,6 +3,7 @@
 */
 import { combineReducers } from 'redux'
 import simpleReducer from './simpleReducer'
+import artistsReducer from './artistsReducer'
 export default combineReducers({
-  simpleReducer
+  simpleReducer, artistsReducer
 })
