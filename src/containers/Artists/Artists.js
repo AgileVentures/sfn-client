@@ -1,9 +1,14 @@
 import React, { Component } from 'react'
+import { connect } from 'react-redux'
+import propTypes from 'prop-types'
 import TrendingArtists from './TrendingArtists/TrendingArtists'
 import ExploreArtists from './ExploreArtists/ExploreArtists'
 import Banner from '../../components/Shared/Banner/Banner'
 
 class Artists extends Component {
+  componentDidMount() {
+    console.log(this.props.artists)
+  }
   render() {
     return (
       <React.Fragment>
@@ -19,4 +24,9 @@ class Artists extends Component {
   }
 }
 
-export default Artists
+Artists.propTypes = {
+  artists: propTypes.array
+}
+const mapStateToProps = state => ({ artists: state.artists })
+
+export default connect(mapStateToProps)(Artists)

@@ -1,14 +1,7 @@
 import React, { Component } from 'react'
 import ReactPaginate from 'react-paginate'
-import { connect } from 'react-redux'
-import PropTypes from 'prop-types'
 import ArtistCard from '../../../components/Artists/ArtistCard/ArtistCard'
-import { fetchArtists } from '../../../actions/artists/fetchArtists'
-
 class ExploreArtists extends Component {
-  componentDidMount() {
-    console.log(this.props)
-  }
   render() {
     return (
       <React.Fragment>
@@ -34,10 +27,4 @@ class ExploreArtists extends Component {
   }
 }
 
-ExploreArtists.propType = {
-  fetchArtists: PropTypes.func
-}
-
-const mapStateToProps = state => ({ artists: state.artist })
-
-export default connect(mapStateToProps, { fetchArtists })(ExploreArtists)
+export default ExploreArtists
