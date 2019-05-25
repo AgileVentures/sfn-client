@@ -1,3 +1,3 @@
 import axios from 'axios'
 
-export default axios.create({ baseURL: 'localhost:4000/api' })
+export default axios.create({ baseURL: 'http://localhost:4002/api' })
