@@ -3,7 +3,7 @@ import CauseCard from './CauseCard'
 
 import { shallow } from 'enzyme'
 
-describe('CauseCard', () => {
+describe('<CauseCard />', () => {
   let causeCardWrapper
 
   let props = {

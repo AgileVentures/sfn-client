@@ -233,3 +233,11 @@ As moving towards with the project the individual screens and assets will be doc
 #### Causes Index Page mockup
 
 ![image](https://user-images.githubusercontent.com/9735009/52993521-84118900-343a-11e9-915d-2265e845fbef.png)
+
+#### About Page mockup
+
+![image](https://user-images.githubusercontent.com/9735009/58062564-69b18d80-7b98-11e9-827c-ea4cf49c554c.png)
+
+#### Contact Page mockup
+
+![image](https://user-images.githubusercontent.com/9735009/58062567-6d451480-7b98-11e9-9944-ae48a021f53b.png)
