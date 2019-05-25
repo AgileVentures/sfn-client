@@ -4,8 +4,12 @@ import { shallow } from 'enzyme'
 
 // Need at least 1 test to pass Travis CI
 describe('<About />', () => {
-  it("displays 'About' text", () => {
-    const aboutWrapper = shallow(<About />)
-    expect(aboutWrapper.find('div').text()).toEqual('About')
+  let aboutWrapper
+  beforeEach(() => {
+    aboutWrapper = shallow(<About />)
+  })
+
+  it('has a vision component', () => {
+    expect(aboutWrapper.find('Vision').length).toEqual(1)
   })
 })
