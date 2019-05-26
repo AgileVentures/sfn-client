@@ -6,7 +6,7 @@ import ExploreArtists from './ExploreArtists/ExploreArtists'
 import Banner from '../../components/Shared/Banner/Banner'
 import { fetchArtists } from '../../actions/artists/fetchArtists'
 
-class Artists extends Component {
+export class Artists extends Component {
   componentDidMount() {
     this.props.fetchArtists()
   }

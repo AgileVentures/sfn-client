@@ -1,5 +1,5 @@
 import React from 'react'
-import Artists from './Artists'
+import { Artists } from './Artists'
 import { mount } from 'enzyme'
 import { Provider } from 'react-redux'
 import configureMockStore from 'redux-mock-store'
@@ -16,8 +16,8 @@ describe('<Artists />', () => {
   }
 
   beforeEach(() => {
-    artistsWrapper = mount(<Provider store={store}><Artists {...props} /></Provider>)
     store = mockStore({})
+    artistsWrapper = mount(<Provider store={store}><Artists {...props} /></Provider>)
   })
 
   it('contains 1 Trending Artists container', () => {
