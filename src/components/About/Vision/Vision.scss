@@ -1,0 +1,39 @@
+.vision-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-top: $margin-l;
+
+  .vision-image {
+    width: 100%;
+    height: 300px;
+    background-image: url("/images/dua_lipa_concert.jpg");
+    background-position: center;
+    background-size: cover;
+    margin-bottom: $margin-r;
+    position: relative;
+  }
+
+  .vision-image::before {
+    content: "";
+    width: 100%;
+    height: 100%;
+    background-image: radial-gradient(
+      ellipse at 50%,
+      rgba(21, 24, 40, 0.31) 0%,
+      $primary-color-darkblue 75%
+    );
+    position: absolute;
+    z-index: 1;
+    top: 0;
+  }
+
+  h3 {
+    text-align: center;
+  }
+
+  .vision-description {
+    max-width: 50%;
+    margin: $margin-s auto;
+  }
+}
