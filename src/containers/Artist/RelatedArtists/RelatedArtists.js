@@ -1,6 +1,5 @@
 import React from 'react'
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faUserCircle } from '@fortawesome/free-solid-svg-icons'
+import Avatar from '../../../components/Shared/Avatar/Avatar'
 
 const RelatedArtists = () => {
   return (
@@ -9,31 +8,19 @@ const RelatedArtists = () => {
       <div>
         <ul className="related-artists-item-list white">
           <li>
-            <FontAwesomeIcon
-              className="related-artists-item-list__icon"
-              icon={faUserCircle}
-            />
+            <Avatar />
             <span>Awesome Artist A</span>
           </li>
           <li>
-            <FontAwesomeIcon
-              className="related-artists-item-list__icon"
-              icon={faUserCircle}
-            />
+            <Avatar />
             <span>Awesome Artist B</span>
           </li>
           <li>
-            <FontAwesomeIcon
-              className="related-artists-item-list__icon"
-              icon={faUserCircle}
-            />
+            <Avatar />
             <span>Awesome Artist C</span>
           </li>
           <li>
-            <FontAwesomeIcon
-              className="related-artists-item-list__icon"
-              icon={faUserCircle}
-            />
+            <Avatar />
             <span>Awesome Artist D</span>
           </li>
         </ul>

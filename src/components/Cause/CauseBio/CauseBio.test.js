@@ -3,7 +3,7 @@ import CauseBio from './CauseBio'
 
 import { shallow } from 'enzyme'
 
-describe('CauseBio', () => {
+describe('<CauseBio />', () => {
   let causeBioWrapper
 
   beforeEach(() => {

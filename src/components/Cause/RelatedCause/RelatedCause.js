@@ -1,15 +1,11 @@
 import React from 'react'
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faUserCircle } from '@fortawesome/free-solid-svg-icons'
+import Avatar from '../../Shared/Avatar/Avatar'
 
 const RelatedCause = () => {
   return (
     <div className="related-cause">
-      <FontAwesomeIcon
-        className="related-cause__icon white"
-        icon={faUserCircle}
-      />
-      <div className="white">Deserving cause A</div>
+      <Avatar />
+      <div className="white related-cause__name">Deserving cause A</div>
     </div>
   )
 }

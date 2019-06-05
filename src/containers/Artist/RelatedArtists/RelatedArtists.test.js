@@ -15,4 +15,8 @@ describe('<RelatedArtists />', () => {
   it('has a list of 4 Related Artists', () => {
     expect(relatedArtistsWrapper.find('li').length).toEqual(4)
   })
+
+  it('has 4 Avatars', () => {
+    expect(relatedArtistsWrapper.find('Avatar').length).toEqual(4)
+  })
 })

@@ -3,7 +3,7 @@ import { shallow } from 'enzyme'
 import moxios from 'moxios'
 import Avatar from './Avatar'
 
-describe('Avatar', () => {
+describe('<Avatar />', () => {
   let avatarWrapper
 
   beforeEach(() => {
