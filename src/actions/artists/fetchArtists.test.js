@@ -1,7 +1,7 @@
 import moxios from 'moxios'
 import thunk from 'redux-thunk'
 import configureMockStore from 'redux-mock-store'
-import fetchArtists from './fetchArtists'
+import { fetchArtists } from './fetchArtists'
 import { FETCH_ARTISTS } from '../types'
 
 const middlewares = [thunk]
@@ -13,8 +13,8 @@ describe('fetchArtists', () => {
   beforeEach(() => {
     moxios.install()
     store = mockStore({})
-    response = {
-      data: [
+    response = [{
+      payload: [
         {
           id: 1,
           name: 'Awesome Artist 1'
@@ -23,23 +23,23 @@ describe('fetchArtists', () => {
           id: 2,
           name: 'Awesome Artist 2'
         }]
-    }
+    }]
   })
 
   afterEach(() => {
     moxios.uninstall()
   })
 
-  it('fetches artists from an external api', async (done) => {
+  it('fetches artists from an external api', () => {
     const expectedActions = [{ type: FETCH_ARTISTS, payload: response }]
     moxios.wait(() => {
       const request = moxios.requests.mostRecent()
+      console.log(response)
       request.resolve(response)
     })
 
-    await store.dispatch(fetchArtists()).then(() => {
+    return store.dispatch(fetchArtists()).then(() => {
       expect(store.getActions()).toEqual(expectedActions)
-      done()
     })
   })
 })
