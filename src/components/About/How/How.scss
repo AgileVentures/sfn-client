@@ -1,0 +1,36 @@
+.how-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-top: $margin-l;
+
+  h3 {
+    text-align: center;
+  }
+
+  .how-process-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: $margin-xs;
+    margin-left: auto;
+    width: 75%;
+
+    .how-process-item {
+      max-width: 20%;
+      padding-top: $padding-l;
+      margin-right: $margin-l;
+      min-width: 250px;
+
+      &:last-of-type {
+        margin-left: 0;
+        margin-right: 0;
+      }
+
+      h5 {
+        display: inline-block;
+        margin-bottom: $margin-s;
+        margin-left: $margin-xs;
+      }
+    }
+  }
+}

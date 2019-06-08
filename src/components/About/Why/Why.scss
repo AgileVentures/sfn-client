@@ -1,0 +1,19 @@
+.why-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-top: $margin-l;
+
+  h3 {
+    text-align: center;
+  }
+
+  .why-description {
+    max-width: 50%;
+    margin: $margin-s auto;
+
+    h5 {
+      margin-bottom: $margin-xs;
+    }
+  }
+}

@@ -8,7 +8,8 @@
     "@fortawesome/free-solid-svg-icons": "^5.8.2",
     "@fortawesome/react-fontawesome": "^0.1.4",
     "@nivo/bar": "^0.54.0",
-    "axios": "^0.18.0",
+    "axios": "^0.19.0",
+    "moxios": "^0.4.0",
     "node-sass": "^4.11.0",
     "react": "^16.1.1",
     "react-dom": "^16.1.1",
@@ -28,6 +29,8 @@
     "lint:fix": "eslint . --fix",
     "pretest": "yarn run lint",
     "test:debug": "react-scripts --inspect-brk test --runInBand --no-cache",
+    "test:coverage": "react-scripts test --env=jsdom --coverage",
+    "coveralls": "cat ./coverage/lcov.info | node node_modules/.bin/coveralls",
     "cypress:open": "cypress open"
   },
   "husky": {
@@ -45,6 +48,7 @@
     "not op_mini all"
   ],
   "devDependencies": {
+    "coveralls": "^3.0.3",
     "cypress": "^3.2.0",
     "cypress-cucumber-preprocessor": "^1.11.2",
     "enzyme": "^3.8.0",
