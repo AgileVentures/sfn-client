@@ -1,10 +1,10 @@
 import moxios from 'moxios'
-import thunk from 'redux-thunk'
+import reduxPromise from 'redux-promise'
 import configureMockStore from 'redux-mock-store'
 import { fetchArtists } from './fetchArtists'
 import { FETCH_ARTISTS } from '../types'
 
-const middlewares = [thunk]
+const middlewares = [reduxPromise]
 const mockStore = configureMockStore(middlewares)
 let store
 
@@ -34,7 +34,6 @@ describe('fetchArtists', () => {
     const expectedActions = [{ type: FETCH_ARTISTS, payload: response }]
     moxios.wait(() => {
       const request = moxios.requests.mostRecent()
-      console.log(response)
       request.resolve(response)
     })
 
