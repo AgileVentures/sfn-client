@@ -10,5 +10,5 @@ cache:
 install: true
 script:
   - yarn
-  - yarn test
+  - yarn test -- --coverage
   - yarn run build
