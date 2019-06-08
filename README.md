@@ -61,7 +61,11 @@ yarn
 ```
 yarn start
 ```
+### Set up .env.local
+* You may need to set up `.env.local` with your backend server's base URL. This can be easily done by coppying the content of your `.env.default` file to `.env.local` as shown below
 
+    ```cp .env.default .env.local```
+* Update the value of the `REACT_APP_BASE_URL` to correspond to your server URL e.g. `REACT_APP_BASE_URL = 'http://localhost:4000'`
 ### Running tests (jest)
 * This codebase uses Enzyme Javascript Testing Utility. To learn more about the Enzyme you can checkout their [documentation](https://airbnb.io/enzyme/).
 
