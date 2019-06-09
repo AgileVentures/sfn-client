@@ -202,9 +202,15 @@ Your pull request needs to be reviewed by at least two people in the team for it
 
 Instructions on how to review a pull request can be found [here](https://github.com/AgileVentures/sfn-client/blob/develop/HOW-TO-REVIEW-A-DEVELOP-PR.md).
 
-### Design
+## Design
 
-#### Designing components
+### Designing new features
+
+The Sing for Needs project follows [user-centered design principles](https://www.interaction-design.org/literature/topics/user-centered-design), accordingly the platform is built with the [different key personas](https://github.com/AgileVentures/sfn-client/blob/develop/PERSONAS.md) (artists, donors and the people behind causes) in mind. Imagine as these personas are the key stakeholders of the project.
+
+If you want to introduce a new feature, then your responsibility is to consult each of the personas mentioned above, and empathize with their _jobs-to-do_, _major pains_ and _major gains_ to properly use this knowledge to shape the new feature. The [personas documentation](https://github.com/AgileVentures/sfn-client/blob/develop/PERSONAS.md) gives additional guidance how you can immerse yourself in the topic.
+
+### Designing components
 
 We try to make designing components easier with setting up some base grounds of colors, typography and layouts. Before start designing a component for the page, please consult these materials. You can find them in the src/components/styles directory.
 
