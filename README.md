@@ -198,7 +198,7 @@ Your pull request needs to be reviewed by at least two people in the team for it
 
 Instructions on how to review a pull request can be found [here](https://github.com/AgileVentures/sfn-client/blob/develop/HOW-TO-REVIEW-A-DEVELOP-PR.md).
 
-### Design
+## Design
 
 #### Designing components
 
