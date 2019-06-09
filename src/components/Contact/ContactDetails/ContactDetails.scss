@@ -1,0 +1,33 @@
+.contact-details-wrapper {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  margin-bottom: $margin-l;
+  margin-top: $margin-s;
+
+  .contact-details {
+    grid-column: 1/7;
+    margin-top: $margin-r;
+    display: flex;
+    flex-direction: column;
+    padding: $padding-r;
+    background-color: $primary-color-darkblue-lighter;
+    color: $primary-color-white;
+
+    .contact-details--item {
+      display: flex;
+      align-items: center;
+      margin-bottom: $margin-s;
+    }
+
+    .contact-icon,
+    .social-icon {
+      margin-right: $margin-xs;
+      font-size: 1.333rem;
+      margin-right: $margin-r;
+    }
+
+    .contact-details--socials {
+      margin-top: $margin-r;
+    }
+  }
+}
