@@ -4,7 +4,7 @@
 import { combineReducers } from 'redux'
 import simpleReducer from '../reducers/simpleReducer'
 
-import artists from './artistsReducer'
+import artists from './artists/artistsReducer'
 export default combineReducers({
   simpleReducer,
   artists
