@@ -14,3 +14,8 @@ $padding-r: 24px;
 $padding-l: 32px;
 $padding-xl: 48px;
 $padding-xxl: 64px;
+
+// POINTER EVENTS
+.no-pointer {
+  pointer-events: none;
+}
