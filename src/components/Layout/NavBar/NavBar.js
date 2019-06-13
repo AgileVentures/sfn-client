@@ -1,7 +1,7 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faBars } from '@fortawesome/free-solid-svg-icons'
+import { faBars, faTimes } from '@fortawesome/free-solid-svg-icons'
 import { NavLink } from 'react-router-dom'
 
 const NavBar = props => {
@@ -36,7 +36,13 @@ const NavBar = props => {
       </div>
       <div className="nav-container__right" />
 
-      <FontAwesomeIcon icon={faBars} className="nav-container__icon" onClick={props.handleClick} />
+      <FontAwesomeIcon
+        icon={props.mobileMenu ? faTimes : faBars}
+        className={`nav-container__icon ${
+          props.mobileMenu ? 'no-pointer' : ''
+        }`}
+        onClick={props.handleClick}
+      />
       <div className="clear-fix" />
     </nav>
   )
