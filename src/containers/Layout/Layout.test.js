@@ -7,7 +7,9 @@ import Layout from './Layout'
 describe('<Layout />', () => {
   let layoutWrapper
   beforeEach(() => {
-    layoutWrapper = shallow(<Layout children={[]} />)
+    layoutWrapper = shallow(<Layout children={[]} />, {
+      disableLifecycleMethods: true
+    })
   })
 
   it('contains a Header component', () => {
