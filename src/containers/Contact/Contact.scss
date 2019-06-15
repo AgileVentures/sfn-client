@@ -1,0 +1,24 @@
+.contact-container {
+  grid-column: 1/-1;
+  min-height: 0;
+  padding-top: $padding-s;
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+
+  h1 {
+    grid-column: 1/-1;
+    text-align: center;
+  }
+
+  h4 {
+    grid-column: 1/-1;
+    margin-top: $margin-s;
+    text-align: center;
+  }
+
+  .heart-icon {
+    color: $primary-color-accent;
+    margin-left: $margin-xs;
+    margin-right: $margin-xs;
+  }
+}
