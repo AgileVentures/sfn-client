@@ -1,5 +1,6 @@
 import React from 'react'
 import ContactDetails from '../../components/Contact/ContactDetails/ContactDetails'
+import ContactForm from '../../components/Contact/ContactForm/ContactForm'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faHeart } from '@fortawesome/free-solid-svg-icons'
 
@@ -13,6 +14,7 @@ const Contact = () => {
         to help!
       </h4>
       <ContactDetails />
+      <ContactForm />
     </div>
   )
 }

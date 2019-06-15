@@ -1,0 +1,80 @@
+.contact-form-wrapper {
+  grid-column: 7/-1;
+  margin-bottom: $margin-l;
+  margin-top: $margin-xl;
+  padding: $padding-r;
+  color: $primary-color-white;
+
+  label,
+  input {
+    display: block;
+  }
+
+  label {
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin-top: $margin-r;
+
+    &:first-of-type {
+      margin-top: 0;
+    }
+  }
+
+  input {
+    border: none;
+    border-bottom: 2px solid $primary-color-white;
+    background-color: transparent;
+    width: 100%;
+    position: relative;
+    font-family: "Archivo Black", sans-serif;
+    font-size: 1.333rem;
+    line-height: 1.2;
+    color: $primary-color-white;
+    margin-top: $margin-xs;
+
+    &::placeholder {
+      font-family: "Archivo Black", sans-serif;
+      font-size: 1.333rem;
+      line-height: 1.2;
+      opacity: 0.4;
+      color: $disabled-color-white;
+    }
+  }
+
+  input[type="submit"] {
+    appearance: none;
+    background-color: $primary-color-accent;
+    font-size: 16px;
+    font-weight: bold;
+    border: none;
+    border-radius: 32px;
+    padding: $padding-xs $padding-s;
+    color: $primary-color-white;
+    margin-top: $margin-s;
+
+    &:hover {
+      cursor: pointer;
+    }
+  }
+
+  textarea {
+    margin-top: $margin-xs;
+    display: block;
+    border: 2px solid $primary-color-white;
+    background: transparent;
+    width: 100%;
+    font-family: "Archivo Black", sans-serif;
+    font-size: 1rem;
+    line-height: 1.2;
+    color: $primary-color-white;
+    padding: $padding-xs;
+
+    &::placeholder {
+      font-family: "Archivo Black", sans-serif;
+      font-size: 1rem;
+      line-height: 1.2;
+      opacity: 0.4;
+      color: $disabled-color-white;
+    }
+  }
+}
