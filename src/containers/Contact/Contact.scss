@@ -1,0 +1,20 @@
+.contact-container {
+  grid-column: 1/-1;
+  min-height: 0;
+  padding-top: $padding-s;
+
+  h1 {
+    text-align: center;
+  }
+
+  h4 {
+    margin-top: $margin-s;
+    text-align: center;
+  }
+
+  .heart-icon {
+    color: $primary-color-accent;
+    margin-left: $margin-xs;
+    margin-right: $margin-xs;
+  }
+}
