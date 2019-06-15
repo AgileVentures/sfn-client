@@ -4,4 +4,4 @@ Feature: The Facebook
 
    @focus
   Scenario: Opening a social network page
-    Given I open Google page
+    Given I open Google pages
