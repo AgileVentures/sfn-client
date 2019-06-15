@@ -16,7 +16,8 @@ a {
   pointer-events: none;
 }
 
-button {
+button,
+.button {
   appearance: none;
   background-color: $primary-color-accent;
   font-size: 16px;
