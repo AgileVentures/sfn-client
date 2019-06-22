@@ -25,10 +25,11 @@ When("I click on 'artist' link on the footer", () => {
 })
 
 Then("I should be on the 'artist' page", () => {
-  cy.url()
-    .should('contain', '/artists')
-  cy.get('.trending-artists-title')
-    .should('contain', 'Trending Artists')
-  cy.get('.explore-artists-title')
-    .should('contain', 'Explore Artists')
+  cy.url().should('contain', '/artists')
+  cy.get('.trending-artists-title').should('contain', 'Trending Artists')
+  cy.get('.explore-artists-title').should('contain', 'Explore Artists')
+})
+
+Then("I should see 'Sing For Needs' as document title", () => {
+  cy.title().should('contain', 'Sing for Needs')
 })
