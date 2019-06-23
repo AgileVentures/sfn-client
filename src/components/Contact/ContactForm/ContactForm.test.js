@@ -1,13 +1,20 @@
 import React from 'react'
 import ContactForm from './ContactForm'
-
-import { shallow } from 'enzyme'
+import { reducer as formReducer } from 'redux-form'
+import { Provider } from 'react-redux'
+import { createStore, combineReducers } from 'redux'
+import { mount } from 'enzyme'
 
 describe('<ContactForm />', () => {
   let contactFormWrapper
+  const reducers = {
+    form: formReducer
+  }
+  const reducer = combineReducers(reducers)
+  const store = createStore(reducer)
 
   beforeEach(() => {
-    contactFormWrapper = shallow(<ContactForm />)
+    contactFormWrapper = mount(<Provider store={store} ><ContactForm /></Provider>)
   })
 
   it('has an input field to fill in with the name', () => {
