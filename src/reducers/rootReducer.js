@@ -2,10 +2,11 @@
  src/reducers/rootReducer.js
 */
 import { combineReducers } from 'redux'
-import simpleReducer from '../reducers/simpleReducer'
-
+import { reducer as formReducer } from 'redux-form'
 import artists from './artists/artistsReducer'
+import simpleReducer from './simpleReducer'
 export default combineReducers({
   simpleReducer,
-  artists
+  artists,
+  form: formReducer
 })

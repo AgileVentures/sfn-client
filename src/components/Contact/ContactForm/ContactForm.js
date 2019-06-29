@@ -1,81 +1,48 @@
 import React from 'react'
+import { Field, reduxForm } from 'redux-form'
+import PropTypes from 'prop-types'
 
 class ContactForm extends React.Component {
-  state = {
-    name: '',
-    email: '',
-    subject: '',
-    message: ''
+  renderInput = ({ input, label, placeholder }) => {
+    return (
+      <React.Fragment>
+        <label className="white label-normal">{label}</label>
+        <input {...input} placeholder={placeholder} />
+      </React.Fragment>
+    )
   };
 
-  onNameInputChange = event => {
-    this.setState({
-      name: event.target.value
-    })
+  renderTextArea = ({ input, label, placeholder, rows }) => {
+    return (
+      <React.Fragment>
+        <label className="white label-normal">{label}</label>
+        <textarea rows={rows} {...input} placeholder={placeholder} />
+      </React.Fragment>
+    )
   };
 
-  onEmailInputChange = event => {
-    this.setState({
-      email: event.target.value
-    })
-  };
-
-  onSubjectInputChange = event => {
-    this.setState({
-      subject: event.target.value
-    })
-  };
-
-  onMessageInputChange = event => {
-    this.setState({
-      message: event.target.value
-    })
+  onSubmit = formValues => {
+    this.props.onSubmit(formValues)
   };
 
   render() {
     return (
-      <form className="contact-form-wrapper">
-        <label className="white label-normal">
-          Your name
-          <input
-            type="text"
-            name="name"
-            placeholder="John Doe"
-            onChange={this.onNameInputChange}
-          />
-        </label>
-        <label className="white label-normal">
-          Your email
-          <input
-            type="email"
-            name="email"
-            placeholder="john@doe.com"
-            onChange={this.onEmailInputChange}
-          />
-        </label>
-        <label className="white label-normal">
-          Subject
-          <input
-            type="text"
-            name="subject"
-            placeholder="Sing for Needs"
-            onChange={this.onSubjectInputChange}
-          />
-        </label>
-        <label className="white label-normal">
-          Message
-          <textarea
-            type="text"
-            name="name"
-            placeholder="The body of your message goes here"
-            rows="5"
-            onChange={this.onMessageInputChange}
-          />
-        </label>
+      <form onSubmit={this.props.handleSubmit(this.onSubmit)} className="contact-form-wrapper">
+        <Field component={this.renderInput} label="Your name" name="name" type="text" placeholder="John Doe" />
+        <Field component={this.renderInput} label="email" name="email" type="text" placeholder="john@doe.com" />
+        <Field component={this.renderInput} label="Subject" name="subject" type="text" placeholder="Sing for Needs" />
+        <Field component={this.renderTextArea} label="Message" name="message" type="textarea" rows="5" placeholder="The body of your message goes here" />
         <input className="button" type="submit" value="Send mail" />
       </form>
     )
   }
 }
 
-export default ContactForm
+ContactForm.propTypes = {
+  onSubmit: PropTypes.func,
+  handleSubmit: PropTypes.func
+}
+
+export default reduxForm({
+  form: 'contact'
+})(ContactForm)
