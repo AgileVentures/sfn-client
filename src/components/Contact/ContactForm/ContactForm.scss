@@ -5,6 +5,14 @@
   padding: $padding-r;
   color: $primary-color-white;
 
+  .field {
+    margin-bottom: $margin-r;
+  }
+
+  .error {
+    color: $primary-color-accent;
+  }
+
   label,
   input {
     display: block;
