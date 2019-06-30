@@ -1,5 +1,8 @@
 [![Coverage Status](https://coveralls.io/repos/github/AgileVentures/sfn-client/badge.svg?branch=develop)](https://coveralls.io/github/AgileVentures/sfn-client?branch=develop)
 [![Build Status](https://travis-ci.org/AgileVentures/sfn-client.svg?branch=develop)](https://travis-ci.org/AgileVentures/sfn-client)
+[![](https://dxssrr2j0sq4w.cloudfront.net/3.2.0/img/external/zenhub-badge.png)](https://app.zenhub.com/workspaces/sfn-client-5cbedb54074dff0857634473/board?repos=110595899)
+
+
 ## About this project
 Sing for Needs is a donation platform, meant to be a positive means for giving, inspired by music performances from artists, unknown and famous. The Artists get to see and choose the various causes to support with their performances, while getting a view of all the funds generated.
 
@@ -235,3 +238,7 @@ As moving towards with the project the individual screens that are in-progress a
 #### Editing Artist Page mockup & flow
 
 ![Artist Profile (edit)](https://user-images.githubusercontent.com/9334646/56868353-9fc47d00-69f1-11e9-90b1-40418ca7097f.png)
+
+#### Performances page
+
+![SFN_performances_index-1](https://user-images.githubusercontent.com/9334646/60400175-ca0cf500-9b70-11e9-8fc2-334143b8d2af.jpg)
