@@ -220,40 +220,17 @@ The structure of the components and spacing is suggested to follow an 8px grid s
 
 ### Design reference 🎨
 
-In 2019 we've created a simple branding document to establish the basis for the design in terms of colors, typography and photographic direction. The values for typography and colors will be reflected in the `.scss` variables (`$variable`) as well. 
+In 2019 we've created a simple branding document to establish the basis for the design in terms of colors, typography and photographic direction. The values for typography and colors will be reflected in the `.scss` variables (`$variable`) as well.
 
 Before delivering a final UI for screens, please consult this little guidance and the stylesheets (`src/styles`) if all the aspects are right in the designs. It's worth checking back because the branding document will evolve in time, so changes will occur.
 
 ![Branding_basic_document_SFN](https://user-images.githubusercontent.com/9334646/59974463-d27f9180-95ac-11e9-9c4b-9a396ab5b385.png)
 
-As moving towards with the project the individual screens and assets will be documented here
+As moving towards with the project the individual screens that are in-progress and assets will be documented here. Wireframes which have been implemented already are under the documentation/wireframes/finished folder.
 
 [Design inspiration](https://dribbble.com/shots/3144986-Online-Music-Streaming-Service-Artist-Page/attachments/666587)
 
-#### Artists Page mockup
-
-![image](https://user-images.githubusercontent.com/9334646/51091497-976e6c00-178b-11e9-9883-322a722909fd.png)
 
 #### Editing Artist Page mockup & flow
 
 ![Artist Profile (edit)](https://user-images.githubusercontent.com/9334646/56868353-9fc47d00-69f1-11e9-90b1-40418ca7097f.png)
-
-#### Artists Index Page mockup
-
-![image](https://user-images.githubusercontent.com/9735009/52993526-88d63d00-343a-11e9-8918-d34454ff8e20.png)
-
-#### Causes Page mockup
-
-![image](https://user-images.githubusercontent.com/9735009/52993527-8b389700-343a-11e9-87c2-ac57a2c73072.png)
-
-#### Causes Index Page mockup
-
-![image](https://user-images.githubusercontent.com/9735009/52993521-84118900-343a-11e9-915d-2265e845fbef.png)
-
-#### About Page mockup
-
-![image](https://user-images.githubusercontent.com/9735009/58062564-69b18d80-7b98-11e9-827c-ea4cf49c554c.png)
-
-#### Contact Page mockup
-
-![image](https://user-images.githubusercontent.com/9735009/58062567-6d451480-7b98-11e9-9944-ae48a021f53b.png)
