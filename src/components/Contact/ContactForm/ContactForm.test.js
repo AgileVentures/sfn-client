@@ -17,6 +17,10 @@ describe('<ContactForm />', () => {
     contactFormWrapper = mount(<Provider store={store} ><ContactForm /></Provider>)
   })
 
+  afterEach(() => {
+    contactFormWrapper.unmount()
+  })
+
   it('has an input field to fill in with the name', () => {
     expect(contactFormWrapper.find("input[name='name']").length).toEqual(1)
   })
@@ -35,5 +39,19 @@ describe('<ContactForm />', () => {
 
   it('has a button to send the email to Sing for Needs', () => {
     expect(contactFormWrapper.find('input.button').length).toEqual(1)
+  })
+
+  it('displays an error when the email field is left blank', () => {
+    contactFormWrapper.find('input').find('[name="name"]').simulate('blur')
+    expect(contactFormWrapper.find('.error.message').length).toEqual(1)
+  })
+
+  it('displays no errors when all the fields have been filled in', () => {
+    const inputsWrapper = contactFormWrapper.find('input')
+    inputsWrapper.not('[type="submit"]').forEach(node => {
+      node.simulate('change', { target: { value: 'asdf' } })
+      node.simulate('blur')
+    })
+    expect(contactFormWrapper.find('.error.message').length).toEqual(0)
   })
 })
