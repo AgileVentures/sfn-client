@@ -1,7 +1,7 @@
 import React from 'react'
-import ReactPaginate from 'react-paginate'
-import ArtistPerformances from './ArtistPerformances'
 import { shallow } from 'enzyme'
+import ArtistPerformances from './ArtistPerformances'
+import Paginate from '../../../components/Paginate/Paginate'
 
 describe('<ArtistPerformances />', () => {
   let artistPerformancesWrapper
@@ -16,6 +16,6 @@ describe('<ArtistPerformances />', () => {
   })
 
   it('displays a pagination component under performances', () => {
-    expect(artistPerformancesWrapper.find(ReactPaginate).length).toEqual(1)
+    expect(artistPerformancesWrapper.find(Paginate).length).toEqual(1)
   })
 })

@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
-import ReactPaginate from 'react-paginate'
 import ArtistPerformance from '../../../components/Artist/ArtistPerformance/ArtistPerformance'
+import Paginate from '../../../components/Paginate/Paginate'
 
 class ArtistPerformances extends Component {
   render() {
@@ -10,18 +10,7 @@ class ArtistPerformances extends Component {
         <ArtistPerformance />
         <ArtistPerformance />
         <ArtistPerformance />
-        <ReactPaginate
-          previousLabel={'previous'}
-          nextLabel={'next'}
-          breakLabel={'...'}
-          breakClassName={'break-me'}
-          pageCount={2}
-          marginPagesDisplayed={1}
-          pageRangeDisplayed={3}
-          containerClassName={'pagination'}
-          subContainerClassName={'pages pagination'}
-          activeClassName={'active'}
-        />
+        <Paginate />
       </div>
     )
   }
