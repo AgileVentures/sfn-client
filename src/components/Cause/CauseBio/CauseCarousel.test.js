@@ -21,4 +21,18 @@ describe('<CauseCarousel />', () => {
   it('has a button to move the carousel right', () => {
     expect(causeCarouselWrapper.find('.next')).toHaveLength(1)
   })
+
+  it('calls slideCarouselRight when next is clicked', () => {
+    Object.defineProperty(global, 'document', {})
+    let slideCarouselRight = jest.fn()
+    causeCarouselWrapper.find('.next').simulate('click')
+    expect(slideCarouselRight()).toHaveBeenCalledTimes(1)
+  })
+
+  it('calls slideCarouselLeft when next is clicked', () => {
+    Object.defineProperty(global, 'document', {})
+    let slideCarouselLeft = jest.fn()
+    causeCarouselWrapper.find('.prev').simulate('click')
+    expect(slideCarouselLeft()).toHaveBeenCalledTimes(1)
+  })
 })
