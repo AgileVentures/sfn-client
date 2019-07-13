@@ -1,13 +1,16 @@
 import React from 'react'
 import CauseCarousel from './CauseCarousel'
 
-import { shallow } from 'enzyme'
+import { mount } from 'enzyme'
 
 describe('<CauseCarousel />', () => {
   let causeCarouselWrapper
+  let querySelector
 
   beforeEach(() => {
-    causeCarouselWrapper = shallow(<CauseCarousel />)
+    causeCarouselWrapper = mount(<CauseCarousel />)
+    querySelector = jest.fn().mockReturnValue({ style: {} })
+    Object.defineProperty(global.document, 'querySelector', { writable: true, value: querySelector })
   })
 
   it('has 4 images rendered within the carousel', () => {
@@ -22,17 +25,15 @@ describe('<CauseCarousel />', () => {
     expect(causeCarouselWrapper.find('.next')).toHaveLength(1)
   })
 
-  it('calls slideCarouselRight when next is clicked', () => {
-    Object.defineProperty(global, 'document', {})
-    let slideCarouselRight = jest.fn()
+  it('calls moveSlide when next is clicked', () => {
     causeCarouselWrapper.find('.next').simulate('click')
-    expect(slideCarouselRight()).toHaveBeenCalledTimes(1)
+    expect(querySelector).toHaveBeenCalledTimes(1)
+    expect(querySelector).toHaveBeenCalledWith('.causeslideshow-holder')
   })
 
-  it('calls slideCarouselLeft when next is clicked', () => {
-    Object.defineProperty(global, 'document', {})
-    let slideCarouselLeft = jest.fn()
+  it('calls slideCarouselLeft when previous is clicked', () => {
     causeCarouselWrapper.find('.prev').simulate('click')
-    expect(slideCarouselLeft()).toHaveBeenCalledTimes(1)
+    expect(querySelector).toHaveBeenCalledTimes(1)
+    expect(querySelector).toHaveBeenCalledWith('.causeslideshow-holder')
   })
 })
