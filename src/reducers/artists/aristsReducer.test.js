@@ -10,7 +10,7 @@ describe('reduces events', () => {
     expect(
       artistsReducer([], {
         type: FETCH_ARTISTS,
-        payload: { data: [{ id: 1, name: 'Awesome Artist 1' }] }
+        payload: [{ id: 1, name: 'Awesome Artist 1' }]
       })
     ).toEqual([{ id: 1, name: 'Awesome Artist 1' }])
   })

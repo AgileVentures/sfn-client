@@ -1,7 +1,8 @@
 import axios from 'axios'
 import { FETCH_ARTISTS } from '../types'
 
-export const fetchArtists = () => {
-  const response = axios.get(`${process.env.REACT_APP_BASE_URL}/api/artists`)
-  return { type: FETCH_ARTISTS, payload: response }
+export const fetchArtists = () => dispatch => {
+  axios.get('http://localhost:4000/api/artists').then(response => {
+    dispatch({ type: FETCH_ARTISTS, payload: response.data.data })
+  })
 }
