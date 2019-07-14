@@ -6,10 +6,13 @@ import Layout from './Layout'
 // Need at least 1 test to pass Travis CI
 describe('<Layout />', () => {
   let layoutWrapper
+  let removeEventListener
   beforeEach(() => {
     layoutWrapper = shallow(<Layout children={[]} />, {
       disableLifecycleMethods: true
     })
+    removeEventListener = jest.fn().mockReturnValue({ style: {} })
+    Object.defineProperty(global.document, 'removeEventListener', { writable: true, value: removeEventListener })
   })
 
   it('contains a Header component', () => {
@@ -27,5 +30,23 @@ describe('<Layout />', () => {
     layoutWrapper.find('FontAwesomeIcon').simulate('click')
     const layout = layoutWrapper.find('Layout')
     expect(layout.state('mobileMenu')).toEqual(true)
+  })
+
+  it('calls component will unmount on unmount', () => {
+    layoutWrapper.unmount()
+    expect(removeEventListener).toHaveBeenCalledTimes(1)
+  })
+
+  it('sets state of mobileMenu to false on mouse up ', () => {
+    layoutWrapper = mount(
+      <BrowserRouter>
+        <Layout children={[]} />
+      </BrowserRouter>
+    )
+    layoutWrapper.setState({ mobileMenu: true })
+    layoutWrapper.find('.footer-container__copyright').simulate('mouseup')
+    layoutWrapper.update()
+
+    expect(layoutWrapper.state().mobileMenu).toBe(false)
   })
 })
