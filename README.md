@@ -2,8 +2,23 @@
 [![Build Status](https://travis-ci.org/AgileVentures/sfn-client.svg?branch=develop)](https://travis-ci.org/AgileVentures/sfn-client)
 [![](https://dxssrr2j0sq4w.cloudfront.net/3.2.0/img/external/zenhub-badge.png)](https://app.zenhub.com/workspaces/sfn-client-5cbedb54074dff0857634473/board?repos=110595899)
 
+## Main contributors
+
+[//]: contributor-faces
+
+<a href="https://github.com/aonomike"><img src="https://avatars3.githubusercontent.com/u/1543546?s=400&v=4" title="aonomike" width="80" height="80"></a>
+<a href="https://github.com/dhemmingson"><img src="https://avatars3.githubusercontent.com/u/2614417?s=400&v=4" title="dhemmingson" width="80" height="80"></a>
+<a href="https://github.com/FedericoEsparza"><img src="https://avatars0.githubusercontent.com/u/11988089?s=400&v=4" title="FedericoEsparza" width="80" height="80"></a>
+<a href="https://github.com/javpet"><img src="https://avatars0.githubusercontent.com/u/9334646?s=460&v=4" title="javpet" width="80" height="80"></a>
+<a href="https://github.com/jmpainter"><img src="https://avatars2.githubusercontent.com/u/10214686?s=460&v=4" title="jmpainter" width="80" height="80"></a>
+<a href="https://github.com/daumie"><img src="https://avatars0.githubusercontent.com/u/11542388?s=460&v=4" title="daumie" width="80" height="80"></a>
+<a href="https://github.com/rachitkansal-ntnx"><img src="https://avatars1.githubusercontent.com/u/48485082?s=460&v=4" title="daumie" width="80" height="80"></a>
+<a href="https://github.com/mhobesong"><img src="https://avatars1.githubusercontent.com/u/5602093?s=460&v=4" title="mhobesong" width="80" height="80"></a>
+<a href="https://github.com/arku"><img src="https://avatars3.githubusercontent.com/u/7039523?s=460&v=4" title="arku" width="80" height="80"></a>
+<a href="https://github.com/mattwr18"><img src="https://avatars3.githubusercontent.com/u/26943915?s=460&v=4" title="arku" width="80" height="80"></a>
 
 ## About this project
+
 Sing for Needs is a donation platform, meant to be a positive means for giving, inspired by music performances from artists, unknown and famous. The Artists get to see and choose the various causes to support with their performances, while getting a view of all the funds generated.
 
 The Sing for Needs project is currently under active developement by a team of volunteers at [Agileventures](https://www.agileventures.org), an official UK Charity (#1170963) dedicated to crowdsourced learning and project development. Under the umbrella of Championer projects, the [Sing for Needs backend](https://github.com/agileVentures/sing_for_needs) uses the [Elixir/Phoenix](https://phoenixframework.org/) framework, while the frontend uses [React](https://reactjs.org/), mainly to facilitate mentorship for the volunteers to learn these modern technologies.
@@ -12,23 +27,26 @@ This is a guide, to help easily get set up and started with the frontend, for an
 
 ## Getting Started
 
-This describes how to contribute to SFN-CLIENT:  the tools we use to track and
+This describes how to contribute to SFN-CLIENT: the tools we use to track and
 coordinate the work that is happening and that needs to happen. This also describes the
-*workflow* -- the processes and sequences for getting contributions merged into the project in an organized and coherent way.
+_workflow_ -- the processes and sequences for getting contributions merged into the project in an organized and coherent way.
 
 We use [Zenhub](https://app.zenhub.com/workspaces/sfn-client-5cbedb54074dff0857634473/board?repos=110595899) to manage our work on features, chores and bugfixes.
 
 We keep our code on [GitHub](http://github.com) and use [git](https://git-scm.com) for version control.
 
 ### Forking the repository
+
 Each developer will usually work with a [fork](https://help.github.com/articles/fork-a-repo/) of the [main repository on Agile Ventures](https://github.com/AgileVentures/sfn-client). Before starting work on a new feature or bugfix, please ensure you have [synced your fork to upstream/develop](https://help.github.com/articles/syncing-a-fork/):
 
 ### Node version management :hammer_and_wrench:
+
 Please ensure you have [nvm installed in your local machine](https://github.com/creationix/nvm). If you are using OSX you can run the command below
 
-```brew install nvm```
+`brew install nvm`
 
 Run the following command to install and switch to the current node version for the project:
+
 ```
 nvm install v10.13.0
 ```
@@ -38,11 +56,15 @@ To ensure that the correct node version for the project is automatically selecte
 ```
 npm install -g avn avn-nvm avn-n
 ```
+
 OR
+
 ```
 yarn global add avn avn-nvm avn-n
 ```
+
 Then run:
+
 ```
 avn setup
 ```
@@ -54,56 +76,73 @@ In Mac's Terminal it works automatically.
 If you are using [fish shell](https://gist.github.com/idleberg/9c7aaa3abedc58694df5) please [use this](https://medium.com/@joshuacrass/nvm-on-mac-for-fish-users-e00af124c540) to install nvm and [install avn for fish](https://github.com/martinkacmar/fish-avn)
 
 ### Install yarn.
+
 ```
 npm install -g yarn
 ```
+
 ### Run yarn to install dependencies
+
 ```
 yarn
 ```
+
 ### Starting the development server
+
 ```
 yarn start
 ```
+
 ### Set up .env.local
-* You may need to set up `.env.local` with your backend server's base URL. This can be easily done by coppying the content of your `.env.default` file to `.env.local` as shown below
 
-    ```cp .env.default .env.local```
-* Update the value of the `REACT_APP_BASE_URL` to correspond to your server URL e.g. `REACT_APP_BASE_URL = 'http://localhost:4000'`
+- You may need to set up `.env.local` with your backend server's base URL. This can be easily done by coppying the content of your `.env.default` file to `.env.local` as shown below
+
+  `cp .env.default .env.local`
+
+- Update the value of the `REACT_APP_BASE_URL` to correspond to your server URL e.g. `REACT_APP_BASE_URL = 'http://localhost:4000'`
+
 ### Running tests (jest)
-* This codebase uses Enzyme Javascript Testing Utility. To learn more about the Enzyme you can checkout their [documentation](https://airbnb.io/enzyme/).
 
-* start the test by running
-    ```
-    yarn test
-    ```
-* then press `a` to run all test
+- This codebase uses Enzyme Javascript Testing Utility. To learn more about the Enzyme you can checkout their [documentation](https://airbnb.io/enzyme/).
+
+- start the test by running
+  ```
+  yarn test
+  ```
+- then press `a` to run all test
 
 ### Running eslint/standard autofix command
 
-* You can't commit or run the tests if you have lint errors, so run:
+- You can't commit or run the tests if you have lint errors, so run:
 
-    ```
-    yarn lint:fix
-    ```
+  ```
+  yarn lint:fix
+  ```
+
 ## SetUp Project with Docker
+
 ### Prerequisite
-* Ensure you have docker installed. [Install docker](https://docs.docker.com/install/)
+
+- Ensure you have docker installed. [Install docker](https://docs.docker.com/install/)
 
 ### Instructions
-* Change to the project root directory. (.//sfn-client)
 
-* Create an image with the following command
-> docker build -f docker/Dockerfile -t sfn_client:production .
+- Change to the project root directory. (.//sfn-client)
 
-* Run the created image with
-> docker run -p 80:80 sfn_client:production
+- Create an image with the following command
 
-* Access the application on localhost port 80
-> http://127.0.0.1:80
+  > docker build -f docker/Dockerfile -t sfn_client:production .
+
+- Run the created image with
+
+  > docker run -p 80:80 sfn_client:production
+
+- Access the application on localhost port 80
+  > http://127.0.0.1:80
 
 ### Using the debugger
-* If tests are failing, or you found a bug running the development server, you can debug using the [inline debug tool](https://github.com/AgileVentures/sfn-client/blob/develop/HOW-TO-USE-DEBUG-SCRIPT.md).
+
+- If tests are failing, or you found a bug running the development server, you can debug using the [inline debug tool](https://github.com/AgileVentures/sfn-client/blob/develop/HOW-TO-USE-DEBUG-SCRIPT.md).
 
 ### Creating an Issue
 
@@ -114,7 +153,7 @@ yarn start
 
 ### Choosing Stories/tickets.
 
-When deciding on an issue to work on, look for the  `Help Wanted` or `Good First Issue` tags.
+When deciding on an issue to work on, look for the `Help Wanted` or `Good First Issue` tags.
 
 Request to be added as a collaborator in our [AgileVentures.org Slack chat channel](https://agileventures.slack.com/messages/phoenix_one).
 
@@ -125,17 +164,20 @@ After you’re a collaborator, you can move the ticket to the `In Progress` colu
 ```
 git checkout develop
 ```
+
 ```
 git pull upstream develop
 ```
+
 After you pulled the latest develop branch, make sure you have also the dependencies installed each time, by running in the console:
 
 ```
 yarn
 ```
-Ensure you have setup AgileVentures/sfn-client's upstream  `develop`.  Otherwise you will not have the latest `develop ` changes.
 
-To confirm this, run ```git remote -v```.
+Ensure you have setup AgileVentures/sfn-client's upstream `develop`. Otherwise you will not have the latest `develop` changes.
+
+To confirm this, run `git remote -v`.
 
 You should see a simillar output.
 
@@ -170,14 +212,14 @@ Once this is done, you can proceed with naming your branch following the below c
 git checkout -b 17-add-sfn-logo
 ```
 
-
-Where `17` is the ticket number and `add-sfn-logo ` is a short description of the purpose of your branch.
+Where `17` is the ticket number and `add-sfn-logo` is a short description of the purpose of your branch.
 
 ### Commit Messages
 
 Ensure your commit message clearly communicate the work you have done.
 
 For example,
+
 ```
 git commit -m "Implement user login"
 ```
@@ -185,6 +227,7 @@ git commit -m "Implement user login"
 ### Pull Requests
 
 After feature branch work is complete, push up to the upstream repo, for example:
+
 ```
 git push --set-upstream upstream 17-add-sfn-logo
 ```
@@ -233,7 +276,6 @@ Before delivering a final UI for screens, please consult this little guidance an
 As moving towards with the project the individual screens that are in-progress and assets will be documented here. Wireframes which have been implemented already are under the documentation/wireframes/finished folder.
 
 [Design inspiration](https://dribbble.com/shots/3144986-Online-Music-Streaming-Service-Artist-Page/attachments/666587)
-
 
 #### Editing Artist Page mockup & flow
 
