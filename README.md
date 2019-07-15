@@ -12,7 +12,7 @@
 <a href="https://github.com/javpet"><img src="https://avatars0.githubusercontent.com/u/9334646?s=460&v=4" title="javpet" width="80" height="80"></a>
 <a href="https://github.com/jmpainter"><img src="https://avatars2.githubusercontent.com/u/10214686?s=460&v=4" title="jmpainter" width="80" height="80"></a>
 <a href="https://github.com/daumie"><img src="https://avatars0.githubusercontent.com/u/11542388?s=460&v=4" title="daumie" width="80" height="80"></a>
-<a href="https://github.com/rachitkansal-ntnx"><img src="https://avatars1.githubusercontent.com/u/48485082?s=460&v=4" title="daumie" width="80" height="80"></a>
+<a href="https://github.com/rachitkansal-ntnx"><img src="https://avatars1.githubusercontent.com/u/48485082?s=460&v=4" title="rachitkansal-ntnx" width="80" height="80"></a>
 <a href="https://github.com/mhobesong"><img src="https://avatars1.githubusercontent.com/u/5602093?s=460&v=4" title="mhobesong" width="80" height="80"></a>
 <a href="https://github.com/arku"><img src="https://avatars3.githubusercontent.com/u/7039523?s=460&v=4" title="arku" width="80" height="80"></a>
 <a href="https://github.com/mattwr18"><img src="https://avatars3.githubusercontent.com/u/26943915?s=460&v=4" title="MattWr18" width="80" height="80"></a>
