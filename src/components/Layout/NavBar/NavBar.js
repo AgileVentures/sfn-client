@@ -3,6 +3,7 @@ import PropTypes from 'prop-types'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faBars, faTimes } from '@fortawesome/free-solid-svg-icons'
 import { NavLink } from 'react-router-dom'
+import Logo from '../Logo/Logo'
 
 const NavBar = props => {
   let navBarClass = 'nav-container main-container'
@@ -12,7 +13,9 @@ const NavBar = props => {
   return (
     <nav className={navBarClass}>
       <div className="nav-container__logo">
-        <p>SFN</p>
+        <NavLink to="/">
+          <Logo />
+        </NavLink>
       </div>
       <div className="nav-container__left">
         <NavLink exact activeClassName="nav__item--selected" to="/">
