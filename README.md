@@ -265,6 +265,21 @@ The layout of the pages is following Bootstrap's [12 column](https://getbootstra
 
 The structure of the components and spacing is suggested to follow an 8px grid system, what does that mean? It means every spacing, padding and size (width, height) of a component is following a multiple of 8. To give you a head start related to this rule, we set up the margins and paddings already to use in the styles/utilities.scss file as SASS variables.
 
+##### How do we name things in CSS/SCSS?
+
+We use **BEM** (stands for Block-Element-Modifier) which is a naming convention standard for CSS class names. It has fairly wide adoption and is immensely useful in writing CSS that is easier to read, understand, and scale.
+
+A BEM class name includes up to three parts:
+
+- Block: The outermost parent element of the component is defined as the block.
+- Element: Inside of the component may be one or more children called elements.
+- Modifier: Either a block or element may have a variation signified by a modifier.
+- If all three are used in a name it would look something like this:
+
+`[block]__[element]--[modifier]`
+
+For full reference with examples, please consult this amazing [article](https://seesparkbox.com/foundry/bem_by_example). If you see something different in our codebase than the best practises mentioned in the article, please open a new issue!
+
 ### Design reference 🎨
 
 In 2019 we've created a simple branding document to establish the basis for the design in terms of colors, typography and photographic direction. The values for typography and colors will be reflected in the `.scss` variables (`$variable`) as well.
