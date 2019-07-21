@@ -6,13 +6,15 @@ import Layout from './Layout'
 // Need at least 1 test to pass Travis CI
 describe('<Layout />', () => {
   let layoutWrapper
-  let removeEventListener
+  let eventMap
+
   beforeEach(() => {
-    layoutWrapper = shallow(<Layout children={[]} />, {
-      disableLifecycleMethods: true
+    eventMap = {}
+    document.addEventListener = jest.fn((event, cb) => {
+      eventMap[event] = cb
     })
-    removeEventListener = jest.fn().mockReturnValue({ style: {} })
-    Object.defineProperty(global.document, 'removeEventListener', { writable: true, value: removeEventListener })
+    document.removeEventListener = jest.fn()
+    layoutWrapper = shallow(<Layout children={[]} />)
   })
 
   it('contains a Header component', () => {
@@ -34,19 +36,14 @@ describe('<Layout />', () => {
 
   it('calls component will unmount on unmount', () => {
     layoutWrapper.unmount()
-    expect(removeEventListener).toHaveBeenCalledTimes(1)
+    expect(document.removeEventListener).toHaveBeenCalledTimes(1)
   })
 
   it('sets state of mobileMenu to false on mouse up ', () => {
-    layoutWrapper = mount(
-      <BrowserRouter>
-        <Layout children={[]} />
-      </BrowserRouter>
-    )
+    eventMap.mouseup()
+    expect(layoutWrapper.state().mobileMenu).toBe(false)
     layoutWrapper.setState({ mobileMenu: true })
-    layoutWrapper.find('.footer-container__copyright').simulate('mouseup')
-    layoutWrapper.update()
-
+    eventMap.mouseup()
     expect(layoutWrapper.state().mobileMenu).toBe(false)
   })
 })
