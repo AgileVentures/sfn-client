@@ -1,20 +1,25 @@
 .footer-container {
   width: 100%;
   background-color: $primary-color-darkblue;
+
 }
 
 .footer-container__copyright {
-  color:  $primary-color-white-darkest;
+  color: $primary-color-white-darkest;
   margin: $margin-r 0;
   text-align: center;
 }
 
 .footer__nav-container {
   display: flex;
-  align-items: center;
+  align-items: flex-end;
   padding-top: $padding-s;
   padding-bottom: $padding-s;
-  padding-left: $padding-xxl;
+  padding-left: $padding-s;
+
+  .logo {
+    margin-right: $padding-r;
+  }
 
   a {
     color: rgba($primary-color-white, 0.6);
@@ -24,6 +29,7 @@
     letter-spacing: 2px;
     margin-right: $margin-r;
     margin-left: $margin-r;
+
     &:active {
       color: $primary-color-white;
     }
@@ -36,8 +42,4 @@
 
 .footer__nav-container .footer__nav__item--selected {
   color: $primary-color-white;
-}
-
-.nav_link {
-  width: 100%;
 }

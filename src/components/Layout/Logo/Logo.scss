@@ -1,0 +1,18 @@
+.logo {
+    height: 48px;
+    width: auto;
+
+    &:hover {
+        cursor: pointer;
+    }
+}
+
+.logo-large {
+    height: 64px;
+    width: auto;
+}
+
+.logo-small {
+    height: 24px;
+    width: auto;
+}

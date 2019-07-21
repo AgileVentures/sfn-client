@@ -33,4 +33,11 @@ describe('<DonateBlock />', () => {
   it('has an add to cart button to put donation amount in the cart', () => {
     expect(donateBlockWrapper.find('button.add-to-cart').length).toEqual(1)
   })
+
+  it('changes state of amount when input typed', () => {
+    const wrapper = shallow(<DonateBlock />)
+    const input = wrapper.find('input')
+    input.simulate('change', { target: { value: '$585' } })
+    expect(wrapper.state().amount).toEqual('$585')
+  })
 })
