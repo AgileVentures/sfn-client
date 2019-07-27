@@ -35,6 +35,17 @@ We use [Zenhub](https://app.zenhub.com/workspaces/sfn-client-5cbedb54074dff08576
 
 We keep our code on [GitHub](http://github.com) and use [git](https://git-scm.com) for version control.
 
+### Recomended IDE linting
+
+Most of our developers use [vs code](https://code.visualstudio.com/) and we really recommend it as an IDE for this project. Once you have it installed, be sure to set [es-lint](https://eslint.org/) as your linter and enable format on save so that your code can be formated as soon as you save. Please ensure that the eslint you install is the same one in the image below
+
+<img width="1254" alt="Screenshot 2019-06-08 13 02 15" src="https://user-images.githubusercontent.com/11988089/59150726-ea241b00-89ed-11e9-9d5f-7caf8978e375.png">
+
+Search for and select `eslint.autoFixOnSave` in the settings (or add it as a `true` property in `settings.json`) as shown below
+
+<img width="1280" alt="Screenshot 2019-06-08 12 56 45" src="https://user-images.githubusercontent.com/11988089/59150776-a847a480-89ee-11e9-8bf0-161f43aa01e3.png">
+
+
 ### Forking the repository
 
 Each developer will usually work with a [fork](https://help.github.com/articles/fork-a-repo/) of the [main repository on Agile Ventures](https://github.com/AgileVentures/sfn-client). Before starting work on a new feature or bugfix, please ensure you have [synced your fork to upstream/develop](https://help.github.com/articles/syncing-a-fork/):
