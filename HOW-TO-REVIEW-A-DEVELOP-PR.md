@@ -123,3 +123,11 @@ yarn start
 // Navigate to http://localhost:3000, then review and inspect the app and its elements for expected and unexpected behavior
 ```
 Then jump back to the [Reviewing from GitHub](#reviewing-from-github) section
+
+## What happens after?
+
+- The reviewer should notify on Slack the owner of the PR if some comments made on the PR, and additional work is expected by the owner of the PR within the current scope
+
+- If the reviewer found work outside of the current ticket's scope, the reviewer should open a new issue (and optionally notify on Slack the owner of the current PR)
+
+- If the PR gets outdated, then it's the reviewer's responsibility to auto-update the branch to the current state. If the auto-update fails, the reviewer should notify the owner of the PR to update the PR
