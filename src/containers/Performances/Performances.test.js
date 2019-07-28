@@ -3,8 +3,11 @@ import Performances from './Performances'
 import { shallow } from 'enzyme'
 
 describe('<Performances />', () => {
-  it('contains the text Performances', () => {
-    const performancesWrapper = shallow(<Performances />)
-    expect(performancesWrapper.text()).toEqual('Performances')
+  let performancesWrapper
+  beforeEach(() => {
+    performancesWrapper = shallow(<Performances />)
+  })
+  it('contains a sign up banner at the bottom', () => {
+    expect(performancesWrapper.find('Banner').length).toEqual(1)
   })
 })
