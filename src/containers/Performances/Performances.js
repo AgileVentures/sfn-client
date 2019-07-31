@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+
 import TrendingPerformances from './TrendingPerformances/TrendingPerformances'
 import ExplorePerformances from './ExplorePerformances/ExplorePerformances'
 import Banner from '../../components/Shared/Banner/Banner'
@@ -7,6 +8,7 @@ class Performances extends Component {
   render() {
     return (
       <React.Fragment>
+
         <TrendingPerformances />
         <ExplorePerformances />
         <Banner
