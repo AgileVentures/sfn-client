@@ -1,10 +1,10 @@
 import React from 'react'
 import Performances from './Performances'
-import { shallow } from 'enzyme'
+import { mount } from 'enzyme'
 
 describe('<Performances />', () => {
-  it('contains the text Performances', () => {
-    const performancesWrapper = shallow(<Performances />)
-    expect(performancesWrapper.text()).toEqual('Performances')
+  it('contains a Trending Performances wrapper', () => {
+    const performancesWrapper = mount(<Performances />)
+    expect(performancesWrapper.find('TrendingPerformances').length).toEqual(1)
   })
 })

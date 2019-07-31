@@ -1,0 +1,111 @@
+.performance-card {
+  grid-column-end: span 6;
+  margin: $padding-s;
+  padding: $padding-s;
+  color: $primary-color-white;
+  text-align: center;
+  background-color: $primary-color-darkblue-lighter;
+  display: flex;
+  flex-direction: column;
+  transition: background-image 400ms ease;
+
+  &:hover {
+    background-image: radial-gradient(
+      rgba($primary-color-white, 0.6),
+      rgba(255, 255, 255, 0)
+    );
+
+    cursor: pointer;
+  }
+
+  .performance-thumbnail {
+    width: 100%;
+  }
+
+  .performance-details {
+    display: flex;
+    flex-direction: column;
+
+    .performance-text {
+      text-align: left;
+      margin-top: $margin-s;
+
+      h4 {
+        margin-bottom: $margin-s;
+      }
+    }
+
+    .performance-stats {
+      min-width: 250px;
+      display: flex;
+      flex-direction: column;
+      margin-top: $margin-s;
+      text-align: left;
+      flex-wrap: wrap;
+
+      h5 {
+        min-width: 200px;
+      }
+
+      .artist-details {
+        display: flex;
+
+        p {
+          margin-right: $margin-s;
+        }
+      }
+
+      .cause-funds {
+        p {
+          display: block;
+          color: $primary-color-white-darkest;
+          margin-top: $margin-s;
+        }
+      }
+
+      button {
+        align-self: flex-end;
+        width: auto;
+        display: block;
+      }
+    }
+  }
+}
+
+.performance-card.featured {
+  grid-column-end: span 12;
+  flex-direction: row;
+
+  .performance-thumbnail {
+    width: 33%;
+  }
+
+  .performance-details {
+    flex-direction: row;
+
+    .performance-text {
+      margin-top: 0;
+      margin-left: $margin-s;
+      margin-right: $margin-s;
+    }
+
+    .performance-stats {
+      min-width: 250px;
+      border-left: 1px solid $primary-color-darkblue-lightest;
+      display: flex;
+      flex-direction: column;
+      margin-top: 0;
+      padding-left: $padding-r;
+      justify-content: space-between;
+      text-align: left;
+
+      .artist-details {
+        display: block;
+      }
+
+      button {
+        align-self: flex-start;
+      }
+    }
+  }
+}

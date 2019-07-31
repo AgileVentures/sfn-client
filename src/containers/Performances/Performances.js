@@ -1,8 +1,13 @@
 import React, { Component } from 'react'
+import TrendingPerformances from './TrendingPerformances/TrendingPerformances'
 
 class Performances extends Component {
   render() {
-    return <div>Performances</div>
+    return (
+      <React.Fragment>
+        <TrendingPerformances />
+      </React.Fragment>
+    )
   }
 }
 
