@@ -20,6 +20,7 @@
 @import "containers/Causes/CampaignsEndingSoon/CampaignsEndingSoon.scss";
 @import "containers/Causes/ExploreCauses/ExploreCauses.scss";
 @import "containers/Artist/ArtistPerformances/artistperformances.scss";
+@import "containers/Performances/TrendingPerformances/TrendingPerformances.scss";
 @import "components/Artist/ArtistPerformance/artistperformance.scss";
 @import "components/Artist/MoneyRaised/MoneyRaised.scss";
 @import "components/Artist/MoneyRaised/Charts.scss";
@@ -42,6 +43,7 @@
 @import "components/Cause/SupportingArtist/SupportingArtist.scss";
 @import "components/Cause/RelatedCause/RelatedCause.scss";
 @import "components/Causes/CauseCard/CauseCard.scss";
+@import "components/Performances/PerformanceCard/PerformanceCard.scss";
 @import "components/Shared/Avatar/Avatar.scss";
 @import "components/About/Vision/Vision.scss";
 @import "components/About/Why/Why.scss";
@@ -49,3 +51,4 @@
 @import "components/Contact/ContactDetails/ContactDetails.scss";
 @import "components/Contact/ContactForm/ContactForm.scss";
 @import "containers/Performances/ExplorePerformances/ExplorePerformances.scss"
+
