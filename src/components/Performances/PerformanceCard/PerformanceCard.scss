@@ -1,5 +1,5 @@
 .performance-card {
-  grid-column-end: span 6;
+  width: 47%;
   margin: $padding-s;
   padding: $padding-s;
   color: $primary-color-white;
@@ -10,10 +10,8 @@
   transition: background-image 400ms ease;
 
   &:hover {
-    background-image: radial-gradient(
-      rgba($primary-color-white, 0.6),
-      rgba(255, 255, 255, 0)
-    );
+    background-image: radial-gradient(rgba($primary-color-white, 0.6),
+        rgba(255, 255, 255, 0));
 
     cursor: pointer;
   }
@@ -68,12 +66,16 @@
         width: auto;
         display: block;
       }
+
+      button.flex-start {
+        align-self: flex-start;
+      }
     }
   }
 }
 
 .performance-card.featured {
-  grid-column-end: span 12;
+  width: 100%;
   flex-direction: row;
 
   .performance-thumbnail {

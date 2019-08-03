@@ -6,6 +6,10 @@
   margin-top: $margin-l;
 }
 
+.performance-card-wrapper-small {
+  display: flex;
+}
+
 .pagination {
   grid-column: -1 / 1;
   display: flex;

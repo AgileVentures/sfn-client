@@ -8,7 +8,10 @@ describe('<PerformanceCard', () => {
 
   beforeEach(() => {
     performanceCardWrapper = shallow(
-      <PerformanceCard performanceTitle="Awesome Test Performance" />
+      <PerformanceCard
+        performanceTitle="Awesome Test Performance"
+        donatedAmount={400}
+      />
     )
   })
 
@@ -37,8 +40,6 @@ describe('<PerformanceCard', () => {
   })
 
   it('contains a Learn More button', () => {
-    expect(
-      performanceCardWrapper.contains(<button>Learn More</button>)
-    ).toEqual(true)
+    expect(performanceCardWrapper.find('button').text()).toEqual('Learn More')
   })
 })
