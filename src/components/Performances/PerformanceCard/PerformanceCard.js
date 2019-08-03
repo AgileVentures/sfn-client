@@ -2,6 +2,15 @@ import React from 'react'
 import PropTypes from 'prop-types'
 
 const PerformanceCard = props => {
+  const renderFundRaised = props => {
+    return (
+      <div>
+        <p>Funds Raised:</p>
+        <h5 className="performance-card-funds">${props.donatedAmount}</h5>
+      </div>
+    )
+  }
+
   return (
     <div
       className={
@@ -21,16 +30,17 @@ const PerformanceCard = props => {
           </p>
         </div>
         <div className="performance-stats">
-          <h5>{props.causeTitle}</h5>
+          <h5> {props.causeTitle} </h5>
           <div className="artist-details">
-            <p className="italic">{props.artistName}</p>
-            <p>Music video</p>
+            <p className="italic"> {props.artistName} </p>
+            {props.artistName ? 'Music video' : ''}
           </div>
           <div className="cause-funds">
-            <p>Funds Raised:</p>
-            <h5 className="performance-card-funds">${props.donatedAmount}</h5>
+            {props.donatedAmount ? renderFundRaised(props) : ''}
           </div>
-          <button>Learn More</button>
+          <button className={props.donatedAmount ? '' : 'flex-start'}>
+            Learn More
+          </button>
         </div>
       </div>
     </div>
