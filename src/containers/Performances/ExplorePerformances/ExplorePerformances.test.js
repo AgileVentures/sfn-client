@@ -11,6 +11,9 @@ describe('<ExplorePerformances />', () => {
   it("has 'Explore Performances' title", () => {
     expect(explorePerformancesWrapper.find('h1').text()).toEqual('Explore Performances')
   })
+  it('Has four performances', () => {
+    expect(explorePerformancesWrapper.find('PerformanceCard').length).toEqual(4)
+  })
   it('has a Paginate component', () => {
     expect(explorePerformancesWrapper.find(Paginate).length).toEqual(1)
   })
