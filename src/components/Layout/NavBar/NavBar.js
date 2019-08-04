@@ -4,6 +4,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faBars, faTimes } from '@fortawesome/free-solid-svg-icons'
 import { NavLink } from 'react-router-dom'
 import Logo from '../Logo/Logo'
+import GoogleAuth from '../../../containers/GoogleAuth/GoogleAuth'
 
 const NavBar = props => {
   let navBarClass = 'nav-container main-container'
@@ -36,6 +37,7 @@ const NavBar = props => {
         <NavLink activeClassName="nav__item--selected" to="/contact">
           Contact
         </NavLink>
+        <GoogleAuth />
       </div>
       <div className="nav-container__right" />
 
