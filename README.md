@@ -310,3 +310,5 @@ As moving towards with the project the individual screens that are in-progress a
 #### Performances page
 
 ![SFN_performances_index-1](https://user-images.githubusercontent.com/9334646/60400175-ca0cf500-9b70-11e9-8fc2-334143b8d2af.jpg)
+
+For more mockups, please follow [this link](MOCKUPS.md)
