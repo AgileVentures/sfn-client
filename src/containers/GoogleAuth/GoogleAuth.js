@@ -14,7 +14,7 @@ class GoogleAuth extends React.Component {
       window.gapi.client
         .init({
           clientId:
-            '1056442258010-5epaajr0e49ubppcgp3d4n9hkr3lfisk.apps.googleusercontent.com',
+            process.env.REACT_APP_GOOGLE_API,
           scope: 'email'
         })
         .then(() => {
@@ -73,5 +73,5 @@ export default connect(
 GoogleAuth.propTypes = {
   signIn: PropTypes.func,
   signOut: PropTypes.func,
-  isSignedIn: PropTypes.func
+  isSignedIn: PropTypes.bool
 }
