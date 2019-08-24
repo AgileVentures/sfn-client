@@ -2,10 +2,9 @@
   padding-top: $padding-s;
   padding-bottom: $padding-s;
   display: flex;
-  align-items: flex-end;
 
   a {
-    color: rgba($primary-color-white, .6);
+    color: rgba($primary-color-white, 0.6);
     font-weight: 700;
     font-size: 0.75rem;
     text-transform: uppercase;
@@ -37,8 +36,13 @@
   display: none;
 }
 
-.nav-container__left>* {
-  margin-left: $margin-l;
+.nav-container__left {
+  display: flex;
+  align-items: center;
+}
+
+.nav-container__left > * {
+  margin-left: $margin-r;
   padding: 11.4px;
   float: left;
   text-align: center;
@@ -58,7 +62,7 @@
 }
 
 @media only screen and (max-width: 992px) {
-  .nav-container__left>* {
+  .nav-container__left > * {
     margin-left: 7px;
   }
 
@@ -68,7 +72,7 @@
 }
 
 @media only screen and (max-width: 768px) {
-  .nav-container__left>* {
+  .nav-container__left > * {
     padding: 11.4px 5px;
     margin-left: 0;
   }
