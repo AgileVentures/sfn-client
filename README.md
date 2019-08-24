@@ -309,6 +309,6 @@ As moving towards with the project the individual screens that are in-progress a
 
 #### Performances page
 
-![SFN_performances_index-1](https://user-images.githubusercontent.com/9334646/60400175-ca0cf500-9b70-11e9-8fc2-334143b8d2af.jpg)
+![SFN_performance page](https://user-images.githubusercontent.com/9334646/63641082-d57c2880-c6a8-11e9-8462-4afe887cb078.png)
 
 For more mockups that have been used in this project, please follow [this link](documentation/wireframes/finished)
