@@ -1,4 +1,8 @@
 import { Given, When, Then } from 'cypress-cucumber-preprocessor/steps'
+/* global Cypress */
+Cypress.on('window:before:load', (win) => {
+  win.gapi = { load: cy.stub().as('load') }
+})
 
 const url = 'https://google.com'
 Given('I open Google page', () => {
