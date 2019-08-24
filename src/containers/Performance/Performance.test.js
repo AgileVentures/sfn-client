@@ -4,8 +4,13 @@ import { shallow } from 'enzyme'
 
 // Need at least 1 test to pass Travis CI
 describe('<Performance />', () => {
-  it('contains the text Performance', () => {
-    const performanceWrapper = shallow(<Performance />)
-    expect(performanceWrapper.text()).toEqual('Performance')
+  let performanceWrapper
+
+  beforeEach(() => {
+    performanceWrapper = shallow(<Performance />)
+  })
+
+  it('contains one PerformanceBio component', () => {
+    expect(performanceWrapper.find('PerformanceBio').length).toEqual(1)
   })
 })
