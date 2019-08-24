@@ -2,11 +2,19 @@ import React from 'react'
 import { shallow, mount } from 'enzyme'
 import { BrowserRouter } from 'react-router-dom'
 import Layout from './Layout'
+import { Provider } from 'react-redux'
+import { createStore, combineReducers } from 'redux'
+import authenticationReducer from '../../reducers/authentication/authenticationReducer'
 
 // Need at least 1 test to pass Travis CI
 describe('<Layout />', () => {
   let layoutWrapper
   let eventMap
+  const reducers = {
+    authentication: authenticationReducer
+  }
+  const reducer = combineReducers(reducers)
+  const store = createStore(reducer)
 
   beforeEach(() => {
     eventMap = {}
@@ -24,14 +32,18 @@ describe('<Layout />', () => {
     expect(layoutWrapper.state('mobileMenu')).toEqual(false)
   })
   it('has state updated when the NavBar it contains has its menu item clicked', () => {
+    window.gapi = { load: jest.fn() }
     layoutWrapper = mount(
-      <BrowserRouter>
-        <Layout children={[]} />
-      </BrowserRouter>
+      <Provider store={store} >
+        <BrowserRouter>
+          <Layout children={[]} />
+        </BrowserRouter>
+      </Provider>
     )
     layoutWrapper.find('FontAwesomeIcon').simulate('click')
     const layout = layoutWrapper.find('Layout')
     expect(layout.state('mobileMenu')).toEqual(true)
+    layoutWrapper.unmount()
   })
 
   it('calls component will unmount on unmount', () => {
