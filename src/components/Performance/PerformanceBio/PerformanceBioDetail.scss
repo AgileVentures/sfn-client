@@ -1,0 +1,12 @@
+.performance-bio-detail-container {
+  grid-column: 1/6;
+  margin-bottom: $margin-l;
+
+  .performance-bio-detail__content {
+    margin-bottom: 0;
+  }
+
+  .performance-bio-detail__heading {
+    margin-bottom: $margin-s;
+  }
+}

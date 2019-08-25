@@ -13,4 +13,8 @@ describe('<PerformanceBio />', () => {
   it('has a <PerformanceCarousel /> element', () => {
     expect(performanceBioWrapper.find('PerformanceCarousel')).toHaveLength(1)
   })
+
+  it('has 2 <PerformanceBioDetail /> components', () => {
+    expect(performanceBioWrapper.find('PerformanceBioDetail')).toHaveLength(2)
+  })
 })
