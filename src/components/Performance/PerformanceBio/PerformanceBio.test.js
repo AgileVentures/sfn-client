@@ -10,7 +10,7 @@ describe('<PerformanceBio />', () => {
     performanceBioWrapper = shallow(<PerformanceBio />)
   })
 
-  it('has the text PerformanceBio written', () => {
-    expect(performanceBioWrapper.text()).toEqual('PerformanceBio')
+  it('has a <PerformanceCarousel /> element', () => {
+    expect(performanceBioWrapper.find('PerformanceCarousel')).toHaveLength(1)
   })
 })

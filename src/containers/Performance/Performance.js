@@ -4,9 +4,9 @@ import PerformanceBio from '../../components/Performance/PerformanceBio/Performa
 class Performance extends Component {
   render() {
     return (
-      <div>
+      <React.Fragment>
         <PerformanceBio />
-      </div>
+      </React.Fragment>
     )
   }
 }
