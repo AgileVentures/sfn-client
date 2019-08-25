@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import CauseBio from '../../components/Cause/CauseBio/CauseBio'
 import Donate from '../../components/Cause/Donate/Donate'
-import Campaign from '../../components/Cause/Campaign/Campaign'
+import Campaign from '../../components/Shared/Campaign/Campaign'
 import ContactUs from '../../components/Cause/ContactUs/ContactUs'
 import SupportingArtists from './SupportingArtists/SupportingArtists'
 import RelatedCauses from './RelatedCauses/RelatedCauses'
@@ -19,6 +19,7 @@ class Cause extends Component {
           numberOfDonors={23}
           daysToGo={12}
           organization="UNICEF"
+          renderButtons
         />
         <SupportingArtists />
         <RelatedCauses />

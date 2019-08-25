@@ -4,6 +4,18 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faHeart } from '@fortawesome/free-solid-svg-icons'
 
 const Campaign = props => {
+  function renderButtons() {
+    return (
+      <div className="donation-buttons">
+        <button className="donation-button">
+          <FontAwesomeIcon className="donation-button-icon" icon={faHeart} />
+          Donate today
+        </button>
+        <button className="text-link">Learn More</button>
+      </div>
+    )
+  }
+
   return (
     <div className="campaign-container">
       <div className="campaign-title white">
@@ -28,13 +40,7 @@ const Campaign = props => {
           </div>
         </div>
       </div>
-      <div className="donation-buttons">
-        <button className="donation-button">
-          <FontAwesomeIcon className="donation-button-icon" icon={faHeart} />
-          Donate today
-        </button>
-        <button className="text-link">Learn More</button>
-      </div>
+      {props.renderButtons ? renderButtons() : ''}
     </div>
   )
 }
@@ -44,7 +50,8 @@ Campaign.propTypes = {
   donatedAmount: PropTypes.number,
   numberOfDonors: PropTypes.number,
   daysToGo: PropTypes.number,
-  organization: PropTypes.string
+  organization: PropTypes.string,
+  renderButtons: PropTypes.bool
 }
 
 export default Campaign

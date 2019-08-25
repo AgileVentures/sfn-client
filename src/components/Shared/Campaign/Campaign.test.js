@@ -11,7 +11,8 @@ describe('<Campaign />', () => {
     donatedAmount: 2000,
     numberOfDonors: 5,
     daysToGo: 31,
-    organization: 'HUMALUPA'
+    organization: 'HUMALUPA',
+    renderButtons: true
   }
 
   beforeEach(() => {
