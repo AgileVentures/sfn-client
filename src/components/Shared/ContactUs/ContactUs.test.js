@@ -1,13 +1,18 @@
 import React from 'react'
 import ContactUs from './ContactUs'
 
-import { shallow } from 'enzyme'
+import { mount } from 'enzyme'
 
 describe('<ContactUs />', () => {
   let contactUsWrapper
 
   beforeEach(() => {
-    contactUsWrapper = shallow(<ContactUs />)
+    contactUsWrapper = mount(
+      <ContactUs
+        contactPersonName="Mrs. Awesome Charity spokesperson"
+        websiteURL="google.com"
+      />
+    )
   })
 
   it('has title Contact us', () => {
@@ -18,6 +23,10 @@ describe('<ContactUs />', () => {
     expect(contactUsWrapper.find('h6').text()).toEqual(
       'Mrs. Awesome Charity spokesperson'
     )
+  })
+
+  it('has the url where the more information can be found', () => {
+    expect(contactUsWrapper.find('a').length).toEqual(1)
   })
 
   it('has information about the contact details', () => {

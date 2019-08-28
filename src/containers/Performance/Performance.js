@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import PerformanceBio from '../../components/Performance/PerformanceBio/PerformanceBio'
 import Campaign from '../../components/Shared/Campaign/Campaign'
+import ContactUs from '../../components/Shared/ContactUs/ContactUs'
 
 class Performance extends Component {
   render() {
@@ -13,6 +14,12 @@ class Performance extends Component {
           numberOfDonors={33}
           daysToGo={23}
           organization="Beyonce"
+        />
+        <ContactUs
+          contactPersonName="Performance owners name"
+          contactPhoneNumber="122-3456"
+          contactEmail="awesomemail@email.com"
+          websiteURL="google.com"
         />
       </React.Fragment>
     )
