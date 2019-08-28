@@ -17,4 +17,8 @@ describe('<Performance />', () => {
   it('contains a Campaign component', () => {
     expect(performanceWrapper.find('Campaign').length).toEqual(1)
   })
+
+  it('contains an Attendance component', () => {
+    expect(performanceWrapper.find('Attendance').length).toEqual(1)
+  })
 })
