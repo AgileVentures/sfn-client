@@ -1,9 +1,13 @@
-.performance-bio-detail-container {
+.performance-bio-detail-wrapper {
   grid-column: 1/6;
-  margin-bottom: $margin-l;
+  grid-row: 2;
 
-  .performance-bio-detail__content {
-    margin-bottom: 0;
+  .performance-bio-detail-container {
+    margin-top: $margin-l;
+  }
+
+  .performance-bio-detail-container:first-of-type {
+    margin-top: $margin-s;
   }
 
   .performance-bio-detail__heading {
