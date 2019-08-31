@@ -64,4 +64,18 @@ describe('<Campaign />', () => {
       )
     ).toEqual(true)
   })
+
+  it('doesnt render buttons if renderButtons is false', () => {
+    props = {
+      causeName: 'Happy Fridays',
+      donatedAmount: 2000,
+      numberOfDonors: 5,
+      daysToGo: 31,
+      organization: 'HUMALUPA',
+      renderButtons: false
+    }
+
+    campaignWrapper = shallow(<Campaign {...props} />)
+    expect(campaignWrapper.find('div.donation-buttons').length).toEqual(0)
+  })
 })
