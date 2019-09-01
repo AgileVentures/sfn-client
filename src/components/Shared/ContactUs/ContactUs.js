@@ -13,25 +13,33 @@ import {
   faInstagram
 } from '@fortawesome/free-brands-svg-icons'
 
+import PropTypes from 'prop-types'
+
 library.add(faFacebook, faTwitter, faInstagram)
 
-const ContactUs = () => {
+const ContactUs = props => {
   return (
     <div className="contact-us-wrapper">
       <h5 className="white">Contact us</h5>
       <div className="contact-details">
-        <h6>Mrs. Awesome Charity spokesperson</h6>
+        <h6>{props.contactPersonName}</h6>
         <div className="contact-details--item">
           <FontAwesomeIcon className="contact-icon" icon={faPhone} />
-          <p>1111 1111</p>
+          <p>{props.contactPhoneNumber}</p>
         </div>
         <div className="contact-details--item">
           <FontAwesomeIcon className="contact-icon" icon={faEnvelope} />
-          <p>charity.spokesperson@mail.com</p>
+          <p>{props.contactEmail}</p>
         </div>
         <div className="contact-details--item">
           <FontAwesomeIcon className="contact-icon" icon={faGlobeAmericas} />
-          <a href="/">Charity Website</a>
+          <a
+            target="_blank"
+            href={`https://${props.websiteURL}`}
+            rel="noopener noreferrer"
+          >
+            Website
+          </a>
         </div>
         <div className="contact-details--socials">
           <FontAwesomeIcon
@@ -47,6 +55,13 @@ const ContactUs = () => {
       </div>
     </div>
   )
+}
+
+ContactUs.propTypes = {
+  contactPersonName: PropTypes.string.isRequired,
+  contactPhoneNumber: PropTypes.string,
+  contactEmail: PropTypes.string,
+  websiteURL: PropTypes.string.isRequired
 }
 
 export default ContactUs
