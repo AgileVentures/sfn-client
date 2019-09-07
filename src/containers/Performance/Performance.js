@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import PerformanceBio from '../../components/Performance/PerformanceBio/PerformanceBio'
+import Ticket from '../../components/Performance/Ticket/Ticket'
 import Campaign from '../../components/Shared/Campaign/Campaign'
 import ContactUs from '../../components/Shared/ContactUs/ContactUs'
 import Attendance from './Attendance/Attendance'
@@ -16,6 +17,7 @@ class Performance extends Component {
           daysToGo={23}
           organization="Beyonce"
         />
+        <Ticket />
         <Attendance />
         <ContactUs
           contactPersonName="Performance owners name"

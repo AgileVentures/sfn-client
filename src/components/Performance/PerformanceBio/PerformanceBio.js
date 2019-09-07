@@ -9,8 +9,13 @@ const PerformanceBio = () => {
   return (
     <React.Fragment>
       <PerformanceCarousel />
-      <PerformanceBioDetail heading="About the Performance" content={content} />
-      <PerformanceBioDetail heading="About the Artist" content={content} />
+      <div className="performance-bio-detail-wrapper">
+        <PerformanceBioDetail
+          heading="About the Performance"
+          content={content}
+        />
+        <PerformanceBioDetail heading="About the Artist" content={content} />
+      </div>
     </React.Fragment>
   )
 }
