@@ -5,5 +5,10 @@
 
   .supporting-artist__name {
     margin-left: $margin-xs;
+
+    &:hover {
+      text-decoration: underline;
+      cursor: pointer;
+    }
   }
 }

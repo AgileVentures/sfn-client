@@ -3,6 +3,17 @@
   margin-top: $margin-l;
 }
 
+.supported-causes-item-list {
+  .supportoed-causes-item--name {
+    display: inline;
+
+    &:hover {
+      cursor: pointer;
+      text-decoration: underline;
+    }
+  }
+}
+
 .supported-causes-item-list li {
   margin: $margin-xs 0;
 }

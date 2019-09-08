@@ -33,6 +33,10 @@
       margin-right: $margin-xs;
       font-size: 1.333rem;
       margin-right: $margin-r;
+
+      &:hover {
+        cursor: pointer;
+      }
     }
 
     .contact-details--socials {

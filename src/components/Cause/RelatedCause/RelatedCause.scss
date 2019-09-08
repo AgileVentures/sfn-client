@@ -5,5 +5,10 @@
 
   .related-cause__name {
     margin-left: $margin-xs;
+
+    &:hover {
+      cursor: pointer;
+      text-decoration: underline;
+    }
   }
 }

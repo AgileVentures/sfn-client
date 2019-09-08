@@ -9,19 +9,19 @@ const RelatedArtists = () => {
         <ul className="related-artists-item-list white">
           <li>
             <Avatar />
-            <span>Awesome Artist A</span>
+            <p className="related-artists-item-list--name">Awesome Artist A</p>
           </li>
           <li>
             <Avatar />
-            <span>Awesome Artist B</span>
+            <p className="related-artists-item-list--name">Awesome Artist B</p>
           </li>
           <li>
             <Avatar />
-            <span>Awesome Artist C</span>
+            <p className="related-artists-item-list--name">Awesome Artist C</p>
           </li>
           <li>
             <Avatar />
-            <span>Awesome Artist D</span>
+            <p className="related-artists-item-list--name">Awesome Artist D</p>
           </li>
         </ul>
       </div>

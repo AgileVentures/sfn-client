@@ -25,11 +25,13 @@ const ContactUs = props => {
         <h6>{props.contactPersonName}</h6>
         <div className="contact-details--item">
           <FontAwesomeIcon className="contact-icon" icon={faPhone} />
-          <p>{props.contactPhoneNumber}</p>
+          <a href={`tel:${props.contactPhoneNumber}`}>
+            {props.contactPhoneNumber}
+          </a>
         </div>
         <div className="contact-details--item">
           <FontAwesomeIcon className="contact-icon" icon={faEnvelope} />
-          <p>{props.contactEmail}</p>
+          <a href={`mailto:${props.contactEmail}`}>{props.contactEmail}</a>
         </div>
         <div className="contact-details--item">
           <FontAwesomeIcon className="contact-icon" icon={faGlobeAmericas} />
