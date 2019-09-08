@@ -1,0 +1,47 @@
+.ticket-wrapper {
+  grid-column: 7/-1;
+  grid-row: 2;
+  margin-top: $margin-s;
+  margin-bottom: $margin-l;
+  margin-left: $margin-l;
+
+  .ticket-blocks {
+    margin-top: $margin-s;
+
+    .ticket-block {
+      display: flex;
+      margin-bottom: $margin-xs;
+
+      .ticket-block-amount {
+        padding: $padding-r;
+        background-color: $primary-color-darkblue-lighter;
+        display: flex;
+        align-items: center;
+      }
+
+      .ticket-block-option {
+        display: flex;
+        align-items: center;
+        padding: $padding-r;
+        background-color: $primary-color-darkblue-lighter;
+        border-left: 1px solid $primary-color-darkblue;
+        flex-grow: 1;
+      }
+
+      .ticket-block-buttons {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        padding: $padding-s;
+        min-width: 180px;
+        background-color: $primary-color-darkblue-lighter;
+        border-left: 1px solid $primary-color-darkblue;
+
+        .ticket-button {
+          margin-bottom: $margin-xs;
+        }
+      }
+    }
+  }
+}

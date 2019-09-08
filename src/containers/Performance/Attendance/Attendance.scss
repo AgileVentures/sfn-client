@@ -1,0 +1,10 @@
+.attendance-wrapper {
+  grid-column: 7/-1;
+  grid-row: 3;
+  margin-left: $margin-l;
+}
+
+.attendance__avatars {
+  display: flex;
+  margin-top: $margin-s;
+}
