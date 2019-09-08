@@ -9,19 +9,19 @@ const SupportedCauses = () => {
         <ul className="supported-causes-item-list white">
           <li>
             <Avatar />
-            <span>Deserving Cause A</span>
+            <p className="supportoed-causes-item--name">Deserving Cause A</p>
           </li>
           <li>
             <Avatar />
-            <span>Deserving Cause B</span>
+            <p className="supportoed-causes-item--name">Deserving Cause B</p>
           </li>
           <li>
             <Avatar />
-            <span>Deserving Cause C</span>
+            <p className="supportoed-causes-item--name">Deserving Cause C</p>
           </li>
           <li>
             <Avatar />
-            <span>Deserving Cause D</span>
+            <p className="supportoed-causes-item--name">Deserving Cause D</p>
           </li>
         </ul>
       </div>

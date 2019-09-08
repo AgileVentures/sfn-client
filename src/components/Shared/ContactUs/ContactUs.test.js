@@ -25,10 +25,6 @@ describe('<ContactUs />', () => {
     )
   })
 
-  it('has the url where the more information can be found', () => {
-    expect(contactUsWrapper.find('a').length).toEqual(1)
-  })
-
   it('has information about the contact details', () => {
     expect(contactUsWrapper.find('div.contact-details--item').length).toEqual(
       3

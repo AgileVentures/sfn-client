@@ -3,6 +3,17 @@
   margin-top: $margin-l;
 }
 
+.related-artists-item-list {
+  .related-artists-item-list--name {
+    display: inline;
+
+    &:hover {
+      cursor: pointer;
+      text-decoration: underline;
+    }
+  }
+}
+
 .related-artists-item-list li {
   margin: $margin-xs 0;
 }
