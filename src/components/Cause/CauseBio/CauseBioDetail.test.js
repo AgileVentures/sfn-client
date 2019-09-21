@@ -6,7 +6,8 @@ describe('<CauseBioDetail/>', () => {
   let causeBioDetailWrapper
   let props = {
     heading: 'Heading',
-    content: 'Content'
+    content: 'Content',
+    daysToGo: 12
   }
   beforeEach(() => {
     causeBioDetailWrapper = shallow(<CauseBioDetail {...props} />)
@@ -16,7 +17,15 @@ describe('<CauseBioDetail/>', () => {
     expect(causeBioDetailWrapper.find('h5').text()).toEqual('Heading')
   })
 
+  it('shows how much time left before the cause closes', () => {
+    expect(causeBioDetailWrapper.find('.cause-days-left').text()).toEqual(
+      ' - 12 more days to go'
+    )
+  })
+
   it('has <p> element with text Content', () => {
-    expect(causeBioDetailWrapper.find('p').text()).toEqual('Content')
+    expect(
+      causeBioDetailWrapper.find('.cause-bio-detail__content').text()
+    ).toEqual('Content')
   })
 })
