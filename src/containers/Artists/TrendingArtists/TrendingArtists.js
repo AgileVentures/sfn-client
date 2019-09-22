@@ -6,10 +6,12 @@ class TrendingArtists extends Component {
     return (
       <React.Fragment>
         <h1 className="trending-artists-title">Trending Artists</h1>
-        <ArtistCard artistName={'Dua Lipa'} artistDetails />
-        <ArtistCard artistName={'Dua Lipa'} artistDetails />
-        <ArtistCard artistName={'Dua Lipa'} artistDetails />
-        <ArtistCard artistName={'Dua Lipa'} artistDetails />
+        <div className="trending-artist-cards">
+          <ArtistCard artistName={'Dua Lipa'} artistDetails />
+          <ArtistCard artistName={'Dua Lipa'} artistDetails />
+          <ArtistCard artistName={'Dua Lipa'} artistDetails />
+          <ArtistCard artistName={'Dua Lipa'} artistDetails />
+        </div>
       </React.Fragment>
     )
   }

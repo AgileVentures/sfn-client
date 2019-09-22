@@ -1,3 +1,10 @@
+.trending-artist-cards {
+  grid-column: 1/-1;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
 .trending-artists-title {
   text-align: center;
   grid-column-end: span 12;

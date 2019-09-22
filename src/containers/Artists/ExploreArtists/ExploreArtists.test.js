@@ -9,7 +9,7 @@ describe('<ExploreArtists />', () => {
     exploreArtistsWrapper = shallow(<ExploreArtists />)
   })
   it('Has 3 Artists', () => {
-    expect(exploreArtistsWrapper.find('ArtistCard').length).toEqual(3)
+    expect(exploreArtistsWrapper.find('ArtistCard').length).toEqual(4)
   })
   it("has 'Explore Artists' title", () => {
     expect(exploreArtistsWrapper.find('h1').text()).toEqual('Explore Artists')

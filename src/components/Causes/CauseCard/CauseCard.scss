@@ -1,9 +1,10 @@
 .cause-card {
-  width: 50%;
+  width: 100%;
   padding: $padding-s;
   color: $primary-color-white;
   text-align: center;
   background-color: $primary-color-darkblue-lighter;
+  margin-bottom: $margin-r;
 
   &:hover {
     background-image: radial-gradient(
@@ -72,8 +73,9 @@
   margin-bottom: 0;
 }
 
-@media only screen and (max-width: 576px) {
+@media only screen and (min-width: 576px) {
   .cause-card {
-    grid-column-end: span 12;
+    width: 48%;
+    max-width: 400px;
   }
 }

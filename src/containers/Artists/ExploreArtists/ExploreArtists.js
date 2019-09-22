@@ -6,9 +6,12 @@ class ExploreArtists extends Component {
     return (
       <React.Fragment>
         <h1 className="explore-artists-title">Explore Artists</h1>
-        <ArtistCard artistName={'Dua Lipa'} />
-        <ArtistCard artistName={'Dua Lipa'} />
-        <ArtistCard artistName={'Dua Lipa'} />
+        <div className="explore-artist-cards">
+          <ArtistCard artistName={'Dua Lipa'} />
+          <ArtistCard artistName={'Dua Lipa'} />
+          <ArtistCard artistName={'Dua Lipa'} />
+          <ArtistCard artistName={'Dua Lipa'} />
+        </div>
         <Paginate />
       </React.Fragment>
     )
