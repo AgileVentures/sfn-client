@@ -2,11 +2,18 @@
   grid-column: 1/6;
   margin-bottom: $margin-l;
 
-  .cause-bio-detail__content {
-    margin-bottom: 0;
+  .cause-bio__top-text {
+    display: flex;
+    align-items: center;
+    margin-bottom: $margin-s;
+
+    p {
+      color: $primary-color-white;
+      margin-left: $margin-s;
+    }
   }
 
-  .cause-bio-detail__heading {
-    margin-bottom: $margin-s;
+  .cause-bio-detail__content {
+    margin-bottom: 0;
   }
 }

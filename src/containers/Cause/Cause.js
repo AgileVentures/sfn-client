@@ -11,7 +11,7 @@ class Cause extends Component {
   render() {
     return (
       <React.Fragment>
-        <CauseBio />
+        <CauseBio daysToGo={12} />
         <Donate />
         <Campaign
           causeName="Go Blue on World Children's Day"
