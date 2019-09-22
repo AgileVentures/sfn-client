@@ -23,6 +23,15 @@ describe('<CauseBioDetail/>', () => {
     )
   })
 
+  it('does not show the time to go if not passed in props', () => {
+    props = {
+      heading: 'Heading',
+      content: 'Content'
+    }
+    causeBioDetailWrapper = shallow(<CauseBioDetail {...props} />)
+    expect(causeBioDetailWrapper.find('.cause-days-left').length).toEqual(0)
+  })
+
   it('has <p> element with text Content', () => {
     expect(
       causeBioDetailWrapper.find('.cause-bio-detail__content').text()
