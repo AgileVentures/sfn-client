@@ -18,7 +18,7 @@ describe('<CauseBioDetail/>', () => {
   })
 
   it('shows how much time left before the cause closes', () => {
-    expect(causeBioDetailWrapper.find('.cause-days-left').text()).toEqual(
+    expect(causeBioDetailWrapper.find('.cause-bio-detail__cause-days-left').text()).toEqual(
       ' - 12 more days to go'
     )
   })
@@ -29,7 +29,7 @@ describe('<CauseBioDetail/>', () => {
       content: 'Content'
     }
     causeBioDetailWrapper = shallow(<CauseBioDetail {...props} />)
-    expect(causeBioDetailWrapper.find('.cause-days-left').length).toEqual(0)
+    expect(causeBioDetailWrapper.find('.cause-bio-detail__cause-days-left').length).toEqual(0)
   })
 
   it('has <p> element with text Content', () => {

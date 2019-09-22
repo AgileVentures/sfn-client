@@ -7,7 +7,7 @@ const CauseBioDetail = props => {
       <div className="cause-bio__top-text">
         <h5 className="white cause-bio-detail__heading">{props.heading}</h5>
         {props.daysToGo ? (
-          <p className="cause-days-left"> - {props.daysToGo} more days to go</p>
+          <p className="cause-bio-detail__cause-days-left"> - {props.daysToGo} more days to go</p>
         ) : (
           ''
         )}
