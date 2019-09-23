@@ -1,10 +1,10 @@
 .artist-card {
-  grid-column-end: span 3;
-  margin: $padding-s;
+  margin-bottom: $margin-r;
   padding: $padding-s;
   color: $primary-color-white;
   text-align: center;
   background-color: $primary-color-darkblue-lighter;
+  width: 100%;
 
   &:hover {
     background-image: radial-gradient(
@@ -48,14 +48,21 @@
   margin: 0.9rem 0 0.1rem;
 }
 
-@media only screen and (max-width: 768px) {
-  .artist-card-artist {
-    grid-column-end: span 6;
+@media only screen and (min-width: 576px) {
+  .artist-card {
+    width: 48%;
+    max-width: 400px;
   }
 }
 
-@media only screen and (max-width: 576px) {
+@media only screen and (min-width: 768px) {
   .artist-card {
-    grid-column-end: span 12;
+    width: 33%;
+  }
+}
+
+@media only screen and (min-width: 992px) {
+  .artist-card {
+    width: 24%;
   }
 }
