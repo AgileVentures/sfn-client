@@ -1,45 +1,85 @@
-.footer-container {
-  width: 100%;
+.footer__container {
   background-color: $primary-color-darkblue;
-
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
 }
 
 .footer-container__copyright {
   color: $primary-color-white-darkest;
-  margin: $margin-r 0;
-  text-align: center;
+  margin-top: $margin-r;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .footer__nav-container {
   display: flex;
-  align-items: flex-end;
+  flex-direction: row-reverse;
+  justify-content: space-between;
   padding-top: $padding-s;
   padding-bottom: $padding-s;
-  padding-left: $padding-s;
+  margin-right: auto;
+  width: 100%;
 
-  .logo {
-    margin-right: $padding-r;
-  }
+  .nav-links {
+    display: flex;
+    flex-direction: row;
+    flex-grow: 0;
+    flex-wrap: wrap;
+    width: 100%;
 
-  a {
-    color: rgba($primary-color-white, 0.6);
-    font-weight: 700;
-    font-size: 0.75rem;
-    text-transform: uppercase;
-    letter-spacing: 2px;
-    margin-right: $margin-r;
-    margin-left: $margin-r;
+    a {
+      color: rgba($primary-color-white, 0.6);
+      font-weight: 700;
+      font-size: 0.75rem;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      margin-bottom: $margin-s;
+      margin-right: $margin-s;
+      width: auto;
+      flex-grow: 0;
 
-    &:active {
+      &:last-of-type {
+        margin-bottom: 0;
+      }
+
+      &:active {
+        color: $primary-color-white;
+      }
+
+      &:hover {
+        color: rgba($primary-color-white, 1);
+      }
+    }
+
+    .footer__nav__item--selected {
       color: $primary-color-white;
     }
+  }
 
-    &:hover {
-      color: rgba($primary-color-white, 1);
-    }
+  .logo {
+    width: 120px;
   }
 }
 
-.footer__nav-container .footer__nav__item--selected {
-  color: $primary-color-white;
+.footer-container__copyright {
+  width: 100%;
+}
+
+@media only screen and (min-width: 576px) {
+  .footer-container__copyright {
+    text-align: left;
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  .footer__nav-container {
+    align-items: flex-end;
+
+    .nav-links {
+      a {
+        margin-bottom: 0;
+      }
+    }
+  }
 }
