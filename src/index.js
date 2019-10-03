@@ -9,9 +9,9 @@ import configureStore from './store/store'
 
 const store = configureStore()
 const client = new ApolloClient({
-  url: process.env.REACT_APP_GQL_URL
+  url: process.env.REACT_APP_SFN_BACKEND
 })
 ReactDOM.render(
-  <ApolloClient client={client}>
+  <ApolloProvider client={client}>
     <Provider store={store}><App /></Provider>
-  </ApolloClient>, document.getElementById('root'))
+  </ApolloProvider>, document.getElementById('root'))
