@@ -4,8 +4,10 @@ import { shallow } from 'enzyme'
 
 describe('<TrendingArtists />', () => {
   let trendingCausesWrapper
+  let causes
   beforeEach(() => {
-    trendingCausesWrapper = shallow(<TrendingCauses />)
+    causes = [{ name: 'Awesome Cause 1', amountRaised: 50, sponsor: 'unicef' }, { name: 'Awesome Cause 2', amountRaised: 50, sponsor: 'unicef' }]
+    trendingCausesWrapper = shallow(<TrendingCauses causes={causes} />)
   })
 
   it("has 'Trending Causes' title", () => {
