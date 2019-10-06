@@ -2,7 +2,7 @@ import React from 'react'
 import TrendingCauses from './TrendingCauses'
 import { shallow } from 'enzyme'
 
-describe('<TrendingArtists />', () => {
+describe('<TrendingCauses />', () => {
   let trendingCausesWrapper
   let causes
   beforeEach(() => {
