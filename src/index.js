@@ -1,15 +1,21 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
 import { Provider } from 'react-redux'
-import ApolloClient from 'apollo-boost'
+import { ApolloClient } from 'apollo-client'
+import { createHttpLink } from 'apollo-link-http'
 import { ApolloProvider } from '@apollo/react-hooks'
+import { InMemoryCache } from 'apollo-cache-inmemory'
 
 import App from './components/App'
 import configureStore from './store/store'
 
 const store = configureStore()
+const link = createHttpLink({
+  uri: 'http://localhost:4002/api/graphql'
+})
 const client = new ApolloClient({
-  url: process.env.REACT_APP_SFN_BACKEND
+  link,
+  cache: new InMemoryCache()
 })
 ReactDOM.render(
   <ApolloProvider client={client}>
