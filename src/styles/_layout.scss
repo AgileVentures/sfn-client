@@ -10,6 +10,9 @@ body {
   margin: 0 auto;
   padding-left: $padding-s;
   padding-right: $padding-s;
+  &.grid {
+    margin-top: 60px;
+  }
 }
 
 .grid {
@@ -34,6 +37,9 @@ body {
 @media only screen and (min-width: 992px) {
   .main-container {
     max-width: 960px;
+    &.grid {
+      margin-top: 80px;
+    }
   }
 }
 
