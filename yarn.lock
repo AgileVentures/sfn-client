@@ -51,6 +51,15 @@
     "@apollo/react-hooks" "^3.1.2"
     tslib "^1.10.0"
 
+"@apollo/react-testing@^3.1.2":
+  version "3.1.2"
+  resolved "https://registry.yarnpkg.com/@apollo/react-testing/-/react-testing-3.1.2.tgz#82bac9ce3033470e4ff145642cd271d33b32296b"
+  integrity sha512-nADLe8ju6K7LinKy5bJnN8cXMeje/s7zNIfKESviQz09+AOORFHtDPlgQPwkaogNor4yTKFwrrwtvokhRu8tnQ==
+  dependencies:
+    "@apollo/react-common" "^3.1.2"
+    fast-json-stable-stringify "^2.0.0"
+    tslib "^1.10.0"
+
 "@babel/code-frame@7.0.0":
   version "7.0.0"
   resolved "https://registry.yarnpkg.com/@babel/code-frame/-/code-frame-7.0.0.tgz#06e2ab19bdb535385559aabb5ba59729482800f8"
@@ -12689,6 +12698,11 @@ w3c-xmlserializer@^1.1.2:
     domexception "^1.0.1"
     webidl-conversions "^4.0.2"
     xml-name-validator "^3.0.0"
+
+wait-for-expect@^3.0.0:
+  version "3.0.0"
+  resolved "https://registry.yarnpkg.com/wait-for-expect/-/wait-for-expect-3.0.0.tgz#d6fbf28959e3b8779dc172fb1ea56bf1e833bf7a"
+  integrity sha512-9LyJL+MugZdcQn5V9PBSEC4d2UPTy1xX2U9wTc6LvG/18qeeYqdE/CgmAQJxc/Vcjs+VzH+wiyIXxz05F3nrpQ==
 
 wait-on@3.3.0:
   version "3.3.0"
