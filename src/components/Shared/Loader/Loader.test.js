@@ -4,26 +4,47 @@ import Loader from './Loader'
 import { mount } from 'enzyme'
 
 describe('<Loader />', () => {
-  let component
+  let loaderWrapper
 
-  beforeEach(() => {
-    component = mount(
-      <Loader
-        mainText="Main Text"
-        subText="Sub Text"
-      />
-    )
+  describe('props have values', () => {
+    beforeEach(() => {
+      loaderWrapper = mount(
+        <Loader
+          mainText="Main Text"
+          subText="Sub Text"
+        />
+      )
+    })
+
+    it('renders main text', () => {
+      expect(loaderWrapper.find('.loader--main-text').text()).toEqual('Main Text')
+    })
+
+    it('renders subtext', () => {
+      expect(loaderWrapper.find('.loader--sub-text').text()).toEqual('Sub Text')
+    })
+
+    it('renders a spinner', () => {
+      expect(loaderWrapper.find('.loader--icon').hostNodes().length).toEqual(1)
+    })
   })
+  describe('no values passed in props', () => {
+    beforeEach(() => {
+      loaderWrapper = mount(
+        <Loader />
+      )
+    })
 
-  it('renders main text', () => {
-    expect(component.find('.loader--main-text').text()).toEqual('Main Text')
-  })
+    it('maitext is empty', () => {
+      expect(loaderWrapper.find('.loader--main-text').text()).toEqual('')
+    })
 
-  it('renders subtext', () => {
-    expect(component.find('.loader--sub-text').text()).toEqual('Sub Text')
-  })
+    it('subtext is empty', () => {
+      expect(loaderWrapper.find('.loader--sub-text').text()).toEqual('')
+    })
 
-  it('renders a spinner', () => {
-    expect(component.find('.loader--icon').hostNodes().length).toEqual(1)
+    it('renders a spinner', () => {
+      expect(loaderWrapper.find('.loader--icon').hostNodes().length).toEqual(1)
+    })
   })
 })
