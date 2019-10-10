@@ -11,6 +11,7 @@ class TrendingCauses extends Component {
         <div className="cause-cards">
           {
             this.props.causes.map(cause => <CauseCard
+              key={cause.name}
               causeName={cause.name}
               donatedAmount={cause.amountRaised}
               numberOfDonors={23}
