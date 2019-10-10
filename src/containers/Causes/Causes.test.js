@@ -1,14 +1,45 @@
 import React from 'react'
-import Causes from './Causes'
-import { shallow } from 'enzyme'
+import { mount } from 'enzyme'
+import { MockedProvider } from '@apollo/react-testing'
+import { act } from 'react-dom/test-utils'
+import { MemoryRouter as Router } from 'react-router-dom'
+import Causes, { GET_CAUSES_QUERY } from './Causes'
+
+async function mountMockedProvider() {
+  const mocks = [
+    {
+      request: {
+        query: GET_CAUSES_QUERY
+      },
+      result: { data: {
+        causes: [{ name: 'Awesome Cause 1', amountRaised: 50, sponsor: 'unicef' }, { name: 'Awesome Cause 2', amountRaised: 50, sponsor: 'unicef' }]
+      } }
+    }
+  ]
+  jest.useFakeTimers()
+  const component = mount(
+    <MockedProvider
+      mocks={mocks}
+      addTypename={false}
+    >
+      <Router>
+        <Causes />
+      </Router>
+    </MockedProvider>)
+  act(() => {
+    jest.runAllTimers()
+  })
+  component.update()
+  return component
+}
 
 describe('<Causes />', () => {
   let causesWrapper
-  beforeEach(() => {
-    causesWrapper = shallow(<Causes />)
+  beforeEach(async () => {
+    causesWrapper = await mountMockedProvider()
   })
 
-  it('contains 1 Trending causes container', () => {
+  it('contains 1 Trending causes container', async() => {
     expect(causesWrapper.find('TrendingCauses').length).toEqual(1)
   })
 
