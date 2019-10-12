@@ -307,8 +307,4 @@ As moving towards with the project the individual screens that are in-progress a
 
 ![Artist Profile (edit)](https://user-images.githubusercontent.com/9334646/56868353-9fc47d00-69f1-11e9-90b1-40418ca7097f.png)
 
-#### Performances page
-
-![SFN_performance page](https://user-images.githubusercontent.com/9334646/63641082-d57c2880-c6a8-11e9-8462-4afe887cb078.png)
-
 For more mockups that have been used in this project, please follow [this link](documentation/wireframes/finished)
