@@ -1,16 +1,44 @@
 .explore-performances-title {
-  text-align: center;
   grid-column-end: span 12;
-  padding: $padding-s;
+  margin-top: $margin-xl;
+  margin-bottom: $margin-r;
   color: $primary-color-white;
-  margin-top: $margin-l;
+  font-family: "proxima-nova", sans-serif;
+  font-weight: 800;
+  font-style: normal;
+  font-size: 2.369rem;
+  line-height: 1.1;
 }
 
 .performance-card-wrapper-small {
   display: flex;
+  flex-direction: column;
+  grid-column: 1/-1;
 }
 
 .pagination {
   grid-column: -1 / 1;
   display: flex;
+}
+
+@media only screen and (min-width: 992px) {
+  .explore-performances-title {
+    font-family: "proxima-nova", sans-serif;
+    font-weight: 800;
+    font-style: normal;
+    font-size: 4.209rem;
+    line-height: 1;
+    text-align: center;
+  }
+
+  .performance-card-wrapper-small {
+    flex-direction: row;
+    justify-content: space-between;
+    grid-column: 1/-1;
+
+    .performance-card {
+      margin-top: 0;
+      width: 24%;
+    }
+  }
 }

@@ -8,10 +8,10 @@ class ExplorePerformances extends Component {
       <React.Fragment>
         <h1 className="explore-performances-title">Explore Performances</h1>
         <div className="performance-card-wrapper-small">
-          <PerformanceCard performanceTitle="Awesome Performance A" />
-          <PerformanceCard performanceTitle="Awesome Performance A" />
-          <PerformanceCard performanceTitle="Awesome Performance A" />
-          <PerformanceCard performanceTitle="Awesome Performance A" />
+          <PerformanceCard performanceTitle="Awesome Performance" />
+          <PerformanceCard performanceTitle="Awesome Performance" />
+          <PerformanceCard performanceTitle="Awesome Performance" />
+          <PerformanceCard performanceTitle="Awesome Performance" />
         </div>
         <Paginate />
       </React.Fragment>

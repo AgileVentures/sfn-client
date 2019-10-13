@@ -1,12 +1,29 @@
 .trending-performances-title {
-  text-align: center;
   grid-column-end: span 12;
-  padding: $padding-s;
+  margin-top: $margin-l;
+  margin-bottom: $margin-r;
   color: $primary-color-white;
+  font-family: "proxima-nova", sans-serif;
+  font-weight: 800;
+  font-style: normal;
+  font-size: 2.369rem;
+  line-height: 1.1;
 }
 
 .performance-card-wrapper {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
+  grid-column: 1/-1;
+}
+
+@media only screen and (min-width: 992px) {
+  .trending-performances-title {
+    font-family: "proxima-nova", sans-serif;
+    font-weight: 800;
+    font-style: normal;
+    font-size: 4.209rem;
+    line-height: 1;
+    text-align: center;
+  }
 }
