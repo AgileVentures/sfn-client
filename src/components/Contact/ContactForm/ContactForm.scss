@@ -1,3 +1,5 @@
+$break-small: 30em;
+
 .contact-form-wrapper {
   grid-column: 7/-1;
   margin-bottom: $margin-l;
@@ -85,4 +87,10 @@
       color: $disabled-color-white;
     }
   }
+
+  @media only screen and (max-width: $break-small) {
+    margin-top: $margin-xs;
+    padding: $padding-xs;
+  }
+
 }
