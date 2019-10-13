@@ -1,3 +1,5 @@
+$break-small: 30em;
+
 .contact-container {
   grid-column: 1/-1;
   min-height: 0;
@@ -20,5 +22,10 @@
     color: $primary-color-accent;
     margin-left: $margin-xs;
     margin-right: $margin-xs;
+  }
+
+  @media only screen and (max-width: $break-small) {
+    display: flex;
+    flex-direction: column;
   }
 }
