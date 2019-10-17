@@ -24,8 +24,15 @@ $break-small: 30em;
     margin-right: $margin-xs;
   }
 
+  .contact-info-main-block {
+    display: grid;
+    grid-column: 1/-1;
+    grid-template-columns: repeat(12, 1fr);
+  }
+
   @media only screen and (max-width: $break-small) {
-    display: flex;
-    flex-direction: column;
+    .contact-info-main-block {
+      margin-top: $margin-l;
+    }
   }
 }

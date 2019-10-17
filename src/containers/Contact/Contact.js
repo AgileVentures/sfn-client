@@ -13,8 +13,10 @@ const Contact = () => {
         <FontAwesomeIcon className="heart-icon" icon={faHeart} />
         to help!
       </h4>
-      <ContactDetails />
-      <ContactForm />
+      <div className="contact-info-main-block">
+        <ContactDetails />
+        <ContactForm />
+      </div>
     </div>
   )
 }
