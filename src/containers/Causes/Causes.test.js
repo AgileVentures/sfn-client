@@ -5,15 +5,13 @@ import { act } from 'react-dom/test-utils'
 import { MemoryRouter as Router } from 'react-router-dom'
 import Causes, { GET_CAUSES_QUERY } from './Causes'
 
-async function mountMockedProvider() {
+async function mountMockedProvider(result) {
   const mocks = [
     {
       request: {
         query: GET_CAUSES_QUERY
       },
-      result: { data: {
-        causes: [{ name: 'Awesome Cause 1', amountRaised: 50, sponsor: 'unicef' }, { name: 'Awesome Cause 2', amountRaised: 50, sponsor: 'unicef' }]
-      } }
+      result
     }
   ]
   jest.useFakeTimers()
@@ -34,24 +32,40 @@ async function mountMockedProvider() {
 }
 
 describe('<Causes />', () => {
-  let causesWrapper
+  let causesWrapper, result
   beforeEach(async () => {
-    causesWrapper = await mountMockedProvider()
+    result = { data: {
+      causes: [{ name: 'Awesome Cause 1', amountRaised: 50, sponsor: 'unicef' }, { name: 'Awesome Cause 2', amountRaised: 50, sponsor: 'unicef' }]
+    }
+    }
+    causesWrapper = await mountMockedProvider(result)
   })
 
-  it('contains 1 Trending causes container', async() => {
-    expect(causesWrapper.find('TrendingCauses').length).toEqual(1)
+  describe('data resolved with no error', () => {
+    it('contains 1 Trending causes container', async() => {
+      expect(causesWrapper.find('TrendingCauses').length).toEqual(1)
+    })
+
+    it('contains 1 Campaigns ending soon container', () => {
+      expect(causesWrapper.find('CampaignsEndingSoon').length).toEqual(1)
+    })
+
+    it('contains 1 Explore these causes container', () => {
+      expect(causesWrapper.find('ExploreCauses').length).toEqual(1)
+    })
+
+    it('contains a sign up banner at the bottom', () => {
+      expect(causesWrapper.find('Banner').length).toEqual(1)
+    })
   })
 
-  it('contains 1 Campaigns ending soon container', () => {
-    expect(causesWrapper.find('CampaignsEndingSoon').length).toEqual(1)
-  })
-
-  it('contains 1 Explore these causes container', () => {
-    expect(causesWrapper.find('ExploreCauses').length).toEqual(1)
-  })
-
-  it('contains a sign up banner at the bottom', () => {
-    expect(causesWrapper.find('Banner').length).toEqual(1)
+  describe('data resolved with error', () => {
+    beforeEach(async () => {
+      result = { error: new Error('aw shucks') }
+      causesWrapper = await mountMockedProvider(result)
+    })
+    it('displays error div', async() => {
+      expect(causesWrapper.find('div').text()).toEqual('Error')
+    })
   })
 })

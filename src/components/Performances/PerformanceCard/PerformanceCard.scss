@@ -1,17 +1,24 @@
 .performance-card {
-  width: 47%;
-  margin: $padding-s;
+  display: flex;
+  flex-direction: column;
+  width: auto;
+  margin-top: $margin-s;
   padding: $padding-s;
   color: $primary-color-white;
   text-align: center;
   background-color: $primary-color-darkblue-lighter;
-  display: flex;
-  flex-direction: column;
   transition: background-image 400ms ease;
+  width: 100%;
+
+  &:first-of-type {
+    margin-top: 0;
+  }
 
   &:hover {
-    background-image: radial-gradient(rgba($primary-color-white, 0.6),
-        rgba(255, 255, 255, 0));
+    background-image: radial-gradient(
+      rgba($primary-color-white, 0.6),
+      rgba(255, 255, 255, 0)
+    );
 
     cursor: pointer;
   }
@@ -58,6 +65,7 @@
           display: block;
           color: $primary-color-white-darkest;
           margin-top: $margin-s;
+          margin-left: auto;
         }
       }
 
@@ -75,38 +83,95 @@
 }
 
 .performance-card.featured {
-  width: 100%;
-  flex-direction: row;
-
-  .performance-thumbnail {
-    width: 33%;
-  }
+  width: auto;
+  flex-direction: column;
 
   .performance-details {
-    flex-direction: row;
+    flex-direction: column;
 
     .performance-text {
-      margin-top: 0;
-      margin-left: $margin-s;
+      margin-top: $margin-s;
       margin-right: $margin-s;
     }
 
     .performance-stats {
       min-width: 250px;
-      border-left: 1px solid $primary-color-darkblue-lightest;
+      border-top: 1px solid $primary-color-darkblue-lightest;
       display: flex;
       flex-direction: column;
-      margin-top: 0;
-      padding-left: $padding-r;
+      margin-top: $margin-r;
+      padding-left: 0;
+      padding-top: $padding-r;
       justify-content: space-between;
       text-align: left;
 
       .artist-details {
         display: block;
       }
+    }
+  }
+}
 
-      button {
-        align-self: flex-start;
+@media only screen and (min-width: 992px) {
+  .performance-card {
+    width: 49%;
+    padding: $padding-s;
+
+    .performance-details {
+      .performance-text {
+        text-align: left;
+      }
+
+      .performance-stats {
+        flex-direction: column;
+        margin-top: $margin-s;
+        text-align: left;
+        flex-wrap: wrap;
+
+        h5 {
+          min-width: 200px;
+        }
+
+        .artist-details {
+          display: flex;
+
+          p {
+            margin-right: $margin-s;
+          }
+        }
+      }
+    }
+  }
+
+  .performance-card.featured {
+    width: 100%;
+    flex-direction: row;
+    margin-left: 0;
+    margin-right: 0;
+
+    .performance-thumbnail {
+      width: 33%;
+    }
+
+    .performance-details {
+      flex-direction: row;
+
+      .performance-text {
+        margin-top: 0;
+        margin-left: $margin-s;
+      }
+
+      .performance-stats {
+        border-top: 0;
+        border-left: 1px solid $primary-color-darkblue-lightest;
+        margin-top: 0;
+        padding-top: 0;
+        padding-left: $padding-r;
+
+        button {
+          margin-top: $margin-s;
+          align-self: flex-start;
+        }
       }
     }
   }
