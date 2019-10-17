@@ -10,21 +10,21 @@ class TrendingPerformances extends Component {
         <div className="performance-card-wrapper">
           <PerformanceCard
             isFeatured
-            performanceTitle="Awesome Performance A"
+            performanceTitle="Awesome Performance"
             performanceDescription="Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book."
             causeTitle="Cause A"
             artistName="Awesome Artist B"
             donatedAmount={478}
           />
           <PerformanceCard
-            performanceTitle="Awesome Performance A"
+            performanceTitle="Awesome Performance"
             performanceDescription="Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book."
             causeTitle="Cause A"
             artistName="Awesome Artist B"
             donatedAmount={478}
           />
           <PerformanceCard
-            performanceTitle="Awesome Performance A"
+            performanceTitle="Awesome Performance"
             performanceDescription="Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book."
             causeTitle="Cause A"
             artistName="Awesome Artist B"
