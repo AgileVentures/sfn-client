@@ -1,5 +1,7 @@
+$break-small: 30em;
+
 .contact-details-wrapper {
-  grid-column: 1/6;
+  grid-area: 1 / 1 / 1 / 7;
   margin-bottom: $margin-l;
   margin-top: $margin-xl;
 
@@ -30,5 +32,9 @@
     .contact-details--socials {
       margin-top: $margin-r;
     }
+  }
+  @media only screen and (max-width: $break-small) {
+    grid-area: 2 / 1 / 2 / -1;
+    margin-top: $margin-l;
   }
 }

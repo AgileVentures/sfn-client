@@ -1,3 +1,5 @@
+$break-small: 30em;
+
 .contact-container {
   grid-column: 1/-1;
   min-height: 0;
@@ -20,5 +22,17 @@
     color: $primary-color-accent;
     margin-left: $margin-xs;
     margin-right: $margin-xs;
+  }
+
+  .contact-info-main-block {
+    display: grid;
+    grid-column: 1/-1;
+    grid-template-columns: repeat(12, 1fr);
+  }
+
+  @media only screen and (max-width: $break-small) {
+    .contact-info-main-block {
+      margin-top: $margin-l;
+    }
   }
 }
