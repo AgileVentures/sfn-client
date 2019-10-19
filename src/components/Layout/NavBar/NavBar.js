@@ -39,7 +39,6 @@ const NavBar = props => {
         </NavLink>
         <GoogleAuth />
       </div>
-      <div className="nav-container__right" />
 
       <FontAwesomeIcon
         icon={props.mobileMenu ? faTimes : faBars}
@@ -48,7 +47,6 @@ const NavBar = props => {
         }`}
         onClick={props.handleClick}
       />
-      <div className="clear-fix" />
     </nav>
   )
 }
