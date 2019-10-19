@@ -7,13 +7,13 @@ import ExploreCauses from './ExploreCauses/ExploreCauses'
 import Banner from '../../components/Shared/Banner/Banner'
 
 export const GET_CAUSES_QUERY = gql`
-  query getCauses{
+  query getCauses {
     causes {
       name
       amountRaised
       sponsor
+    }
   }
-}
 `
 class Causes extends Component {
   render() {
@@ -24,7 +24,7 @@ class Causes extends Component {
             return <div className="white">loading</div>
           }
           if (error) {
-            return (<div>Error</div>)
+            return <div>Error</div>
           }
           return (
             <React.Fragment>
@@ -39,7 +39,6 @@ class Causes extends Component {
           )
         }}
       </Query>
-
     )
   }
 }
