@@ -11,13 +11,16 @@ export class Artists extends Component {
     this.props.fetchArtists()
   }
   render() {
-    return (<React.Fragment >
-      <TrendingArtists />
-      <ExploreArtists />
-      <Banner headline="This is a headline"
-        benefits="This is a paragraph to explain some benefits of signing up"
-        buttonLabel="Sign up" />
-    </React.Fragment>
+    return (
+      <React.Fragment>
+        <TrendingArtists />
+        <ExploreArtists />
+        <Banner
+          headline="This is a headline"
+          benefits="This is a paragraph to explain some benefits of signing up"
+          buttonLabel="Sign up"
+        />
+      </React.Fragment>
     )
   }
 }
@@ -27,4 +30,7 @@ Artists.propTypes = {
 }
 const mapStateToProps = state => ({ artists: state.artists })
 
-export default connect(mapStateToProps, { fetchArtists })(Artists)
+export default connect(
+  mapStateToProps,
+  { fetchArtists }
+)(Artists)

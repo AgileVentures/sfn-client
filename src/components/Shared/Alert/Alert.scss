@@ -1,0 +1,23 @@
+.alert {
+  display: block;
+  background-color: $primary-color-white;
+  padding: $padding-s;
+  color: $validation-color-red;
+  width: 100%;
+
+  .alert-headline {
+    margin-bottom: $margin-xs;
+  }
+
+  .alert-message {
+    font-weight: bold;
+  }
+}
+
+.no-background {
+  background-color: transparent;
+}
+
+.alert-success {
+  color: $validation-color-green;
+}
