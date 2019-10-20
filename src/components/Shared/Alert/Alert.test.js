@@ -8,7 +8,8 @@ describe('Alert component with props', () => {
 
   let props = {
     message: 'This is a sample message for a test',
-    headline: 'This is an example headline for error'
+    headline: 'This is an example headline for error',
+    noBackground: true
   }
 
   beforeEach(() => {
@@ -29,6 +30,10 @@ describe('Alert component with props', () => {
     expect(alertWrapper.find('h5.alert-headline').text()).toEqual(
       'This is an example headline for error'
     )
+  })
+
+  it('for inline errors no background is used', () => {
+    expect(alertWrapper.find('.no-background').length).toEqual(1)
   })
 })
 
