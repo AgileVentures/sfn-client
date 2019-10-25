@@ -1,19 +1,88 @@
 .why-container {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  margin-top: $margin-l;
+  display: grid;
+  
+  @media only screen and (min-width: 320px) {
+      grid-template-columns: 1fr;
+      grid-template-rows: repeat(4, min-content);
+      justify-content: center;
+      align-content: center;
+  }
+
+  @media only screen and (min-width: 992px) {
+      grid-template-columns: repeat(3, 1fr);
+      grid-template-rows: repeat(2, min-content);
+  }
 
   h3 {
     text-align: center;
+    grid-row: 1 / 2;
+
+    @media only screen and (min-width: 320px) {
+        grid-column: 1 / -1;
+    }
+
+    @media only screen and (min-width: 992px) {
+      grid-column: 2 / 3;
+    }
   }
 
   .why-description {
-    max-width: 50%;
     margin: $margin-s auto;
+    padding: $padding-xl;
+    @media only screen and (min-width: 320px) {
+      &--1, &--2, &--3 {
+        grid-column: 1 / 2;
+      }
+      &--1 {
+        grid-row: 2 / 3; 
+      }
+      &--2 {
+        grid-row: 3 / 4;
+      }
+      &--3 {
+        grid-row: 4 / 5;
+      }
+    }
+    @media only screen and (min-width: 992px) {
+      &--1, &--2, &--3 {
+        grid-row: 2 / 3;
+      }
+      &--1 {
+        grid-column: 1 / 2; 
+      }
+      &--2 {
+        grid-column: 2 / 3;
+      }
+      &--3 {
+        grid-column: 3 / 4;
+      }
+    }
+    
+    &--1, &--2, &--3 {
+        &:hover {
+          background-color: $primary-color-white;
+          color: $primary-color-darkblue;
+          transition: all 0.7s ease;
+        }
+    }
 
     h5 {
       margin-bottom: $margin-xs;
+      @media only screen and (min-width: 320px) {
+        text-align: center;
+      }
+      @media only screen and (min-width: 992px) {
+        text-align: left;
+      }
     }
+
+    p {
+      width: 80%;
+      margin: 0 auto;
+      @media only screen and (min-width: 992px) {
+        margin: 0;
+      }
+    }
+
   }
 }

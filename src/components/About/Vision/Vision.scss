@@ -32,8 +32,26 @@
     text-align: center;
   }
 
-  .vision-description {
-    max-width: 50%;
-    margin: $margin-s auto;
+  p {
+    text-align: left;
   }
+
+  .vision-description {
+
+    @media only screen and (min-width: 320px) {
+      width: 80%;
+      margin: $margin-s auto $margin-xl auto;
+    }
+    @media only screen and (min-width: 1024px) {
+      max-width: 60%;
+    }
+    margin: $margin-s auto;
+    padding: $padding-s;
+        &:hover {
+        background-color: $primary-color-white;
+        color: $primary-color-darkblue;
+        transition: all 0.7s ease;
+      }
+  }
+  
 }
