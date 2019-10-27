@@ -11,7 +11,7 @@ import configureStore from './store/store'
 
 const store = configureStore()
 const link = createHttpLink({
-  uri: 'http://localhost:4002/api/graphql'
+  uri: process.env.REACT_APP_SFN_BACKEND
 })
 const client = new ApolloClient({
   link,
@@ -19,5 +19,9 @@ const client = new ApolloClient({
 })
 ReactDOM.render(
   <ApolloProvider client={client}>
-    <Provider store={store}><App /></Provider>
-  </ApolloProvider>, document.getElementById('root'))
+    <Provider store={store}>
+      <App />
+    </Provider>
+  </ApolloProvider>,
+  document.getElementById('root')
+)
