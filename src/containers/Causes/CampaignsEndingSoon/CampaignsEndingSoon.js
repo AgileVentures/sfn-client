@@ -4,7 +4,7 @@ import gql from 'graphql-tag'
 import { Query } from 'react-apollo'
 import CauseCard from '../../../components/Causes/CauseCard/CauseCard'
 
-const GET_CAUSES_ENDING_SOON_QUERY = gql`
+export const GET_CAUSES_ENDING_SOON_QUERY = gql`
   query getCausesEndingSoon($scope: String) {
   causes(scope: $scope) {
     id
@@ -25,10 +25,8 @@ class CampaignsEndingSoon extends Component {
             return <div className="white">loading</div>
           }
           if (error) {
-            console.log(error)
             return <div>Error</div>
           }
-          console.log(data.causes)
           return (
             <React.Fragment>
               <div className="campaigns_ending_soon-container">
