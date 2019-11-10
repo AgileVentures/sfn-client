@@ -58,31 +58,44 @@ describe('<CampaignsEndingSoon />', () => {
     campaignsEndingSoonWrapper = await mountMockedProvider(data)
   })
 
-  it("has 'Campaign Ending Soon' title", () => {
-    expect(campaignsEndingSoonWrapper.find('h3').text()).toEqual(
-      'Campaigns ending soon'
-    )
-  })
+  describe('data resolves with no error', () => {
+    it("has 'Campaign Ending Soon' title", () => {
+      expect(campaignsEndingSoonWrapper.find('h3').text()).toEqual(
+        'Campaigns ending soon'
+      )
+    })
 
-  it('has 2 campaign cards that end soon showing underneath', () => {
-    expect(campaignsEndingSoonWrapper.find('CauseCard').length).toEqual(2)
-  })
-
-  it('has link to navigate to all ending causes', () => {
-    expect(campaignsEndingSoonWrapper.find('NavLink').length).toEqual(1)
-  })
-
-  describe('CauseCard', () => {
-    it('has two cause cards cause card', () => {
+    it('has 2 campaign cards that end soon showing underneath', () => {
       expect(campaignsEndingSoonWrapper.find('CauseCard').length).toEqual(2)
     })
 
-    it('first cause card has correct cause name', () => {
-      expect(campaignsEndingSoonWrapper.find('CauseCard').at(0).find('.cause-card-name').text()).toEqual('Awesome Cause 1')
+    it('has link to navigate to all ending causes', () => {
+      expect(campaignsEndingSoonWrapper.find('NavLink').length).toEqual(1)
     })
 
-    it('second cause card has correct cause name', () => {
-      expect(campaignsEndingSoonWrapper.find('CauseCard').at(1).find('.cause-card-name').text()).toEqual('Awesome Cause 2')
+    describe('CauseCard', () => {
+      it('has two cause cards cause card', () => {
+        expect(campaignsEndingSoonWrapper.find('CauseCard').length).toEqual(2)
+      })
+
+      it('first cause card has correct cause name', () => {
+        expect(campaignsEndingSoonWrapper.find('CauseCard').at(0).find('.cause-card-name').text()).toEqual('Awesome Cause 1')
+      })
+
+      it('second cause card has correct cause name', () => {
+        expect(campaignsEndingSoonWrapper.find('CauseCard').at(1).find('.cause-card-name').text()).toEqual('Awesome Cause 2')
+      })
+    })
+  })
+
+  describe('data resolved with error', () => {
+    let result
+    beforeEach(async () => {
+      result = { error: new Error('aw shucks') }
+      campaignsEndingSoonWrapper = await mountMockedProvider(result)
+    })
+    it('displays error div', () => {
+      expect(campaignsEndingSoonWrapper.find('div').text()).toEqual('Error')
     })
   })
 })
