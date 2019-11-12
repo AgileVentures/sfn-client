@@ -13,15 +13,17 @@ class CampaignsEndingSoon extends Component {
           <CauseCard
             causeName="Go Blue on World Children's Day"
             donatedAmount={3000}
+            targetAmount={8000}
             numberOfDonors={23}
-            daysToGo={12}
+            daysToGo={'12 days'}
             organization="UNICEF"
           />
           <CauseCard
             causeName="Go Blue on World Children's Day"
             donatedAmount={5000}
+            targetAmount={8000}
             numberOfDonors={12}
-            daysToGo={45}
+            daysToGo={'45 days'}
             organization="UNICEF"
           />
         </div>

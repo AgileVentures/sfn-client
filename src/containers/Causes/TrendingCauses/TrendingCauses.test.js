@@ -7,7 +7,7 @@ describe('<TrendingCauses />', () => {
   let causes
 
   beforeEach(() => {
-    causes = [{ name: 'Awesome Cause 1', amountRaised: 50, sponsor: 'unicef' }, { name: 'Awesome Cause 2', amountRaised: 50, sponsor: 'unicef' }, { name: 'Awesome Cause 3', amountRaised: 40, sponsor: 'who' }, { name: 'Awesome Cause 4', amountRaised: 67, sponsor: 'wfp' }]
+    causes = [{ endDate: '2019-10-10', name: 'Awesome Cause 1', amountRaised: '5000', targetAmount: '100000', sponsor: 'unicef' }, { endDate: '2019-10-10', name: 'Awesome Cause 2', amountRaised: '2000', targetAmount: '100000', sponsor: 'unicef' }, { endDate: '2019-10-10', name: 'Awesome Cause 3', amountRaised: '400', targetAmount: '100000', sponsor: 'who' }, { endDate: '2019-10-10', name: 'Awesome Cause 4', amountRaised: '2000', targetAmount: '100000', sponsor: 'wfp' }]
     trendingCausesWrapper = shallow(<TrendingCauses causes={causes} />)
   })
 

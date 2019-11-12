@@ -7,10 +7,12 @@ describe('<CauseCard />', () => {
   let causeCardWrapper
 
   let props = {
+    key: 'Happy Fridays',
     causeName: 'Happy Fridays',
     donatedAmount: 2000,
+    targetAmount: 5000,
     numberOfDonors: 5,
-    daysToGo: 31,
+    daysToGo: '31 days',
     organization: 'HUMALUPA'
   }
 
@@ -38,7 +40,7 @@ describe('<CauseCard />', () => {
     expect(causeCardWrapper.find('div.cause-card-detail').length).toEqual(1)
   })
 
-  it('contains the $5000 funds raised', () => {
+  it('contains the $2000 funds raised', () => {
     expect(causeCardWrapper.find('h4.cause-card-funds').text()).toEqual(
       '$2000'
     )
@@ -52,7 +54,7 @@ describe('<CauseCard />', () => {
 
   it('contains the amount of time remaining from the campaign', () => {
     expect(causeCardWrapper.find('p.cause-card-days-to-go').text()).toEqual(
-      '31 more days to go'
+      '31 days to go'
     )
   })
 

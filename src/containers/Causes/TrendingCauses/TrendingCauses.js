@@ -2,19 +2,21 @@ import React, { Component } from 'react'
 import { NavLink } from 'react-router-dom'
 import PropTypes from 'prop-types'
 import take from 'lodash/take'
+import { formatDistanceStrict } from 'date-fns'
 import CauseCard from '../../../components/Causes/CauseCard/CauseCard'
 
 class TrendingCauses extends Component {
   renderTrendingCauses = () => {
     const firstTwoCauses = take(this.props.causes, 2)
-    return firstTwoCauses.map(cause => <CauseCard
+    return firstTwoCauses.map(cause => (<CauseCard
       key={cause.name}
       causeName={cause.name}
-      donatedAmount={cause.amountRaised}
+      donatedAmount={Number(cause.amountRaised)}
+      targetAmount={Number(cause.targetAmount)}
       numberOfDonors={23}
-      daysToGo={12}
+      daysToGo={formatDistanceStrict(new Date(cause.endDate), new Date(), { unit: 'day' })}
       organization={cause.sponsor}
-    />)
+    />))
   }
   render() {
     return (
@@ -34,7 +36,9 @@ class TrendingCauses extends Component {
 TrendingCauses.propTypes = {
   causes: PropTypes.arrayOf(PropTypes.shape({
     name: PropTypes.string.isRequired,
-    amountRaised: PropTypes.number.isRequired,
+    amountRaised: PropTypes.string.isRequired,
+    targetAmount: PropTypes.string.isRequired,
+    endDate: PropTypes.string.isRequired,
     sponsor: PropTypes.string.isRequired
   })).isRequired
 }
