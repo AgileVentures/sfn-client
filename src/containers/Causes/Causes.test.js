@@ -35,7 +35,7 @@ describe('<Causes />', () => {
   let causesWrapper, result
   beforeEach(async () => {
     result = { data: {
-      causes: [{ name: 'Awesome Cause 1', amountRaised: 50, sponsor: 'unicef' }, { name: 'Awesome Cause 2', amountRaised: 50, sponsor: 'unicef' }]
+      causes: [{ endDate: '2019-10-10', name: 'Awesome Cause 1', amountRaised: '50000', targetAmount: '100000', sponsor: 'unicef' }, { endDate: '2019-10-10', name: 'Awesome Cause 2', amountRaised: '50000', targetAmount: '100000', sponsor: 'unicef' }]
     }
     }
     causesWrapper = await mountMockedProvider(result)

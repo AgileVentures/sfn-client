@@ -26,7 +26,7 @@ const CauseCard = props => {
           <p>{progress}% of ${props.targetAmount}</p>
         </div>
         <p className="cause-card-days-to-go">
-          {props.daysToGo} more to go
+          {props.daysToGo} to go
         </p>
         <button>Donate today</button>
         <button className="text-link">Learn More</button>
@@ -40,7 +40,7 @@ CauseCard.propTypes = {
   donatedAmount: PropTypes.number,
   targetAmount: PropTypes.number,
   numberOfDonors: PropTypes.number,
-  daysToGo: PropTypes.number,
+  daysToGo: PropTypes.string,
   organization: PropTypes.string
 }
 

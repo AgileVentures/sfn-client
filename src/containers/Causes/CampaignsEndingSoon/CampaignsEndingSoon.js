@@ -15,7 +15,7 @@ class CampaignsEndingSoon extends Component {
             donatedAmount={3000}
             targetAmount={8000}
             numberOfDonors={23}
-            daysToGo={12}
+            daysToGo={'12 days'}
             organization="UNICEF"
           />
           <CauseCard
@@ -23,7 +23,7 @@ class CampaignsEndingSoon extends Component {
             donatedAmount={5000}
             targetAmount={8000}
             numberOfDonors={12}
-            daysToGo={45}
+            daysToGo={'45 days'}
             organization="UNICEF"
           />
         </div>
