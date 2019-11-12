@@ -97,6 +97,17 @@ npm install -g yarn
 ```
 yarn
 ```
+### Setting up with the backend
+The [backend](https://github.com/AgileVentures/sing_for_needs) is currently [deployed](https://sing-for-needs.gigalixirapp.com/graphiql) on [gigalixir](https://gigalixir.com/) to enable Front end developers ease of setup. To get set up with the deployed backend:
+- Create a `.env.local`  file in the root of the app you just cloned
+- Add the following 
+```
+REACT_APP_BASE_URL = 'http://localhost:4002'
+REACT_APP_SFN_BACKEND = 'https://sing-for-needs.gigalixirapp.com/graphiql'
+SKIP_PREFLIGHT_CHECK=true
+```
+
+Please note that the `REACT_APP_BASE_URL` variable is meant to be the base REST API endpoint for the application. Also you can choose to clone the [backend](https://github.com/AgileVentures/sing_for_needs) and get setup locally.
 
 ### Starting the development server
 
