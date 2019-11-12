@@ -2,19 +2,21 @@ import React, { Component } from 'react'
 import { NavLink } from 'react-router-dom'
 import PropTypes from 'prop-types'
 import take from 'lodash/take'
+import { formatDistance } from 'date-fns'
 import CauseCard from '../../../components/Causes/CauseCard/CauseCard'
 
 class TrendingCauses extends Component {
   renderTrendingCauses = () => {
     const firstTwoCauses = take(this.props.causes, 2)
-    return firstTwoCauses.map(cause => <CauseCard
+    return firstTwoCauses.map(cause => (<CauseCard
       key={cause.name}
       causeName={cause.name}
-      donatedAmount={cause.amountRaised}
+      donatedAmount={Number(cause.amountRaised)}
+      targetAmount={Number(cause.targetAmount)}
       numberOfDonors={23}
-      daysToGo={12}
+      daysToGo={formatDistance(new Date(cause.endDate), new Date())}
       organization={cause.sponsor}
-    />)
+    />))
   }
   render() {
     return (
