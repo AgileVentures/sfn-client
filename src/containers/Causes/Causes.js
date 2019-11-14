@@ -9,12 +9,15 @@ import Banner from '../../components/Shared/Banner/Banner'
 export const GET_CAUSES_QUERY = gql`
   query getCauses {
     causes {
+      endDate
       name
       amountRaised
+      targetAmount
       sponsor
     }
   }
 `
+
 class Causes extends Component {
   render() {
     return (
