@@ -1,37 +1,65 @@
 import React, { Component } from 'react'
+import gql from 'graphql-tag'
 import { NavLink } from 'react-router-dom'
-import PropTypes from 'prop-types'
+import take from 'lodash/take'
+import { Query } from 'react-apollo'
+import { formatDistanceStrict } from 'date-fns'
 import CauseCard from '../../../components/Causes/CauseCard/CauseCard'
 
+export const GET_TRENDING_CAUSES_QUERY = gql`
+  query getTrendingCauses($scope: String) {
+  causes(scope: $scope) {
+    id
+    name
+    amountRaised
+    targetAmount
+    startDate
+    endDate
+    description
+    sponsor
+  }
+}
+`
 class TrendingCauses extends Component {
+  renderTrendingCauses = (trendingCauses) => {
+    const firstTwoCauses = take(trendingCauses, 2)
+    return firstTwoCauses.map(cause => (<CauseCard
+      key={cause.name}
+      causeName={cause.name}
+      donatedAmount={Number(cause.amountRaised)}
+      targetAmount={Number(cause.targetAmount)}
+      numberOfDonors={23}
+      daysToGo={formatDistanceStrict(new Date(cause.endDate), new Date(), { unit: 'day' })}
+      organization={cause.sponsor}
+    />))
+  }
   render() {
     return (
-      <div className="trending-causes-container">
-        <h3 className="trending-causes-title white">Trending causes</h3>
-        <div className="cause-cards">
-          {
-            this.props.causes.map(cause => <CauseCard
-              key={cause.name}
-              causeName={cause.name}
-              donatedAmount={cause.amountRaised}
-              numberOfDonors={23}
-              daysToGo={12}
-              organization={cause.sponsor}
-            />)}
-        </div>
-        <NavLink activeClassName="nav__item--selected" to="/causes?q=trending">
-          See all trending causes
-        </NavLink>
-      </div>
+      <Query query={GET_TRENDING_CAUSES_QUERY} variables={{ scope: 'trending' }}>
+        {({ data, error, loading }) => {
+          if (loading) {
+            return <div className="white">loading</div>
+          }
+          if (error) {
+            return <div className="white">Error</div>
+          }
+          return (
+            <React.Fragment>
+              <div className="trending-causes-container">
+                <h3 className="trending-causes-title white">Trending causes</h3>
+                <div className="cause-cards">
+                  { this.renderTrendingCauses(data.causes) }
+                </div>
+                <NavLink activeClassName="nav__item--selected" to="/causes?q=trending">
+            See all trending causes
+                </NavLink>
+              </div>
+            </React.Fragment>
+          )
+        }}
+      </Query>
     )
   }
 }
 
-TrendingCauses.propTypes = {
-  causes: PropTypes.arrayOf(PropTypes.shape({
-    name: PropTypes.string.isRequired,
-    amountRaised: PropTypes.number.isRequired,
-    sponsor: PropTypes.string.isRequired
-  })).isRequired
-}
 export default TrendingCauses
