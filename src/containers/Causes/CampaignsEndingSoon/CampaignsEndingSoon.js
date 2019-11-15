@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import { NavLink } from 'react-router-dom'
 import CauseCard from '../../../components/Causes/CauseCard/CauseCard'
+import EmptyCard from '../../../components/Shared/EmptyCard/EmptyCard'
 
 class CampaignsEndingSoon extends Component {
   render() {
@@ -24,6 +25,7 @@ class CampaignsEndingSoon extends Component {
             daysToGo={45}
             organization="UNICEF"
           />
+          <EmptyCard itemName="Cause" />
         </div>
         <NavLink activeClassName="nav__item--selected" to="/causes?q=ending">
           See all ending causes

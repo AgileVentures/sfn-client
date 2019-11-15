@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import ArtistCard from '../../../components/Artists/ArtistCard/ArtistCard'
 import Paginate from '../../../components/Paginate/Paginate'
+
 class ExploreArtists extends Component {
   render() {
     return (
