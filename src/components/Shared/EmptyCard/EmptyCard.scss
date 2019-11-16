@@ -1,0 +1,20 @@
+.empty-card {
+  width: 100%;
+  padding: $padding-s;
+  color: $primary-color-white;
+  text-align: center;
+  background-color: $primary-color-darkblue-lighter;
+  margin-bottom: $margin-r;
+  border: 2px dashed rgba($primary-color-white, 0.6);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  min-height: 300px;
+}
+
+@media only screen and (min-width: 576px) {
+  .empty-card {
+    width: 48%;
+    max-width: 400px;
+  }
+}
