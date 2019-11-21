@@ -5,18 +5,21 @@ import { shallow } from 'enzyme'
 
 describe('<CauseCard />', () => {
   let causeCardWrapper
-
-  let props = {
-    key: 'Happy Fridays',
-    causeName: 'Happy Fridays',
-    donatedAmount: 2000,
-    targetAmount: 5000,
-    numberOfDonors: 5,
-    daysToGo: '31 days',
-    organization: 'HUMALUPA'
-  }
+  let donatedAmount, targetAmount, props
 
   beforeEach(() => {
+    donatedAmount = 2000
+    targetAmount = 5000
+    props = {
+      cause: {
+        causeName: 'Happy Fridays',
+        donatedAmount,
+        targetAmount,
+        numberOfDonors: 5,
+        daysToGo: '31 days',
+        organization: 'HUMALUPA'
+      }
+    }
     causeCardWrapper = shallow(<CauseCard {...props} />)
   })
 
@@ -70,5 +73,17 @@ describe('<CauseCard />', () => {
         <button className="text-link">Learn More</button>
       )
     ).toEqual(true)
+  })
+
+  describe('cause-card-progress', () => {
+    it('has progress bar', () => {
+      expect(causeCardWrapper.find('div.cause-card-progress').find('div.cause-card-progress-bar-active')).toBeTruthy()
+    })
+
+    it('contains percentage donation', () => {
+      let progress = Math.floor((donatedAmount / targetAmount) * 100)
+      let expectedText = `${progress}% of $${targetAmount}`
+      expect(causeCardWrapper.find('div.cause-card-progress p').text()).toContain(expectedText)
+    })
   })
 })
