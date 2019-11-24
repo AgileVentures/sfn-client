@@ -1,9 +1,16 @@
 .supporting-artists-wrapper {
-  grid-row: 2;
-  grid-column: 7/10;
-  margin-left: $margin-l;
+  grid-row: 4;
+  grid-column: 1/-1;
   margin-bottom: $margin-r;
   h5 {
     margin-bottom: $margin-s;
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  .cause-bio-wrapper {
+    grid-row: 2;
+    grid-column: 7/10;
+    margin-left: $margin-l;
   }
 }

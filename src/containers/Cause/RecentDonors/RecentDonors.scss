@@ -1,10 +1,19 @@
 .recent-donors-wrapper {
-  grid-column: 7/-1;
-  grid-row: 3;
-  margin-left: $margin-l;
+  grid-column: 1/-1;
+  grid-row: 6;
+  margin-top: $margin-r;
+  margin-bottom: $margin-r;
 }
 
 .recent-donors__avatars {
   display: flex;
   margin-top: $margin-s;
+}
+
+@media only screen and (min-width: 768px) {
+  .recent-donors-wrapper {
+    grid-column: 7/-1;
+    grid-row: 3;
+    margin-left: $margin-l;
+  }
 }
