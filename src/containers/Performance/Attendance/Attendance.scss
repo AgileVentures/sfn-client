@@ -1,10 +1,17 @@
 .attendance-wrapper {
-  grid-column: 7/-1;
-  grid-row: 3;
-  margin-left: $margin-l;
+  grid-column: 1/-1;
+  grid-row: 5;
 }
 
 .attendance__avatars {
   display: flex;
   margin-top: $margin-s;
+}
+
+@media only screen and (min-width: 768px) {
+  .attendance-wrapper {
+    grid-column: 7/-1;
+    grid-row: 4;
+    margin-left: $margin-l;
+  }
 }
