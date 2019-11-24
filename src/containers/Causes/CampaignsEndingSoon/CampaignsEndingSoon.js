@@ -38,11 +38,7 @@ class CampaignsEndingSoon extends Component {
                   { data.causes.map(cause => {
                     return <CauseCard
                       key={cause.id}
-                      causeName={cause.name}
-                      donatedAmount={cause.amountRaised}
-                      numberOfDonors={12}
-                      daysToGo={45}
-                      organization="UNICEF"
+                      cause={cause}
                     />
                   })}
                 </div>

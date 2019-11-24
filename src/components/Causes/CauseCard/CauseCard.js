@@ -43,9 +43,14 @@ CauseCard.propTypes = {
     donatedAmount: PropTypes.number,
     targetAmount: PropTypes.number,
     numberOfDonors: PropTypes.number,
-    daysToGo: PropTypes.string,
     organization: PropTypes.string,
     endDate: PropTypes.Date
+  })
+}
+
+CauseCard.defaultProps = {
+  cause: PropTypes.shape({
+    numberOfDonors: 0
   })
 }
 
