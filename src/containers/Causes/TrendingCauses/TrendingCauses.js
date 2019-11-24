@@ -25,7 +25,6 @@ class TrendingCauses extends Component {
     return firstTwoCauses.map(cause => (<CauseCard
       key={cause.id}
       cause={cause}
-      numberOfDonors={23}
     />))
   }
   render() {
