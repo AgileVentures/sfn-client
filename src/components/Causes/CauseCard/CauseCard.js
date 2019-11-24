@@ -1,8 +1,9 @@
 import React from 'react'
 import PropTypes from 'prop-types'
+import { formatDistanceStrict } from 'date-fns'
 
 const CauseCard = props => {
-  let { causeName, organization, donatedAmount, numberOfDonors, daysToGo, targetAmount } = props.cause
+  let { name, organization, donatedAmount, numberOfDonors, endDate, targetAmount } = props.cause
   const progress = Math.floor((donatedAmount / targetAmount) * 100)
   return (
     <div className="cause-card">
@@ -11,7 +12,7 @@ const CauseCard = props => {
         src="/images/cause_sample.jpg"
         alt="A cause that deserves attention"
       />
-      <h5 className="cause-card-name">{causeName}</h5>
+      <h5 className="cause-card-name">{name}</h5>
       <span className="cause-card-owner italic">by {organization}</span>
 
       <div className="cause-card-detail">
@@ -27,7 +28,7 @@ const CauseCard = props => {
           <p>{progress}% of ${targetAmount}</p>
         </div>
         <p className="cause-card-days-to-go">
-          {daysToGo} to go
+          {formatDistanceStrict(new Date(endDate), new Date(), { unit: 'day' })} to go
         </p>
         <button>Donate today</button>
         <button className="text-link">Learn More</button>
@@ -38,12 +39,14 @@ const CauseCard = props => {
 
 CauseCard.propTypes = {
   cause: PropTypes.shape({
-    causeName: PropTypes.string,
+    name: PropTypes.string,
     donatedAmount: PropTypes.number,
     targetAmount: PropTypes.number,
     numberOfDonors: PropTypes.number,
     daysToGo: PropTypes.string,
-    organization: PropTypes.string })
+    organization: PropTypes.string,
+    endDate: PropTypes.Date
+  })
 }
 
 export default CauseCard

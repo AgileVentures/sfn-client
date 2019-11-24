@@ -1,22 +1,24 @@
 import React from 'react'
+import { addDays } from 'date-fns'
 import CauseCard from './CauseCard'
 
 import { shallow } from 'enzyme'
 
 describe('<CauseCard />', () => {
   let causeCardWrapper
-  let donatedAmount, targetAmount, props
+  let donatedAmount, dateTenDaysAway, targetAmount, props
 
   beforeEach(() => {
     donatedAmount = 2000
     targetAmount = 5000
+    dateTenDaysAway = addDays(new Date(), 10)
     props = {
       cause: {
-        causeName: 'Happy Fridays',
+        name: 'Happy Fridays',
         donatedAmount,
         targetAmount,
         numberOfDonors: 5,
-        daysToGo: '31 days',
+        endDate: dateTenDaysAway,
         organization: 'HUMALUPA'
       }
     }
@@ -57,7 +59,7 @@ describe('<CauseCard />', () => {
 
   it('contains the amount of time remaining from the campaign', () => {
     expect(causeCardWrapper.find('p.cause-card-days-to-go').text()).toEqual(
-      '31 days to go'
+      '10 days to go'
     )
   })
 
