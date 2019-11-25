@@ -44,7 +44,7 @@ CauseCard.propTypes = {
     targetAmount: PropTypes.number,
     numberOfDonors: PropTypes.number,
     organization: PropTypes.string,
-    endDate: PropTypes.Date
+    endDate: PropTypes.instanceOf(Date)
   })
 }
 
