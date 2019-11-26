@@ -1,5 +1,5 @@
 .performance-slideshow {
-  grid-column: 1/7;
+  grid-column: 1/-1;
   height: 300px;
   margin-bottom: $margin-l;
   margin-top: $margin-l;
@@ -89,5 +89,12 @@
 
   .performance-slide-4 {
     background-color: brown;
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  .performance-slideshow {
+    grid-column: 1/7;
+    grid-row: 1;
   }
 }

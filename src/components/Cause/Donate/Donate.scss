@@ -1,6 +1,7 @@
 .donation-wrapper {
-  grid-column: 1/7;
-  margin-top: $margin-s;
+  grid-column: 1/-1;
+  grid-row: 7;
+  margin-top: $margin-l;
   margin-bottom: $margin-l;
 
   .donation-blocks {
@@ -32,7 +33,7 @@
         align-items: center;
         justify-content: center;
         padding: $padding-s;
-        min-width: 180px;
+        min-width: 140px;
         background-color: $primary-color-darkblue-lighter;
         border-left: 1px solid $primary-color-darkblue;
 
@@ -61,5 +62,12 @@
         color: $disabled-color-white;
       }
     }
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  .donation-wrapper {
+    grid-row: 2;
+    grid-column: 1/7;
   }
 }

@@ -1,9 +1,8 @@
 .ticket-wrapper {
-  grid-column: 7/-1;
-  grid-row: 2;
-  margin-top: $margin-s;
+  grid-column: 1/-1;
+  grid-row: 4;
+  margin-top: $margin-r;
   margin-bottom: $margin-l;
-  margin-left: $margin-l;
 
   .ticket-blocks {
     margin-top: $margin-s;
@@ -43,5 +42,13 @@
         }
       }
     }
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  .ticket-wrapper {
+    grid-column: 7/-1;
+    grid-row: 2;
+    margin-left: $margin-l;
   }
 }

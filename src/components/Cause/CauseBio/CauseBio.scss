@@ -1,3 +1,12 @@
 .cause-bio-wrapper {
-  grid-column: 1/7;
+  grid-row: 3;
+  grid-column: 1/-1;
+}
+
+@media only screen and (min-width: 768px) {
+  .cause-bio-wrapper {
+    grid-row: 2;
+    grid-column: 1/7;
+    margin-left: $margin-l;
+  }
 }

@@ -1,10 +1,17 @@
 .related-causes-wrapper {
-  grid-row: 2;
-  grid-column: 10/-1;
-  margin-left: $margin-r;
+  grid-row: 5;
+  grid-column: 1/-1;
   margin-bottom: $margin-r;
-  
+
   h5 {
     margin-bottom: $margin-s;
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  .related-causes-wrapper {
+    grid-row: 2;
+    grid-column: 10/-1;
+    margin-left: $margin-r;
   }
 }
