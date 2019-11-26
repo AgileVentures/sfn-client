@@ -3,7 +3,7 @@
   grid-column: 1/-1;
   display: flex;
   margin-bottom: $margin-l;
-  margin-top: $margin-s;
+  margin-top: $margin-l;
   display: flex;
   flex-direction: column;
 
@@ -49,5 +49,6 @@
     grid-row: 4;
     grid-column: 7/-1;
     margin-left: $margin-l;
+
   }
 }
