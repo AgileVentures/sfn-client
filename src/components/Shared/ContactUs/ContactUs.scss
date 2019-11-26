@@ -1,10 +1,9 @@
 .contact-us-wrapper {
-  grid-row: 4;
-  grid-column: 7/-1;
+  grid-row: 6;
+  grid-column: 1/-1;
   display: flex;
-  margin-left: $margin-l;
   margin-bottom: $margin-l;
-  margin-top: $margin-s;
+  margin-top: $margin-l;
   display: flex;
   flex-direction: column;
 
@@ -42,5 +41,12 @@
     .contact-details--socials {
       margin-top: $margin-r;
     }
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  .contact-us-wrapper {
+    grid-row: 4;
+    grid-column: 1/7;
   }
 }
