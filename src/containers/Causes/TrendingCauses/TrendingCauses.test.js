@@ -50,7 +50,7 @@ describe('<TrendingCauses />', () => {
       expect(trendingCausesWrapper.find('NavLink').length).toEqual(1)
     })
     describe('CauseCard', () => {
-      it('has two cause cards cause card', () => {
+      it('has two cause cards', () => {
         expect(trendingCausesWrapper.find('CauseCard').length).toEqual(2)
       })
 

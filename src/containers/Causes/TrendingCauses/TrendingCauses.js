@@ -3,7 +3,6 @@ import gql from 'graphql-tag'
 import { NavLink } from 'react-router-dom'
 import take from 'lodash/take'
 import { Query } from 'react-apollo'
-import { formatDistanceStrict } from 'date-fns'
 import CauseCard from '../../../components/Causes/CauseCard/CauseCard'
 
 export const GET_TRENDING_CAUSES_QUERY = gql`
@@ -24,13 +23,8 @@ class TrendingCauses extends Component {
   renderTrendingCauses = (trendingCauses) => {
     const firstTwoCauses = take(trendingCauses, 2)
     return firstTwoCauses.map(cause => (<CauseCard
-      key={cause.name}
-      causeName={cause.name}
-      donatedAmount={Number(cause.amountRaised)}
-      targetAmount={Number(cause.targetAmount)}
-      numberOfDonors={23}
-      daysToGo={formatDistanceStrict(new Date(cause.endDate), new Date(), { unit: 'day' })}
-      organization={cause.sponsor}
+      key={cause.id}
+      cause={cause}
     />))
   }
   render() {
