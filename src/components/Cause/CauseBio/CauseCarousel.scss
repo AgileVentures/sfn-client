@@ -1,5 +1,6 @@
 .cause-slideshow {
-  grid-column: 1/7;
+  grid-column: 1/-1;
+  grid-row: 1;
   height: 300px;
   margin-bottom: $margin-l;
   margin-top: $margin-l;
@@ -89,5 +90,11 @@
 
   .cause-slide-4 {
     background-color: brown;
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  .cause-slideshow {
+    grid-column: 1/7;
   }
 }

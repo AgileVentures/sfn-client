@@ -1,5 +1,5 @@
 .contact-us-wrapper {
-  grid-row: 6;
+  grid-row: 8;
   grid-column: 1/-1;
   display: flex;
   margin-bottom: $margin-l;
@@ -47,6 +47,8 @@
 @media only screen and (min-width: 768px) {
   .contact-us-wrapper {
     grid-row: 4;
-    grid-column: 1/7;
+    grid-column: 7/-1;
+    margin-left: $margin-l;
+
   }
 }
