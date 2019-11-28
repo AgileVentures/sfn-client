@@ -48,7 +48,7 @@ const PerformanceCard = props => {
 }
 
 PerformanceCard.propTypes = {
-  performanceTitle: PropTypes.string.isRequired,
+  performanceTitle: PropTypes.string,
   performanceDescription: PropTypes.string,
   causeTitle: PropTypes.string,
   artistName: PropTypes.string,

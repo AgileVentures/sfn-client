@@ -3,28 +3,28 @@ import { mount } from 'enzyme'
 import { MockedProvider } from '@apollo/react-testing'
 import { act } from 'react-dom/test-utils'
 import { MemoryRouter as Router } from 'react-router-dom'
-import CampaignsEndingSoon, { GET_CAUSES_ENDING_SOON_QUERY } from './CampaignsEndingSoon'
+import CampaignsEndingSoon, {
+  GET_CAUSES_ENDING_SOON_QUERY
+} from './CampaignsEndingSoon'
 
 async function mountMockedProvider(result) {
   const mocks = [
     {
       request: {
         query: GET_CAUSES_ENDING_SOON_QUERY,
-        variables: { 'scope': 'ending_soon' }
+        variables: { scope: 'ending_soon' }
       },
       result
     }
   ]
   jest.useFakeTimers()
   const component = mount(
-    <MockedProvider
-      mocks={mocks}
-      addTypename={false}
-    >
+    <MockedProvider mocks={mocks} addTypename={false}>
       <Router>
         <CampaignsEndingSoon />
       </Router>
-    </MockedProvider>)
+    </MockedProvider>
+  )
   act(() => {
     jest.runAllTimers()
   })
@@ -34,10 +34,10 @@ async function mountMockedProvider(result) {
 
 describe('<CampaignsEndingSoon />', () => {
   let campaignsEndingSoonWrapper, data
-  beforeEach(async() => {
+  beforeEach(async () => {
     data = {
-      'data': {
-        'causes': [
+      data: {
+        causes: [
           {
             amountRaised: 5000,
             endDate: new Date('2019-12-12'),
@@ -79,11 +79,23 @@ describe('<CampaignsEndingSoon />', () => {
       })
 
       it('first cause card has correct cause name', () => {
-        expect(campaignsEndingSoonWrapper.find('CauseCard').at(0).find('.cause-card-name').text()).toEqual('Awesome Cause 1')
+        expect(
+          campaignsEndingSoonWrapper
+            .find('CauseCard')
+            .at(0)
+            .find('.cause-card-name')
+            .text()
+        ).toEqual('Awesome Cause 1')
       })
 
       it('second cause card has correct cause name', () => {
-        expect(campaignsEndingSoonWrapper.find('CauseCard').at(1).find('.cause-card-name').text()).toEqual('Awesome Cause 2')
+        expect(
+          campaignsEndingSoonWrapper
+            .find('CauseCard')
+            .at(1)
+            .find('.cause-card-name')
+            .text()
+        ).toEqual('Awesome Cause 2')
       })
     })
   })
