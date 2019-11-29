@@ -3,6 +3,7 @@
   margin: $margin-l auto;
   overflow-x: scroll;
   width: 100%;
+  position: relative;
 
   h3 {
     text-align: center;
@@ -45,12 +46,47 @@
       }
     }
   }
+  .carousel-arrow {
+    width: 32px;
+    height: 32px;
+    background-color: $primary-color-white;
+    position: absolute;
+    top: 55%;
+    right: 0;
+    transform: translateY(0, -50%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+}
+
+@media only screen and (min-width: 576px) {
+  .explore-causes-container {
+    .explore-causes-categories {
+      justify-content: space-between;
+      flex-wrap: wrap;
+
+      .explore-causes-category {
+        width: 48%;
+        margin-right: 0;
+      }
+    }
+    .carousel-arrow {
+      display: none;
+    }
+  }
 }
 
 @media only screen and (min-width: 768px) {
   .explore-causes-container {
     .explore-causes-categories {
       flex-wrap: wrap;
+      justify-content: center;
+
+      .explore-causes-category {
+        width: 170px;
+        margin-right: $margin-r;
+      }
     }
   }
 }
