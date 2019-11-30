@@ -26,7 +26,7 @@ const PerformanceCard = props => {
         <div className="performance-text">
           <h4>{props.performanceTitle}</h4>
           <p className="performance-description">
-            {props.performanceDescription}
+            {props.description}
           </p>
         </div>
         <div className="performance-stats">
@@ -48,8 +48,8 @@ const PerformanceCard = props => {
 }
 
 PerformanceCard.propTypes = {
-  performanceTitle: PropTypes.string.isRequired,
-  performanceDescription: PropTypes.string,
+  performanceTitle: PropTypes.string,
+  description: PropTypes.string,
   causeTitle: PropTypes.string,
   artistName: PropTypes.string,
   donatedAmount: PropTypes.number,
