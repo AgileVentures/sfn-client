@@ -3,10 +3,9 @@
   z-index: 100;
   width: 100%;
   background-color: $primary-color-darkblue-lighter;
-  box-shadow: 0 12px 30px rgba($primary-color-darkblue, .4);
+  box-shadow: 0 12px 30px rgba($primary-color-darkblue, 0.4);
   top: 0;
   @media only screen and (min-width: 992px) {
     position: static;
   }
 }
-
