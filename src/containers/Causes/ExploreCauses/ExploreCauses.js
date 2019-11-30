@@ -1,5 +1,6 @@
 import React from 'react'
 import ExploreCausesCategory from './ExploreCausesCategory'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import {
   faPaw,
   faChild,
@@ -8,7 +9,8 @@ import {
   faLeaf,
   faMedkit,
   faBook,
-  faFemale
+  faFemale,
+  faAngleDoubleRight
 } from '@fortawesome/free-solid-svg-icons'
 
 let categoriesData = [
@@ -37,6 +39,9 @@ const ExploreCauses = () => {
     <div className="explore-causes-container">
       <h3 className="explore-causes-title white">Explore these causes</h3>
       <div className="explore-causes-categories">{renderedList}</div>
+      <div className="carousel-arrow">
+        <FontAwesomeIcon className="arrow-icon" icon={faAngleDoubleRight} />
+      </div>
     </div>
   )
 }
