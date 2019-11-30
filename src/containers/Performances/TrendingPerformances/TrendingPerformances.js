@@ -31,12 +31,13 @@ class TrendingPerformances extends Component {
               </h1>
 
               <div className="performance-card-wrapper">
-                {data.performances.map(performance => {
+                {data.performances.map((performance, index) => {
                   return (
                     <PerformanceCard
                       key={performance.id}
                       description={performance.detail}
                       donatedAmount={performance.amountRaised}
+                      isFeatured={index === 0}
                     />
                   )
                 })}
