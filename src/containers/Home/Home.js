@@ -20,17 +20,17 @@ class Home extends Component {
           <img
             id="image-1"
             src="images/polaroid-sing-for-needs-1.jpg"
-            alt="Singer on the chair -- photo from Unsplash.com"
+            alt="Singer on the chair -- from Unsplash.com"
           />
           <img
             id="image-2"
             src="images/polaroid-sing-for-needs-2.jpg"
-            alt="Singer on the chair -- photo from Unsplash.com"
+            alt="Singer on the chair -- from Unsplash.com"
           />
           <img
             id="image-3"
             src="images/polaroid-sing-for-needs-3.jpg"
-            alt="Singer on the chair -- photo from Unsplash.com"
+            alt="Singer on the chair -- from Unsplash.com"
           />
         </div>
       </div>
