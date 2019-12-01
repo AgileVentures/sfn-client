@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+import Banner from '../../components/Shared/Banner/Banner'
 
 class Home extends Component {
   render() {
@@ -87,6 +88,11 @@ class Home extends Component {
             </div>
           </div>
         </section>
+        <Banner
+          headline="Want to stay in touch?"
+          benefits="We send regular updates about the recent causes, upcoming artist performances and about Sing for Needs in general"
+          buttonLabel="Sign up to newsletter"
+        />
       </React.Fragment>
     )
   }
