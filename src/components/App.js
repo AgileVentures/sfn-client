@@ -15,6 +15,7 @@ import Artist from '../containers/Artist/Artist'
 import Performances from '../containers/Performances/Performances'
 import Performance from '../containers/Performance/Performance'
 import Contact from '../containers/Contact/Contact'
+import UserCreate from '../containers/Users/Create/UserCreate'
 
 const App = () => {
   return (
@@ -26,13 +27,14 @@ const App = () => {
           <Route path="/causes" exact component={Causes} />
           <Route path="/causes/:id" component={Cause} />
           <Route path="/artists" exact component={Artists} />
+          <Route path="/users/signup" exact component={UserCreate} />
           <Route path="/artists/:id" component={Artist} />
           <Route path="/performances" exact component={Performances} />
           <Route path="/performances/:id" component={Performance} />
           <Route path="/contact" component={Contact} />
         </main>
       </Layout>
-    </BrowserRouter >
+    </BrowserRouter>
   )
 }
 

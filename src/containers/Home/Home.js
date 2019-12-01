@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+import { NavLink } from 'react-router-dom'
 
 class Home extends Component {
   render() {
@@ -41,7 +42,7 @@ class Home extends Component {
           <h2 className="heading">How to get started?</h2>
           <p className="intro">Choose from the options available below</p>
           <div className="registration-options">
-            <div className="registration-option-card">
+            <NavLink className="registration-option-card" to="/users/signup">
               <div className="registration-details">
                 <img
                   src="/images/user-registration-photo.jpg"
@@ -55,7 +56,7 @@ class Home extends Component {
                 </p>
               </div>
               <button>Register as a music fan</button>
-            </div>
+            </NavLink>
             <div className="registration-option-card">
               <div className="registration-details">
                 <img
