@@ -37,4 +37,8 @@ describe('<Home />', () => {
       3
     )
   })
+
+  it('has a section which directs visitors to the newsletter sign up page', () => {
+    expect(homeWrapper.find('Banner').length).toEqual(1)
+  })
 })

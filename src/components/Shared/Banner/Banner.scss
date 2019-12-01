@@ -26,6 +26,7 @@
 
   p {
     margin-bottom: $margin-r;
+    text-align: center;
     text-shadow: 1px 1px $primary-color-darkblue;
   }
 }
@@ -42,4 +43,13 @@
   position: absolute;
   z-index: 1;
   top: 0;
+}
+
+@media only screen and (min-width: 992px) {
+  .banner {
+    p {
+      text-align: center;
+      max-width: 500px;
+    }
+  }
 }

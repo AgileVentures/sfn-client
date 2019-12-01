@@ -104,8 +104,8 @@
   flex-direction: column;
   grid-column: 1/-1;
   margin-top: $margin-xxl;
-  margin-bottom: $margin-xxl;
-  padding-top: $padding-xl;
+  margin-bottom: $margin-r;
+  padding-top: $padding-xxl;
 
   h2 {
     color: $primary-color-white;
@@ -239,6 +239,7 @@
     .registration-options {
       width: 100%;
       padding-top: $padding-xl;
+      margin-bottom: $margin-xl;
       display: flex;
       flex-direction: row;
       justify-content: space-around;
