@@ -57,7 +57,7 @@ class Home extends Component {
               </div>
               <button>Register as a music fan</button>
             </NavLink>
-            <div className="registration-option-card">
+            <div className="registration-option-card coming-soon">
               <div className="registration-details">
                 <img
                   src="/images/artist-registration-photo.jpg"
@@ -69,9 +69,9 @@ class Home extends Component {
                   the charities to close to my mindset and engage with fans.
                 </p>
               </div>
-              <button>Register as an artist</button>
+              <h5>Coming soon</h5>
             </div>
-            <div className="registration-option-card">
+            <div className="registration-option-card coming-soon">
               <div className="registration-details">
                 <img
                   src="/images/charity-registration-photo.jpg"
@@ -84,7 +84,7 @@ class Home extends Component {
                   cause we're supporting.
                 </p>
               </div>
-              <button>Register as a charity</button>
+              <h5>Coming soon</h5>
             </div>
           </div>
         </section>

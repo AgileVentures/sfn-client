@@ -60,6 +60,10 @@ class UserCreate extends React.Component {
               <input name="username" type="text" />
             </div>
             <div className="field">
+              <label htmlFor="email">Email</label>
+              <input name="email" type="email" />
+            </div>
+            <div className="field">
               <label htmlFor="password">
                 Password <span>(8 characters minimum)</span>
               </label>

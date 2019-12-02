@@ -147,7 +147,8 @@
         width: 100%;
       }
 
-      h4 {
+      h4,
+      h5 {
         width: 100%;
         color: $primary-color-white;
         padding-top: $padding-s;
@@ -170,6 +171,17 @@
         border: 1px solid $primary-color-white-darkest;
         text-decoration: none;
         transform: translateY(-8px);
+      }
+    }
+
+    .registration-option-card.coming-soon {
+      opacity: 0.4;
+
+      &:hover {
+        cursor: auto;
+        border: 1px solid $primary-color-darkblue-lightest;
+        text-decoration: none;
+        transform: translateY(0px);
       }
     }
   }
