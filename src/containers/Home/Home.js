@@ -92,6 +92,7 @@ class Home extends Component {
           headline="Want to stay in touch?"
           benefits="We send regular updates about the recent causes, upcoming artist performances and about Sing for Needs in general"
           buttonLabel="Sign up to newsletter"
+          mailchimpForm
         />
       </React.Fragment>
     )

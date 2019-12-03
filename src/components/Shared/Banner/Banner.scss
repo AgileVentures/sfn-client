@@ -29,6 +29,40 @@
     text-align: center;
     text-shadow: 1px 1px $primary-color-darkblue;
   }
+
+  .form-mailchimp {
+    display: flex;
+    flex-direction: column;
+    z-index: 3;
+    width: 100%;
+
+    input[type="email"] {
+      width: 100%;
+      max-width: 400px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    button[type="submit"] {
+      width: fit-content;
+      margin-top: $margin-s;
+      font-size: 18px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    .msg-alert {
+      margin-top: $margin-s;
+      p {
+        font-family: "proxima-nova", sans-serif;
+        font-weight: 800;
+        font-style: normal;
+        font-size: 1.333rem;
+        line-height: 1.2;
+        color: $primary-color-white;
+      }
+    }
+  }
 }
 
 .banner::before {
