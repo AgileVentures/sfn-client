@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+import { NavLink } from 'react-router-dom'
 import Banner from '../../components/Shared/Banner/Banner'
 
 class Home extends Component {
@@ -42,7 +43,7 @@ class Home extends Component {
           <h2 className="heading">How to get started?</h2>
           <p className="intro">Choose from the options available below</p>
           <div className="registration-options">
-            <div className="registration-option-card">
+            <NavLink className="registration-option-card" to="/users/signup">
               <div className="registration-details">
                 <img
                   src="/images/user-registration-photo.jpg"
@@ -56,8 +57,8 @@ class Home extends Component {
                 </p>
               </div>
               <button>Register as a music fan</button>
-            </div>
-            <div className="registration-option-card">
+            </NavLink>
+            <div className="registration-option-card coming-soon">
               <div className="registration-details">
                 <img
                   src="/images/artist-registration-photo.jpg"
@@ -69,9 +70,9 @@ class Home extends Component {
                   the charities to close to my mindset and engage with fans.
                 </p>
               </div>
-              <button>Register as an artist</button>
+              <h5>Coming soon</h5>
             </div>
-            <div className="registration-option-card">
+            <div className="registration-option-card coming-soon">
               <div className="registration-details">
                 <img
                   src="/images/charity-registration-photo.jpg"
@@ -84,7 +85,7 @@ class Home extends Component {
                   cause we're supporting.
                 </p>
               </div>
-              <button>Register as a charity</button>
+              <h5>Coming soon</h5>
             </div>
           </div>
         </section>

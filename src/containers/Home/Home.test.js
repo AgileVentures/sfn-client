@@ -34,7 +34,7 @@ describe('<Home />', () => {
 
   it('each of the 3 cards has a button which leads to the registration accordingly', () => {
     expect(homeWrapper.find('.registration-option-card button').length).toEqual(
-      3
+      1
     )
   })
 
