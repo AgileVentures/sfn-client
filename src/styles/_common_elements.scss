@@ -65,3 +65,13 @@ button.text-link {
 button .button-icon {
   margin-left: $margin-xs;
 }
+
+input[type="text"],
+input[type="email"] {
+  border: none;
+  background-image: none;
+  background-color: $primary-color-white;
+  padding: $padding-xs $padding-s;
+  border-radius: 32px;
+  outline: rgba($primary-color-white, 0);
+}
