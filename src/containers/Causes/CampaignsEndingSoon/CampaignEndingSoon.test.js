@@ -58,7 +58,7 @@ describe('<CampaignsEndingSoon />', () => {
     campaignsEndingSoonWrapper = await mountMockedProvider(data)
   })
 
-  describe('data resolves with no error', () => {
+  describe('success', () => {
     it("has 'Campaign Ending Soon' title", () => {
       expect(campaignsEndingSoonWrapper.find('h3').text()).toEqual(
         'Campaigns ending soon'
@@ -98,9 +98,20 @@ describe('<CampaignsEndingSoon />', () => {
         ).toEqual('Awesome Cause 2')
       })
     })
+
+    describe('empty response', () => {
+      beforeEach(async() => {
+        data = { 'data': { 'causes': [] } }
+        campaignsEndingSoonWrapper = await mountMockedProvider(data)
+      })
+
+      it('displays 2 EmptyCard components', () => {
+        expect(campaignsEndingSoonWrapper.find('EmptyCard').length).toEqual(2)
+      })
+    })
   })
 
-  describe('data resolved with error', () => {
+  describe('error', () => {
     let result
     beforeEach(async () => {
       result = { error: new Error('aw shucks') }
