@@ -98,8 +98,8 @@ describe('<TrendingPerformances />', () => {
           trendingPerformancesWrapper = await mountMockedProvider(data)
         })
 
-        it('has 2 Empty cards', () => {
-          expect(trendingPerformancesWrapper.find('EmptyCard').length).toEqual(2)
+        it('has 1 Empty cards', () => {
+          expect(trendingPerformancesWrapper.find('EmptyCard').length).toEqual(1)
         })
       })
     })
