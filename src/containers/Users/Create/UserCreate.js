@@ -1,34 +1,34 @@
 import React from 'react'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faCamera } from '@fortawesome/free-solid-svg-icons'
-import Loader from '../../../Components/Shared/Loader/Loader'
 import gql from 'graphql-tag'
 import { Mutation } from 'react-apollo'
+import Loader from '../../../components/Shared/Loader/Loader'
 
 export const SIGNUP_MUTATION = gql`
-  mutation userSignup ($username: String!, $password: String!, email: String!, passwordConfirmation: String!, imagePreviewUrl: String) {
-    signup(username: $username, email: $email, password: $password, passwordConfirmation: $passwordConfirmation, imagePreviewUrl: $imagePreviewUrl){
-      {
-        username,
-        imagePreviewUrl
-      },
-      token,
+mutation userSignup($username: String!, $password: String!, $email: String!, $avatarUrl: String) {
+  signup(username: $username, password: $password, email: $email, avatarUrl: $avatarUrl ){
+    token
+    user{
+      username
+      avatarUrl
     }
   }
+}
 `
 class UserCreate extends React.Component {
   state = {
-    imagePreviewUrl: null,
+    avatarUrl: null,
     username: '',
     email: '',
     password: '',
     passwordConfirmation: ''
   };
 
-  handleSubmit = (event, signup) => {
-    event.preventDefault()
-    signup()
-  };
+  // handleSubmit = (event, signup) => {
+  //   event.preventDefault()
+  //   signup()
+  // };
 
   handleFileChange = event => {
     this.setState({
@@ -39,7 +39,7 @@ class UserCreate extends React.Component {
 
     reader.onloadend = () => {
       this.setState({
-        imagePreviewUrl: reader.result
+        avatarUrl: reader.result
       })
     }
 
@@ -49,14 +49,14 @@ class UserCreate extends React.Component {
   renderImagePreview = () => {
     return (
       <div className="image-container">
-        <img src={this.state.imagePreviewUrl} alt="icon" width="200" />{' '}
+        <img src={this.state.avatarUrl} alt="icon" width="200" />{' '}
       </div>
     )
   };
 
   render() {
     return (
-      <Mutation query={SIGNUP_MUTATION} variables={this.state}>
+      <Mutation mutation={SIGNUP_MUTATION} variables={this.state}>
         { (signup, { error, loading }) => {
           if (loading) return <Loader />
           return (
@@ -64,7 +64,10 @@ class UserCreate extends React.Component {
               <h1>Register as a fan</h1>
               <div className="user-registration-form-wrapper">
                 <p className="error-message">{error}</p>
-                <form onSubmit={this.handleSubmit(event, signup)} className="user-registration-form">
+                <form onSubmit={(e) => {
+                  e.preventDefault()
+                  signup()
+                }} className="user-registration-form">
                   <div className="field avatar-field">
                     <span className="label">Upload your avatar</span>
                     <label id="avatar-label" htmlFor="avatar">
@@ -76,7 +79,7 @@ class UserCreate extends React.Component {
                         accept="image/png, image/jpeg"
                         onChange={this.handleFileChange}
                       />
-                      {this.state.imagePreviewUrl ? this.renderImagePreview() : ''}
+                      {this.state.avatarUrl ? this.renderImagePreview() : ''}
                     </label>
                   </div>
                   <div className="field">
@@ -93,12 +96,12 @@ class UserCreate extends React.Component {
                     </label>
                     <input name="password" type="password" />
                   </div>
-                  <div className="field">
+                  {/* <div className="field">
                     <label htmlFor="passwordConfirmation">
                 Password confirmation
                     </label>
                     <input name="passwordConfirmation" type="password" />
-                  </div>
+                  </div> */}
                   <input
                     className="button body-large"
                     type="submit"
