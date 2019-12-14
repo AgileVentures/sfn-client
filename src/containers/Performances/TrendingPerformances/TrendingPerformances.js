@@ -20,7 +20,6 @@ class TrendingPerformances extends Component {
       return (
         <React.Fragment>
           <EmptyCard itemName="Performances" />
-          <EmptyCard itemName="Performances" />
         </React.Fragment>
 
       )
