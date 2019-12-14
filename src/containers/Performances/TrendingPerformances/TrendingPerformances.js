@@ -2,6 +2,7 @@ import React, { Component } from 'react'
 import { Query } from 'react-apollo'
 import gql from 'graphql-tag'
 import PerformanceCard from '../../../components/Performances/PerformanceCard/PerformanceCard'
+import EmptyCard from '../../../components/Shared/EmptyCard/EmptyCard'
 
 export const GET_TRENDING_PERFORMANCES_QUERY = gql`
   query getTrendingPerformances {
@@ -14,6 +15,29 @@ export const GET_TRENDING_PERFORMANCES_QUERY = gql`
 `
 
 class TrendingPerformances extends Component {
+  renderPerformaces = performances => {
+    if (performances.length === 0) {
+      return (
+        <React.Fragment>
+          <EmptyCard itemName="Performances" />
+        </React.Fragment>
+
+      )
+    }
+    return (
+      performances.map((performance, index) => {
+        return (
+          <PerformanceCard
+            key={performance.id}
+            description={performance.detail}
+            donatedAmount={performance.amountRaised}
+            isFeatured={index === 0}
+          />
+        )
+      })
+    )
+  }
+
   render() {
     return (
       <Query query={GET_TRENDING_PERFORMANCES_QUERY}>
@@ -31,16 +55,7 @@ class TrendingPerformances extends Component {
               </h1>
 
               <div className="performance-card-wrapper">
-                {data.performances.map((performance, index) => {
-                  return (
-                    <PerformanceCard
-                      key={performance.id}
-                      description={performance.detail}
-                      donatedAmount={performance.amountRaised}
-                      isFeatured={index === 0}
-                    />
-                  )
-                })}
+                { this.renderPerformaces(data.performances)}
               </div>
             </React.Fragment>
           )
