@@ -27,6 +27,11 @@
       display: flex;
       flex-direction: column;
       margin-bottom: $margin-r;
+
+      .sign-up-error {
+        margin-top: $margin-xs;
+        color: $validation-color-red;
+      }
     }
 
     input[type="text"],

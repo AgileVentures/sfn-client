@@ -1,12 +1,46 @@
 import React from 'react'
-import { shallow } from 'enzyme'
-import UserCreate from './UserCreate'
+import { mount } from 'enzyme'
+import { MockedProvider } from '@apollo/react-testing'
+import { act } from 'react-dom/test-utils'
+import { MemoryRouter as Router } from 'react-router-dom'
+import UserCreate, { SIGNUP_MUTATION } from './UserCreate'
 
+async function mountMockedProvider(result) {
+  const mocks = [
+    {
+      request: {
+        query: SIGNUP_MUTATION },
+      result
+    }
+  ]
+  jest.useFakeTimers()
+  const component = mount(
+    <MockedProvider mocks={mocks} addTypename={false}>
+      <Router>
+        <UserCreate />
+      </Router>
+    </MockedProvider>
+  )
+  act(() => {
+    jest.runAllTimers()
+  })
+  component.update()
+  return component
+}
 describe('<UserCreate />', () => {
-  let userCreateWrapper
+  let result, userCreateWrapper
 
-  beforeEach(() => {
-    userCreateWrapper = shallow(<UserCreate />)
+  beforeEach(async () => {
+    result = {
+      signup: {
+        token: '234343345435ascsdaewrewwr3242',
+        user: {
+          username: 'awesome_user',
+          avatarUrl: 'http://avatar.url'
+        }
+      }
+    }
+    userCreateWrapper = await mountMockedProvider(result)
   })
 
   it('has form component to submit the form', () => {
