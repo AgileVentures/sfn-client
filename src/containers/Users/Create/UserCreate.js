@@ -25,11 +25,6 @@ class UserCreate extends React.Component {
     passwordConfirmation: ''
   };
 
-  // handleSubmit = (event, signup) => {
-  //   event.preventDefault()
-  //   signup()
-  // };
-
   handleFileChange = event => {
     this.setState({
       selectedFile: event.target.files[0]
@@ -49,6 +44,18 @@ class UserCreate extends React.Component {
   handleChange = event => {
     const { name, value } = event.target
     this.setState({ [name]: value })
+  };
+
+  handlePasswordConfirmation = event => {
+    if (this.state.passwordConfirmation && (this.state.password !== this.state.passwordConfirmation)) {
+      return (
+        <span className="sign-up-error">Password doesn't match</span>
+      )
+    }
+  }
+
+  isFormValid = event => {
+    return this.state.username.length > 0 && this.state.password.length > 0
   };
 
   renderImagePreview = () => {
@@ -117,16 +124,23 @@ class UserCreate extends React.Component {
                       onChange={this.handleChange}
                     />
                   </div>
-                  {/* <div className="field">
+                  <div className="field">
                     <label htmlFor="passwordConfirmation">
                 Password confirmation
                     </label>
-                    <input name="passwordConfirmation" type="password" />
-                  </div> */}
+                    <input
+                      name="passwordConfirmation"
+                      type="password"
+                      value={this.state.passwordConfirmation}
+                      onChange={this.handleChange}
+                    />
+                    {this.handlePasswordConfirmation()}
+                  </div>
                   <input
                     className="button body-large"
                     type="submit"
                     value="Register"
+                    disabled={loading || !this.isFormValid()}
                   />
                 </form>
               </div>
