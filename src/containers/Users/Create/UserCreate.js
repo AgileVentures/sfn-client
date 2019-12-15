@@ -46,6 +46,11 @@ class UserCreate extends React.Component {
     reader.readAsDataURL(event.target.files[0])
   };
 
+  handleChange = event => {
+    const { name, value } = event.target
+    this.setState({ [name]: value })
+  };
+
   renderImagePreview = () => {
     return (
       <div className="image-container">
@@ -84,17 +89,33 @@ class UserCreate extends React.Component {
                   </div>
                   <div className="field">
                     <label htmlFor="username">Username</label>
-                    <input name="username" type="text" />
+                    <input
+                      name="username"
+                      type="text"
+                      value={this.state.username}
+                      onChange={this.handleChange}
+                    />
                   </div>
                   <div className="field">
                     <label htmlFor="email">Email</label>
-                    <input name="email" type="email" />
+                    <input
+                      name="email"
+                      type="email"
+                      value={this.state.email}
+                      onChange={this.handleChange}
+                    />
+
                   </div>
                   <div className="field">
                     <label htmlFor="password">
                 Password <span>(8 characters minimum)</span>
                     </label>
-                    <input name="password" type="password" />
+                    <input
+                      name="password"
+                      type="password"
+                      value={this.state.password}
+                      onChange={this.handleChange}
+                    />
                   </div>
                   {/* <div className="field">
                     <label htmlFor="passwordConfirmation">
