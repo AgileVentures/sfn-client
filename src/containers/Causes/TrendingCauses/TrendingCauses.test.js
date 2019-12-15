@@ -37,7 +37,14 @@ describe('<TrendingCauses />', () => {
 
   beforeEach(async () => {
     result = { data: { causes:
-      [{ id: 1, startDate: '2019-01-10', description: 'Awesome Cause 1', endDate: '2019-10-10', name: 'Awesome Cause 1', amountRaised: '5000', targetAmount: '100000', sponsor: 'unicef' }, { id: 2, startDate: '2019-01-10', description: 'Awesome Cause 2', endDate: '2019-10-10', name: 'Awesome Cause 2', amountRaised: '2000', targetAmount: '100000', sponsor: 'unicef' }, { id: 3, startDate: '2019-01-10', description: 'Awesome Cause 3', endDate: '2019-10-10', name: 'Awesome Cause 3', amountRaised: '400', targetAmount: '100000', sponsor: 'who' }, { id: 4, startDate: '2019-01-10', description: 'Awesome Cause 1', endDate: '2019-10-10', name: 'Awesome Cause 4', amountRaised: '2000', targetAmount: '100000', sponsor: 'wfp' }] } }
+                        [
+                          { id: 1, startDate: new Date('2019-01-10'), description: 'Awesome Cause 1', endDate: new Date('2019-10-10'), name: 'Awesome Cause 1', amountRaised: 5000, targetAmount: 100000, sponsor: 'unicef' },
+                          { id: 2, startDate: new Date('2019-01-10'), description: 'Awesome Cause 2', endDate: new Date('2019-10-10'), name: 'Awesome Cause 2', amountRaised: 2000, targetAmount: 100000, sponsor: 'unicef' },
+                          { id: 3, startDate: new Date('2019-01-10'), description: 'Awesome Cause 3', endDate: new Date('2019-10-10'), name: 'Awesome Cause 3', amountRaised: 400, targetAmount: 100000, sponsor: 'who' },
+                          { id: 4, startDate: new Date('2019-01-10'), description: 'Awesome Cause 1', endDate: new Date('2019-10-10'), name: 'Awesome Cause 4', amountRaised: 2000, targetAmount: 100000, sponsor: 'wfp' }
+                        ]
+    }
+    }
     trendingCausesWrapper = await mountMockedProvider(result)
   })
 
@@ -60,6 +67,17 @@ describe('<TrendingCauses />', () => {
 
       it('second cause card has correct cause name', () => {
         expect(trendingCausesWrapper.find('CauseCard').at(1).find('.cause-card-name').text()).toEqual('Awesome Cause 2')
+      })
+    })
+
+    describe('empty response', () => {
+      beforeEach(async() => {
+        result = { 'data': { 'causes': [] } }
+        trendingCausesWrapper = await mountMockedProvider(result)
+      })
+
+      it('displays 2 EmptyCard components', () => {
+        expect(trendingCausesWrapper.find('EmptyCard').length).toEqual(2)
       })
     })
   })

@@ -4,6 +4,7 @@ import { NavLink } from 'react-router-dom'
 import take from 'lodash/take'
 import { Query } from 'react-apollo'
 import CauseCard from '../../../components/Causes/CauseCard/CauseCard'
+import EmptyCard from '../../../components/Shared/EmptyCard/EmptyCard'
 
 export const GET_TRENDING_CAUSES_QUERY = gql`
   query getTrendingCauses($scope: String) {
@@ -21,6 +22,15 @@ export const GET_TRENDING_CAUSES_QUERY = gql`
 `
 class TrendingCauses extends Component {
   renderTrendingCauses = (trendingCauses) => {
+    if (trendingCauses.length === 0) {
+      return (
+        <React.Fragment>
+          <EmptyCard itemName="Causes" />
+          <EmptyCard itemName="Causes" />
+        </React.Fragment>
+
+      )
+    }
     const firstTwoCauses = take(trendingCauses, 2)
     return firstTwoCauses.map(cause => (<CauseCard
       key={cause.id}

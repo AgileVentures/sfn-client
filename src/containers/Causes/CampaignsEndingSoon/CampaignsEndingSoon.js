@@ -3,6 +3,7 @@ import { NavLink } from 'react-router-dom'
 import gql from 'graphql-tag'
 import { Query } from 'react-apollo'
 import CauseCard from '../../../components/Causes/CauseCard/CauseCard'
+import EmptyCard from '../../../components/Shared/EmptyCard/EmptyCard'
 
 export const GET_CAUSES_ENDING_SOON_QUERY = gql`
   query getCausesEndingSoon($scope: String) {
@@ -17,6 +18,25 @@ export const GET_CAUSES_ENDING_SOON_QUERY = gql`
 `
 
 class CampaignsEndingSoon extends Component {
+  renderCauses = causes => {
+    if (causes.length === 0) {
+      return (
+        <React.Fragment>
+          <EmptyCard itemName="Causes" />
+          <EmptyCard itemName="Causes" />
+        </React.Fragment>
+
+      )
+    }
+    return (
+      causes.map(cause => {
+        return <CauseCard
+          key={cause.id}
+          cause={cause}
+        />
+      })
+    )
+  }
   render() {
     return (
       <Query query={GET_CAUSES_ENDING_SOON_QUERY} variables={{ scope: 'ending_soon' }}>
@@ -35,12 +55,7 @@ class CampaignsEndingSoon extends Component {
                 </h3>
                 <div className="cause-cards">
 
-                  { data.causes.map(cause => {
-                    return <CauseCard
-                      key={cause.id}
-                      cause={cause}
-                    />
-                  })}
+                  { this.renderCauses(data.causes)}
                 </div>
                 <NavLink activeClassName="nav__item--selected" to="/causes?q=ending">
                   See all ending causes
