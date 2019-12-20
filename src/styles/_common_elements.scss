@@ -62,6 +62,12 @@ button.text-link {
   }
 }
 
+button[disabled],
+button:disabled,
+input[disabled] {
+  opacity: 0.48;
+}
+
 button .button-icon {
   margin-left: $margin-xs;
 }
