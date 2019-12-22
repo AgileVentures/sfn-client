@@ -2,6 +2,7 @@ import React from 'react'
 import gql from 'graphql-tag'
 import { Mutation } from 'react-apollo'
 import Loader from '../../../components/Shared/Loader/Loader'
+import { NavLink } from 'react-router-dom'
 
 export const SIGNIN_MUTATION = gql`
   mutation userSignIn($username: String!, $password: String!) {
@@ -64,12 +65,17 @@ class UserSignIn extends React.Component {
                       onChange={this.handleChange}
                     />
                   </div>
-                  <input
-                    className="button body-large"
-                    type="submit"
-                    value="Sign in"
-                    disabled={loading || !this.isFormValid()}
-                  />
+                  <div className="actions">
+                    <input
+                      className="button body-large"
+                      type="submit"
+                      value="Sign in"
+                      disabled={loading || !this.isFormValid()}
+                    />
+                    <NavLink to="/users/signup">
+                      New here? Create your account in less than a beat
+                    </NavLink>
+                  </div>
                 </form>
               </div>
             </div>
