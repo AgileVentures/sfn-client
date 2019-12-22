@@ -47,8 +47,20 @@
 
     input[type="submit"] {
       width: fit-content;
-      margin-top: $margin-s;
       font-size: 18px;
+    }
+
+    .actions {
+      margin-top: $margin-s;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+
+      a {
+        text-decoration: underline;
+        font-weight: bold;
+        margin-top: $margin-r;
+      }
     }
   }
 }
@@ -56,5 +68,16 @@
 @media only screen and (min-width: 768px) {
   .user-signin-container {
     grid-column: 4/10;
+
+    form {
+      .actions {
+        flex-direction: row;
+        align-items: center;
+
+        a {
+          margin-top: 0;
+        }
+      }
+    }
   }
 }

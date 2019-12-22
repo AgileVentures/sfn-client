@@ -11,7 +11,7 @@ describe('<NavBar />', () => {
   })
 
   it('contains all the navigation links', () => {
-    expect(navBarWrapper.find('NavLink').length).toEqual(7)
+    expect(navBarWrapper.find('NavLink').length).toEqual(8)
   })
   it('contains a logo', () => {
     expect(navBarWrapper.find('.nav-container__logo').length).toEqual(1)

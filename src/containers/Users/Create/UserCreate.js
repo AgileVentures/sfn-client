@@ -4,17 +4,28 @@ import { faCamera } from '@fortawesome/free-solid-svg-icons'
 import gql from 'graphql-tag'
 import { Mutation } from 'react-apollo'
 import Loader from '../../../components/Shared/Loader/Loader'
+import { NavLink } from 'react-router-dom'
 
 export const SIGNUP_MUTATION = gql`
-mutation userSignup($username: String!, $password: String!, $email: String!, $avatarUrl: String) {
-  signup(username: $username, password: $password, email: $email, avatarUrl: $avatarUrl ){
-    token
-    user{
-      username
-      avatarUrl
+  mutation userSignup(
+    $username: String!
+    $password: String!
+    $email: String!
+    $avatarUrl: String
+  ) {
+    signup(
+      username: $username
+      password: $password
+      email: $email
+      avatarUrl: $avatarUrl
+    ) {
+      token
+      user {
+        username
+        avatarUrl
+      }
     }
   }
-}
 `
 class UserCreate extends React.Component {
   state = {
@@ -47,12 +58,13 @@ class UserCreate extends React.Component {
   };
 
   handlePasswordConfirmation = event => {
-    if (this.state.passwordConfirmation && (this.state.password !== this.state.passwordConfirmation)) {
-      return (
-        <span className="sign-up-error">Password doesn't match</span>
-      )
+    if (
+      this.state.passwordConfirmation &&
+      this.state.password !== this.state.passwordConfirmation
+    ) {
+      return <span className="sign-up-error">Password doesn't match</span>
     }
-  }
+  };
 
   isFormValid = event => {
     return this.state.username.length > 0 && this.state.password.length > 0
@@ -69,21 +81,27 @@ class UserCreate extends React.Component {
   render() {
     return (
       <Mutation mutation={SIGNUP_MUTATION} variables={this.state}>
-        { (signup, { error, loading }) => {
+        {(signup, { error, loading }) => {
           if (loading) return <Loader />
           return (
             <div className="user-registration-container">
               <h1>Register as a fan</h1>
               <div className="user-registration-form-wrapper">
                 <p className="error-message">{error}</p>
-                <form onSubmit={(e) => {
-                  e.preventDefault()
-                  signup()
-                }} className="user-registration-form">
+                <form
+                  onSubmit={e => {
+                    e.preventDefault()
+                    signup()
+                  }}
+                  className="user-registration-form"
+                >
                   <div className="field avatar-field">
                     <span className="label">Upload your avatar</span>
                     <label id="avatar-label" htmlFor="avatar">
-                      <FontAwesomeIcon className="camera-icon" icon={faCamera} />
+                      <FontAwesomeIcon
+                        className="camera-icon"
+                        icon={faCamera}
+                      />
                       <input
                         id="upload-avatar"
                         name="avatar"
@@ -111,11 +129,10 @@ class UserCreate extends React.Component {
                       value={this.state.email}
                       onChange={this.handleChange}
                     />
-
                   </div>
                   <div className="field">
                     <label htmlFor="password">
-                Password <span>(8 characters minimum)</span>
+                      Password <span>(8 characters minimum)</span>
                     </label>
                     <input
                       name="password"
@@ -126,7 +143,7 @@ class UserCreate extends React.Component {
                   </div>
                   <div className="field">
                     <label htmlFor="passwordConfirmation">
-                Password confirmation
+                      Password confirmation
                     </label>
                     <input
                       name="passwordConfirmation"
@@ -136,20 +153,23 @@ class UserCreate extends React.Component {
                     />
                     {this.handlePasswordConfirmation()}
                   </div>
-                  <input
-                    className="button body-large"
-                    type="submit"
-                    value="Register"
-                    disabled={loading || !this.isFormValid()}
-                  />
+                  <div className="actions">
+                    <input
+                      className="button body-large"
+                      type="submit"
+                      value="Register"
+                      disabled={loading || !this.isFormValid()}
+                    />
+                    <NavLink to="/users/signin">
+                      Already registered? Sign in!
+                    </NavLink>
+                  </div>
                 </form>
               </div>
             </div>
           )
-        }
-        }
+        }}
       </Mutation>
-
     )
   }
 }

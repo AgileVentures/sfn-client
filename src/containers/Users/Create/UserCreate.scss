@@ -47,7 +47,6 @@
 
     input[type="submit"] {
       width: fit-content;
-      margin-top: $margin-s;
       font-size: 18px;
     }
 
@@ -89,6 +88,18 @@
       width: 100%;
       height: 100%;
       position: absolute;
+    }
+
+    .actions {
+      margin-top: $margin-s;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+
+      a {
+        text-decoration: underline;
+        font-weight: bold;
+      }
     }
   }
 }
