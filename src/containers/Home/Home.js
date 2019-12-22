@@ -14,9 +14,11 @@ class Home extends Component {
               performances with inspiring causes to create change together with
               the fans
             </p>
-            <button className="intro-cta">
-              Get started with Sing for Needs
-            </button>
+            <a href="#get-started">
+              <button className="intro-cta">
+                Get started with Sing for Needs
+              </button>
+            </a>
             <p className="intro-usp body-small">
               Join over 100,000 artists, causes and changemakers
             </p>
@@ -39,7 +41,7 @@ class Home extends Component {
             />
           </div>
         </section>
-        <section className="home-container__registration">
+        <section className="home-container__registration" id="get-started">
           <h2 className="heading">How to get started?</h2>
           <p className="intro">Choose from the options available below</p>
           <div className="registration-options">

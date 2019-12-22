@@ -1,6 +1,10 @@
 // The layout defines the structure of the pages using the combination of CSS Grid and Flexbox
 // The structure following a 12-column grid structure using fractions
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   width: 100%;
   height: 100%;
@@ -19,7 +23,6 @@ body {
   display: grid;
   grid-template-columns: repeat(12, 1fr);
 }
-
 
 @media only screen and (min-width: 576px) {
   .main-container {
