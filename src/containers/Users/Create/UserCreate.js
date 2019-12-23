@@ -4,7 +4,6 @@ import { faCamera } from '@fortawesome/free-solid-svg-icons'
 import gql from 'graphql-tag'
 import { Mutation } from 'react-apollo'
 import Loader from '../../../components/Shared/Loader/Loader'
-import { NavLink } from 'react-router-dom'
 
 export const SIGNUP_MUTATION = gql`
   mutation userSignup(
@@ -62,12 +61,20 @@ class UserCreate extends React.Component {
       this.state.passwordConfirmation &&
       this.state.password !== this.state.passwordConfirmation
     ) {
-      return <span className="sign-up-error">Password doesn't match</span>
+      return (
+        <span className="sign-up-error">
+          Password doesn't match, please have a look again?
+        </span>
+      )
     }
   };
 
   isFormValid = event => {
-    return this.state.username.length > 0 && this.state.password.length > 0
+    return (
+      this.state.username.length > 0 &&
+      this.state.password.length > 7 &&
+      this.state.password === this.state.passwordConfirmation
+    )
   };
 
   renderImagePreview = () => {
@@ -153,17 +160,12 @@ class UserCreate extends React.Component {
                     />
                     {this.handlePasswordConfirmation()}
                   </div>
-                  <div className="actions">
-                    <input
-                      className="button body-large"
-                      type="submit"
-                      value="Register"
-                      disabled={loading || !this.isFormValid()}
-                    />
-                    <NavLink to="/users/signin">
-                      Already registered? Sign in!
-                    </NavLink>
-                  </div>
+                  <input
+                    className="button body-large"
+                    type="submit"
+                    value="Register"
+                    disabled={loading || !this.isFormValid()}
+                  />
                 </form>
               </div>
             </div>
