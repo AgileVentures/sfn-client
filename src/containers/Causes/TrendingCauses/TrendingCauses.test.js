@@ -1,37 +1,7 @@
 import React from 'react'
-import { mount } from 'enzyme'
-import { MockedProvider } from '@apollo/react-testing'
-import { act } from 'react-dom/test-utils'
-import { MemoryRouter as Router } from 'react-router-dom'
 import TrendingCauses, { GET_TRENDING_CAUSES_QUERY } from './TrendingCauses'
+import { mountMockedProvider } from '../../support/tests/mountMockedProvider'
 
-async function mountMockedProvider(result) {
-  const mocks = [
-    {
-      request: {
-        query: GET_TRENDING_CAUSES_QUERY,
-        variables: { scope: 'trending' }
-      },
-      result
-    }
-  ]
-
-  jest.useFakeTimers()
-  const component = mount(
-    <MockedProvider
-      mocks={mocks}
-      addTypename={false}
-    >
-      <Router>
-        <TrendingCauses />
-      </Router>
-    </MockedProvider>)
-  act(() => {
-    jest.runAllTimers()
-  })
-  component.update()
-  return component
-}
 describe('<TrendingCauses />', () => {
   let trendingCausesWrapper, result
 
@@ -45,7 +15,7 @@ describe('<TrendingCauses />', () => {
                         ]
     }
     }
-    trendingCausesWrapper = await mountMockedProvider(result)
+    trendingCausesWrapper = await mountMockedProvider(result, GET_TRENDING_CAUSES_QUERY, <TrendingCauses />, { scope: 'trending' })
   })
 
   describe('success', () => {
@@ -73,7 +43,7 @@ describe('<TrendingCauses />', () => {
     describe('empty response', () => {
       beforeEach(async() => {
         result = { 'data': { 'causes': [] } }
-        trendingCausesWrapper = await mountMockedProvider(result)
+        trendingCausesWrapper = await mountMockedProvider(result, GET_TRENDING_CAUSES_QUERY, <TrendingCauses />, { scope: 'trending' })
       })
 
       it('displays 2 EmptyCard components', () => {
@@ -85,7 +55,7 @@ describe('<TrendingCauses />', () => {
   describe('error', () => {
     beforeEach(async () => {
       result = { error: new Error('aw shucks') }
-      trendingCausesWrapper = await mountMockedProvider(result)
+      trendingCausesWrapper = await mountMockedProvider(result, GET_TRENDING_CAUSES_QUERY, <TrendingCauses />, { scope: 'trending' })
     })
     it('displays error div', async() => {
       expect(trendingCausesWrapper.find('div').text()).toEqual('Error')

@@ -1,35 +1,8 @@
 import React from 'react'
-import { mount } from 'enzyme'
-import { MockedProvider } from '@apollo/react-testing'
-import { act } from 'react-dom/test-utils'
-import { MemoryRouter as Router } from 'react-router-dom'
 import TrendingPerformances, {
   GET_TRENDING_PERFORMANCES_QUERY
 } from './TrendingPerformances'
-
-async function mountMockedProvider(result) {
-  const mocks = [
-    {
-      request: {
-        query: GET_TRENDING_PERFORMANCES_QUERY
-      },
-      result
-    }
-  ]
-  jest.useFakeTimers()
-  const component = mount(
-    <MockedProvider mocks={mocks} addTypename={false}>
-      <Router>
-        <TrendingPerformances />
-      </Router>
-    </MockedProvider>
-  )
-  act(() => {
-    jest.runAllTimers()
-  })
-  component.update()
-  return component
-}
+import { mountMockedProvider } from '../../support/tests/mountMockedProvider'
 
 describe('<TrendingPerformances />', () => {
   let trendingPerformancesWrapper, data
@@ -59,7 +32,7 @@ describe('<TrendingPerformances />', () => {
         ]
       }
     }
-    trendingPerformancesWrapper = await mountMockedProvider(data)
+    trendingPerformancesWrapper = await mountMockedProvider(data, GET_TRENDING_PERFORMANCES_QUERY, <TrendingPerformances />)
   })
   describe('success', () => {
     it("has 'Trending Performances' title", () => {
@@ -95,7 +68,7 @@ describe('<TrendingPerformances />', () => {
               performances: []
             }
           }
-          trendingPerformancesWrapper = await mountMockedProvider(data)
+          trendingPerformancesWrapper = await mountMockedProvider(data, GET_TRENDING_PERFORMANCES_QUERY, <TrendingPerformances />)
         })
 
         it('has 1 Empty cards', () => {
@@ -109,7 +82,7 @@ describe('<TrendingPerformances />', () => {
     let result
     beforeEach(async () => {
       result = { error: new Error('aw shucks') }
-      trendingPerformancesWrapper = await mountMockedProvider(result)
+      trendingPerformancesWrapper = await mountMockedProvider(result, GET_TRENDING_PERFORMANCES_QUERY, <TrendingPerformances />)
     })
     it('displays error div', () => {
       expect(trendingPerformancesWrapper.find('div').text()).toEqual('Error')

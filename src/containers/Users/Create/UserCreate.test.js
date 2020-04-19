@@ -1,32 +1,7 @@
 import React from 'react'
-import { mount } from 'enzyme'
-import { MockedProvider } from '@apollo/react-testing'
-import { act } from 'react-dom/test-utils'
-import { MemoryRouter as Router } from 'react-router-dom'
 import UserCreate, { SIGNUP_MUTATION } from './UserCreate'
+import { mountMockedProvider } from '../../support/tests/mountMockedProvider'
 
-async function mountMockedProvider(result) {
-  const mocks = [
-    {
-      request: {
-        query: SIGNUP_MUTATION },
-      result
-    }
-  ]
-  jest.useFakeTimers()
-  const component = mount(
-    <MockedProvider mocks={mocks} addTypename={false}>
-      <Router>
-        <UserCreate />
-      </Router>
-    </MockedProvider>
-  )
-  act(() => {
-    jest.runAllTimers()
-  })
-  component.update()
-  return component
-}
 describe('<UserCreate />', () => {
   let result, userCreateWrapper
 
@@ -40,7 +15,7 @@ describe('<UserCreate />', () => {
         }
       }
     }
-    userCreateWrapper = await mountMockedProvider(result)
+    userCreateWrapper = await mountMockedProvider(result, SIGNUP_MUTATION, <UserCreate />)
   })
 
   it('has form component to submit the form', () => {
