@@ -1,36 +1,8 @@
 import React from 'react'
-import { mount } from 'enzyme'
-import { MockedProvider } from '@apollo/react-testing'
-import { act } from 'react-dom/test-utils'
-import { MemoryRouter as Router } from 'react-router-dom'
 import CampaignsEndingSoon, {
   GET_CAUSES_ENDING_SOON_QUERY
 } from './CampaignsEndingSoon'
-
-async function mountMockedProvider(result) {
-  const mocks = [
-    {
-      request: {
-        query: GET_CAUSES_ENDING_SOON_QUERY,
-        variables: { scope: 'ending_soon' }
-      },
-      result
-    }
-  ]
-  jest.useFakeTimers()
-  const component = mount(
-    <MockedProvider mocks={mocks} addTypename={false}>
-      <Router>
-        <CampaignsEndingSoon />
-      </Router>
-    </MockedProvider>
-  )
-  act(() => {
-    jest.runAllTimers()
-  })
-  component.update()
-  return component
-}
+import { mountMockedProvider } from '../../support/tests/mountMockedProvider'
 
 describe('<CampaignsEndingSoon />', () => {
   let campaignsEndingSoonWrapper, data
@@ -55,7 +27,7 @@ describe('<CampaignsEndingSoon />', () => {
         ]
       }
     }
-    campaignsEndingSoonWrapper = await mountMockedProvider(data)
+    campaignsEndingSoonWrapper = await mountMockedProvider(data, GET_CAUSES_ENDING_SOON_QUERY, <CampaignsEndingSoon />, { scope: 'ending_soon' })
   })
 
   describe('success', () => {
@@ -102,7 +74,7 @@ describe('<CampaignsEndingSoon />', () => {
     describe('empty response', () => {
       beforeEach(async() => {
         data = { 'data': { 'causes': [] } }
-        campaignsEndingSoonWrapper = await mountMockedProvider(data)
+        campaignsEndingSoonWrapper = await mountMockedProvider(data, GET_CAUSES_ENDING_SOON_QUERY, <CampaignsEndingSoon />, { scope: 'ending_soon' })
       })
 
       it('displays 2 EmptyCard components', () => {
@@ -115,7 +87,7 @@ describe('<CampaignsEndingSoon />', () => {
     let result
     beforeEach(async () => {
       result = { error: new Error('aw shucks') }
-      campaignsEndingSoonWrapper = await mountMockedProvider(result)
+      campaignsEndingSoonWrapper = await mountMockedProvider(result, GET_CAUSES_ENDING_SOON_QUERY, <CampaignsEndingSoon />)
     })
     it('displays error div', () => {
       expect(campaignsEndingSoonWrapper.find('div').text()).toEqual('Error')

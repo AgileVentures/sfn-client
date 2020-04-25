@@ -1,33 +1,7 @@
 import React from 'react'
-import { mount } from 'enzyme'
-import { MockedProvider } from '@apollo/react-testing'
-import { act } from 'react-dom/test-utils'
-import { MemoryRouter as Router } from 'react-router-dom'
 import UserSignIn, { SIGNIN_MUTATION } from './UserSignIn'
+import { mountMockedProvider } from '../../support/tests/mountMockedProvider'
 
-async function mountMockedProvider(result) {
-  const mocks = [
-    {
-      request: {
-        query: SIGNIN_MUTATION
-      },
-      result
-    }
-  ]
-  jest.useFakeTimers()
-  const component = mount(
-    <MockedProvider mocks={mocks} addTypename={false}>
-      <Router>
-        <UserSignIn />
-      </Router>
-    </MockedProvider>
-  )
-  act(() => {
-    jest.runAllTimers()
-  })
-  component.update()
-  return component
-}
 describe('<UserSignIn />', () => {
   let result, userSignInWrapper
 
@@ -40,7 +14,7 @@ describe('<UserSignIn />', () => {
         }
       }
     }
-    userSignInWrapper = await mountMockedProvider(result)
+    userSignInWrapper = await mountMockedProvider(result, SIGNIN_MUTATION, <UserSignIn />)
   })
 
   it('has form component to sign in to Sing for Needs', () => {
