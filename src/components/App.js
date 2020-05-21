@@ -1,5 +1,5 @@
 import React from 'react'
-import { BrowserRouter, Route } from 'react-router-dom'
+import { BrowserRouter, Route, Switch } from 'react-router-dom'
 
 // CSS
 import '../main.scss'
@@ -12,6 +12,7 @@ import Causes from '../containers/Causes/Causes'
 import Cause from '../containers/Cause/Cause'
 import Artists from '../containers/Artists/Artists'
 import Artist from '../containers/Artist/Artist'
+import ArtistCreate from '../containers/Artist/Create/ArtistCreate'
 import Performances from '../containers/Performances/Performances'
 import Performance from '../containers/Performance/Performance'
 import Contact from '../containers/Contact/Contact'
@@ -23,17 +24,20 @@ const App = () => {
     <BrowserRouter>
       <Layout>
         <main className="main-container grid">
-          <Route path="/" exact component={Home} />
-          <Route path="/about" component={About} />
-          <Route path="/causes" exact component={Causes} />
-          <Route path="/causes/:id" component={Cause} />
-          <Route path="/artists" exact component={Artists} />
-          <Route path="/users/signin" exact component={UserSignIn} />
-          <Route path="/users/signup" exact component={UserCreate} />
-          <Route path="/artists/:id" component={Artist} />
-          <Route path="/performances" exact component={Performances} />
-          <Route path="/performances/:id" component={Performance} />
-          <Route path="/contact" component={Contact} />
+          <Switch>
+            <Route path="/" exact component={Home} />
+            <Route path="/about" component={About} />
+            <Route path="/causes" exact component={Causes} />
+            <Route path="/causes/:id" component={Cause} />
+            <Route path="/artists/signup" exact component={ArtistCreate} />
+            <Route path="/artists" exact component={Artists} />
+            <Route path="/users/signin" exact component={UserSignIn} />
+            <Route path="/users/signup" exact component={UserCreate} />
+            <Route path="/artists/:id" component={Artist} />
+            <Route path="/performances" exact component={Performances} />
+            <Route path="/performances/:id" component={Performance} />
+            <Route path="/contact" component={Contact} />
+          </Switch>
         </main>
       </Layout>
     </BrowserRouter>
